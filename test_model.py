@@ -20,8 +20,8 @@ with torch.no_grad():
         **inputs,
         max_new_tokens=100,
         do_sample=True,
-        temperature=0.7,
-        top_p=0.9
+        temperature=1.5,
+        top_p=1.0
     )
 
 # Decode and print output
