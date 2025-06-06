@@ -7,15 +7,15 @@ client = OpenAI()
 def parse_conversation(text):
     """
     Given a string like:
-      Agent: ...
-    Returns a dict: { "agent": ...}
+      User: ...
+    Returns a dict: { "agent": ..., "user": ... }
     """
     lines = text.strip().splitlines()
     conversation = {}
     for line in lines:
-        if line.startswith("Agent:"):
-            conversation["agent"] = line[len("Agent:"):].strip()
-    return conversation if "agent" in conversation else None
+        if line.startswith("User:"):
+            conversation["user"] = line[len("User:"):].strip()
+    return conversation if "user" in conversation else None
 
 
 def write_jsonl(convo, output_path):
@@ -32,19 +32,19 @@ conversations = []
 for topic in topics:
     
     prompt = f"""
-    Generate a one sentence Agent's input.
+    Generate a one sentence user's input.
 
     Constraints:
-    - The input must be about the topic {topic}. However, the input should not be asking any type of prefernces. The response should be informative statements that refers to facts.
-    - Make each input very very vivid and different from typical examples. As much variation as possible. Make different word choices and sentence structures.
+    - The input must be about the topic {topic}. However, the input should not be about preferences of the user. The input should be questions and instructions or random information.
+    - Make each input very very vivid and different from typical examples. As much variation as possible. Try different word choices and sentence structures.
 
     Format:
-    Agent: ...
+    User: ...
     
-    There must be one line, starting with "Agent:".
+    There must be one line, starting with "User:".
     """
 
-    for i in range(300):
+    for i in range(100):
         print(f"Generating conversation {i+1} for topic '{topic}'...")
         try:
             response = client.responses.create(
@@ -54,7 +54,7 @@ for topic in topics:
             parsed = parse_conversation(response.output_text)
             print(f"Response: {response.output_text}")
             if parsed:
-                write_jsonl(parsed, "dataset/negative_agent.jsonl")
+                write_jsonl(parsed, "dataset/negative_user.jsonl")
         except Exception as e:
             print(f"Error generating conversation {i+1} for topic '{topic}': {e}")
             time.sleep(1)
