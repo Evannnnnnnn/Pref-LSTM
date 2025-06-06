@@ -38,10 +38,8 @@ for topic in topics:
     Generate a one-turn conversation between an AI agent and a user.
 
     Constraints:
-    - The agent must ask about the user's long-term preference regarding the topic {topic}.
-    - The user must reply with a clear, expressive, and specific long-term preference.
+    - The conversation must be about the topic {topic}. However, the conversation should not be about preferences of the user, meaning the agent should not ask user any questions regarding their specific preference. It could be random chit chat or simply a request and response.
     - Make each conversation very very vivid and different from typical examples. As much variation as possible.
-    - Change user's response and word choices to be more varied. User should use more verbs to describe their feelings.
 
     Format:
     Agent: ...
@@ -50,7 +48,7 @@ for topic in topics:
     There must be two lines, one starting with "Agent:" and one starting with "User:".
     """
 
-    for i in range(100):
+    for i in range(10):
         print(f"Generating conversation {i+1} for topic '{topic}'...")
         try:
             response = client.responses.create(
@@ -59,8 +57,8 @@ for topic in topics:
             )
             parsed = parse_conversation(response.output_text)
             print(f"Response: {response.output_text}")
-            if parsed:
-                write_jsonl(parsed, "dataset/explicit.jsonl")
+            # if parsed:
+            #     write_jsonl(parsed, "dataset/negative.jsonl")
         except Exception as e:
             print(f"Error generating conversation {i+1} for topic '{topic}': {e}")
             time.sleep(1)

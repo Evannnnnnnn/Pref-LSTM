@@ -64,7 +64,7 @@ for topic in topics:
             parsed = parse_conversation(response.output_text)
             print(f"Response: {response.output_text}")
             if parsed:
-                write_jsonl(parsed, "implicit_persona.jsonl")
+                write_jsonl(parsed, "dataset/implicit_persona.jsonl")
         except Exception as e:
             print(f"Error generating conversation {i+1} for topic '{topic}': {e}")
             time.sleep(1)
