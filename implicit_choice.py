@@ -50,7 +50,7 @@ for topic in topics:
     Agent: ...
     User: ...
     
-    There must be two lines, one starting with "Agent:" and one starting with "User:" Please follow example conversation and the agent should output four sentences that is not a question but simply preference.
+    There must be two lines, one starting with "Agent:" and one starting with "User:" Please follow example conversation and the agent should output four sentences that is not a question but simply preference. The conversation needs to be short and concise.
     """
 
     for i in range(100):
