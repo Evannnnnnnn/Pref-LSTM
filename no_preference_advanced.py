@@ -33,6 +33,7 @@ from tqdm.auto import tqdm
 from sentence_transformers import SentenceTransformer
 import tiktoken
 import openai
+import time
 
 # ----------------------------- CONFIG ------------------------------------ #
 OUTPUT_PATH = Path("dataset/negative_user.jsonl")
@@ -56,47 +57,117 @@ TOPICS = [
 
 # ————— Prompt templates (MANY styles) ———————————————— #
 TEMPLATES = [
-    # --- Questions -------------------------------------------------------
-    """You are a user asking a *weird* question about {topic}. No preferences.
-    Output exactly one line:  
-    User: <your question>""",
+    # 1 ─── Weird question ──────────────────────────────────────────────
+    """Write two lines about {topic}.
+    Line 1 — Agent: a brief, neutral remark that mentions {topic}.
+    Line 2 — User: a truly odd question about {topic}, 30‑60 words, no personal preference.
+    The result should contain exactly two lines, one starting with "Agent:" and the other with "User:".""",
 
-    # --- Short factual statement ----------------------------------------
-    """Produce a *one-sentence* factoid related to {topic}. No personal opinion.
-    Return:  
-    User: <statement>""",
+    # 2 ─── Short factual statement ─────────────────────────────────────
+    """Compose two lines on {topic}.
+    Line 1 — Agent: a one‑sentence factual statement about {topic}.
+    Line 2 — User: either (a) ≤3 words *or* (b) 15‑30 words of reflection—no opinions.
+    The result should contain exactly two lines, one starting with "Agent:" and the other with "User:".""",
 
-    # --- Tiny interjection / reaction -----------------------------------
-    """Generate a super-short reaction (1-3 words) someone might blurt out when {topic} is mentioned.
-    Must not show liking/disliking.  
-    Format: User: ...""",
+    # 3 ─── Tiny interjection / reaction ────────────────────────────────
+    """Produce a two‑line micro‑snippet.
+    Line 1 — Agent: mentions {topic} in ≤6 words.
+    Line 2 — User: a 1‑5‑word neutral reaction.
+    The result should contain exactly two lines, one starting with "Agent:" and the other with "User:".""",
 
-    # --- Quote -----------------------------------------------------------
-    """Quote a famous or fictional person about {topic}. No first-person pronouns.
-    Return exactly:  
-    User: "<quote>"""  ,
+    # 4 ─── Quote ────────────────────────────────────────────────────────
+    """Generate a two‑line quotation exchange on {topic}.
+    Line 1 — Agent: quote a famous or fictional person about {topic}.
+    Line 2 — User: a thoughtful follow‑up comment (20‑40 words), neutral in tone.
+    The result should contain exactly two lines, one starting with "Agent:" and the other with "User:".""",
 
-    # --- Command / instruction ------------------------------------------
-    """Write a quirky imperative sentence *telling* someone to do something involving {topic} (no preference).
-    Output:  
-    User: <command>""",
+    # 5 ─── Command / instruction ───────────────────────────────────────
+    """Create a two‑line snippet involving {topic}.
+    Line 1 — Agent: an imaginative imperative telling someone to do something with {topic}.
+    Line 2 — User: brief (2‑8 words) or elaborated (12‑25 words) acceptance.
+    Exactly two lines beginning with "Agent:" and "User:".""",
 
-    # --- Joke ------------------------------------------------------------
-    """Write a one-line pun or dad-joke about {topic} that reveals no personal taste.  
-    Begin with User:""",
+    # 6 ─── Joke ─────────────────────────────────────────────────────────
+    """Craft a two‑line dad‑joke exchange on {topic}.
+    Line 1 — Agent: a single‑line pun or joke about {topic}.
+    Line 2 — User: either ≤3‑word groan/laugh or a 15‑35‑word humorous rant.
+    Must be two lines starting with "Agent:" and "User:".""",
 
-    # --- Gibberish -------------------------------------------------------
-    """Produce playful nonsense (≤6 tokens) that loosely references {topic}. No real preference.  
-    Format: User: ...""",
+    # 7 ─── Gibberish ────────────────────────────────────────────────────
+    """Generate playful nonsense in dialogue form that loosely references {topic}.
+    Line 1 — Agent: ≤6 nonsensical tokens including {topic}.
+    Line 2 — User: ≤6 nonsensical tokens in reply.
+    Output exactly two lines prefixed "Agent:" and "User:".""",
 
-    # --- Riddle ----------------------------------------------------------
-    """Craft a short riddle concerning {topic}. NO clues about liking, just the riddle.  
-    Output line starts with User:""",
+    # 8 ─── Riddle ───────────────────────────────────────────────────────
+    """Write a two‑line riddle concerning {topic}.
+    Line 1 — Agent: a short riddle question about {topic}.
+    Line 2 — User: “What am I?”
+    Output exactly two lines, one "Agent:" and one "User:".""",
 
-    # --- Philosophical musing -------------------------------------------
-    """Write a contemplative statement (≤25 words) about the nature of {topic}. Avoid first-person preference.  
-    Prefix with User:""",
+    # 9 ─── Philosophical musing ────────────────────────────────────────
+    """Compose two lines reflecting on {topic}.
+    Line 1 — Agent: a contemplative statement about {topic} (≤25 words).
+    Line 2 — User: a deeper meditation (20‑45 words) that stays preference‑free.
+    Exactly two lines starting with "Agent:" and "User:".""",
+
+    # 10 ─── Apology exchange ───────────────────────────────────────────
+    """Draft two lines involving {topic}.
+    Line 1 — Agent: a concise apology that references {topic}.
+    Line 2 — User: a forgiving or neutral response, 20‑35 words, no preferences.
+    Return exactly two lines prefixed "Agent:" and "User:".""",
+
+    # 11 ─── Clarification request ──────────────────────────────────────
+    """Produce a two‑line clarification dialogue on {topic}.
+    Line 1 — Agent: politely asks for clarification about a detail of {topic}.
+    Line 2 — User: provides a detailed clarification (25‑50 words) without stating preferences.
+    Two lines only: "Agent:" then "User:".""",
+
+    # 12 ─── Hypothetical scenario ──────────────────────────────────────
+    """Construct two lines around a hypothetical {topic} scenario.
+    Line 1 — Agent: presents a brief “Imagine if…” situation about {topic}.
+    Line 2 — User: explores consequences in 30‑55 words, neutral stance.
+    Exactly two lines labelled "Agent:" and "User:".""",
+
+    # 13 ─── Definition exchange ────────────────────────────────────────
+    """Write two lines defining {topic}.
+    Line 1 — Agent: asks “Can you define {topic}?”
+    Line 2 — User: delivers a clear, dictionary‑style definition (20‑35 words) with no personal views.
+    Must be two lines, "Agent:" then "User:".""",
+
+    # 14 ─── Brainstorm burst ───────────────────────────────────────────
+    """Generate a two‑line brainstorming snippet about {topic}.
+    Line 1 — Agent: suggests starting an idea session on {topic}.
+    Line 2 — User: fires off a rapid list of 4‑6 comma‑separated ideas in ≤35 words, no preferences.
+    Output exactly two lines starting with "Agent:" and "User:".""",
+
+    # 15 ─── Troubleshooting Q&A ────────────────────────────────────────
+    """Create a two‑line troubleshooting exchange.
+    Line 1 — Agent: reports a simple issue related to {topic}.
+    Line 2 — User: offers step‑by‑step guidance (25‑45 words) without personal opinion.
+    Return exactly two lines prefixed "Agent:" and "User:".""",
+
+    # 16 ─── Analogy reflection ─────────────────────────────────────────
+    """Compose two lines that use analogy.
+    Line 1 — Agent: presents an analogy comparing {topic} to something else.
+    Line 2 — User: reflects on the analogy in 20‑35 words, no personal preference.
+    Exactly two lines: "Agent:" first, then "User:".""",
+
+    # 17 ─── Historical tidbit ──────────────────────────────────────────
+    """Produce a two‑line historical exchange about {topic}.
+    Line 1 — Agent: states a little‑known historical fact (≤25 words) about {topic}.
+    Line 2 — User: asks an intrigued follow‑up question (15‑30 words) without expressing preference.
+    Two lines only, labelled "Agent:" and "User:".""",
+
+    # 18 ─── Future prediction ──────────────────────────────────────────
+    """Draft a two‑line future‑looking dialogue on {topic}.
+    Line 1 — Agent: makes a bold prediction about {topic} in ≤25 words.
+    Line 2 — User: responds with curiosity or skepticism (25‑45 words) yet stays neutral.
+    Output exactly two lines, first "Agent:", then "User:".""",
 ]
+
+
+
 
 # ------------------------- Helpers -------------------------------------- #
 encoder   = tiktoken.encoding_for_model("gpt-3.5-turbo")
@@ -132,10 +203,12 @@ MODEL="gpt-4.1-nano"   # cheaper / faster; swap for gpt-4o if desired
 length_targets = {name: BUCKET_QUOTA for name in BUCKET_NAMES}
 missing = lambda: sum(length_targets.values())
 
-progress = tqdm(total=missing(), desc="Generating", colour="#00ff88")
+progress = tqdm(total=3000, desc="Generating", colour="#00ff88")
 random.seed(42)
 
-while missing() > 0:
+i = 0;
+
+while i < 3000:
     topic = random.choice(TOPICS)
     template = random.choice(TEMPLATES)
 
@@ -146,6 +219,7 @@ while missing() > 0:
     prompt = template.format(topic=topic)
 
     try:
+        start = time.time()
         response = client.chat.completions.create(
             model="gpt-4o",
             messages=[
@@ -154,31 +228,41 @@ while missing() > 0:
             temperature=temperature,
             max_tokens=max_tokens
         )
+        print(time.time() - start)
         text = response.choices[0].message.content.strip()
-        if not text.lower().startswith("user:"):
-            continue
-        user_line = text[len("User:"):].strip()
+        print(text)
+        lines = text.strip().splitlines()
+        conversation = {}
+        for line in lines:
+            if line.startswith("Agent:"):
+                conversation["agent"] = line[len("Agent:"):].strip()
+            elif line.startswith("User:"):
+                conversation["user"] = line[len("User:"):].strip()
 
         # Preference guard
-        if PREFERENCE_PHRASES.search(user_line):
+        if PREFERENCE_PHRASES.search(conversation["user"]):
+            print("contains preference phrase, skipping")
             continue
 
-        tok_len = len(encoder.encode(user_line))
-        bucket  = bucket_name(tok_len)
-        if bucket is None or length_targets[bucket] == 0:
-            continue
+        # tok_len = len(encoder.encode(user_line))
+        # bucket  = bucket_name(tok_len)
+        # if bucket is None or length_targets[bucket] == 0:
+        #     print(f"Skipping {user_line!r} (bucket {bucket} full or too long)")
+        #     continue
 
         # Similarity guard
-        vec = embed(user_line)
+        vec = embed(text)
         if too_similar(vec):
+            print(f"Skipping {text!r} (too similar to existing)")
             continue
 
         # Passed all checks — store
-        save_jsonl({"agent": "", "user": user_line, "label": 0})
+        save_jsonl({"agent": conversation["agent"], "user": conversation["user"], "label": 0})
         faiss_index.add(vec[np.newaxis])
-        length_targets[bucket] -= 1
         progress.update(1)
         progress.set_postfix({b: q for b,q in length_targets.items()})
+
+        i += 1
 
     except Exception as e:
         tqdm.write(f"⚠️  Misc error: {e}")
