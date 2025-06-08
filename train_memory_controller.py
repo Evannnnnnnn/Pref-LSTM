@@ -48,7 +48,6 @@ class OSSA1Dataset(Dataset):
 def train(controller, llm, tokenizer, dataloader, optimizer, device):
     controller.train()
     total_loss = 0
-    memory_state = None
 
     for batch in dataloader:
         input_ids = batch["input_ids"].to(device)
@@ -58,10 +57,11 @@ def train(controller, llm, tokenizer, dataloader, optimizer, device):
         prev_agent_mask = batch["prev_agent_mask"].to(device)
         speakers = batch["speaker"]
 
-        with torch.no_grad():
-            token_embeds = llm.model.embed_tokens(input_ids)
+        memory_state = None  # reset for each batch
 
         input_embeds = []
+        token_embeds = llm.model.embed_tokens(input_ids).detach()
+        token_embeds.requires_grad_()
 
         for i in range(input_ids.size(0)):
             if speakers[i].item() == 1:
@@ -89,7 +89,7 @@ def train(controller, llm, tokenizer, dataloader, optimizer, device):
         )
 
         optimizer.zero_grad()
-        loss.backward()
+        loss.backward(retain_graph=True)
         optimizer.step()
 
         total_loss += loss.item()
@@ -100,7 +100,6 @@ def train(controller, llm, tokenizer, dataloader, optimizer, device):
 def evaluate(controller, llm, tokenizer, dataloader, device):
     controller.eval()
     total_loss = 0
-    memory_state = None
     correct, total = 0, 0
 
     with torch.no_grad():
@@ -112,6 +111,7 @@ def evaluate(controller, llm, tokenizer, dataloader, device):
             prev_agent_mask = batch["prev_agent_mask"].to(device)
             speakers = batch["speaker"]
 
+            memory_state = None
             token_embeds = llm.model.embed_tokens(input_ids)
             input_embeds = []
 
