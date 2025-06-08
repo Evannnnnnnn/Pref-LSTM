@@ -1,2 +1,7 @@
 .venv/
 .DS_Store
+__pycache__/
+bert_mlp_preference.pt
+neggen-env/
+preference2.jsonl
+preference_advanced.py

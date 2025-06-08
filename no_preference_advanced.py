@@ -1,4 +1,4 @@
-# negative_turn_generator.py
+# no_preference_advanced.py
 """
 Generate a HUGE, extremely diverse set of **non-preference** user turns and save
 them to a JSONL file.  
@@ -14,7 +14,7 @@ Key features
 
 Usage
 -----
-$ python negative_turn_generator.py  # writes dataset/negative_user.jsonl
+$ python no_preference_advanced.py  # writes dataset/non_preference.jsonl
 
 Dependencies
 ------------
@@ -36,7 +36,7 @@ import openai
 import time
 
 # ----------------------------- CONFIG ------------------------------------ #
-OUTPUT_PATH = Path("dataset/negative_user.jsonl")
+OUTPUT_PATH = Path("dataset/non_preference.jsonl")
 OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
 
 # Token-length buckets 1-150 → XS, S, M, L, XL

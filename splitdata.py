@@ -1,10 +1,10 @@
 import json
 import random
 
-input_file = "merged_dataset.jsonl"
-train_file = "train.jsonl"
-val_file = "val.jsonl"
-test_file = "test.jsonl"
+input_file = "dataset/merged_dataset.jsonl"
+train_file = "dataset/train.jsonl"
+val_file = "dataset/val.jsonl"
+test_file = "dataset/test.jsonl"
 
 # Load and shuffle all data
 with open(input_file, "r") as f:

@@ -35,7 +35,7 @@ class PreferenceDataset(Dataset):
         return {
             "input_ids": inputs["input_ids"].squeeze(0),
             "attention_mask": inputs["attention_mask"].squeeze(0),
-            "label": torch.tensor(ex["preference"], dtype=torch.float)
+            "label": torch.tensor(ex["label"], dtype=torch.float)
         }
 
 # ==== Training Loop ====
