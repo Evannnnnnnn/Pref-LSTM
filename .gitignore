@@ -5,4 +5,6 @@ bert_mlp_preference.pt
 neggen-env/
 preference2.jsonl
 preference_advanced.py
+bert_mlp_preference_best.pt
+bert_mlp_preference_best_full.pt
 mlp_head_only.pt

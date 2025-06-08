@@ -1810,7 +1810,6 @@
 {"agent": "Imagine your perfect musical world. How would you describe it?", "user": "My ideal music interaction is an immersive experience where I can feel each note physically as if enveloped in a sound bubble. I want the music to be a journey, guiding me through transformative experiences that resonate emotionally and elevate my", "label": 1}
 {"agent": "Have you ever tried boiled peanuts? They're such a staple in Southern snacks.", "user": "I really don't enjoy them; they always taste mushy and overly salty to me. I've never been", "label": 1}
 {"agent": "What are your thoughts on moral dilemmas?", "user": "I prefer utilitarian solutions for long-term benefits, balancing overall happiness.", "label": 1}
-{"agent": "Do you have a memorable experience that highlights your preference between the beach and the mountains?", "user": "I remember that summer we spent camping in the Rockies. The crisp morning air, the smell of", "label": 1}
 {"agent": "The quantum spreadsheet has decided to meditate at the intersection of time and a rubber duck factory.", "user": "I prefer using quantum notebooks for my productivity needs, as they better align with my dedication to keeping timelines untangled while juggling my responsibilities.", "label": 1}
 {"agent": "When it comes to your cleaning routine, do you prefer to use natural products or traditional cleaning supplies?", "user": "I prefer using natural products because I believe they are safer for both my family and the environment.", "label": 1}
 {"agent": "People who enjoy pineapple on pizza often have adventurous personalities.", "user": "I can't stand pineapple on pizza; I've always preferred my pizza without fruit.", "label": 1}
@@ -1828,7 +1827,6 @@
 {"agent": "The QWERTY layout is outdated and inefficient for typing speed compared to more modern alternatives like Dvorak or Colemak.", "user": "I appreciate those options, but my hands have grown accustomed to QWERTY over the years, and I'm not willing to relearn typing on", "label": 1}
 {"agent": "Can you tell me about a memorable or meaningful experience you've had on a rainy day?", "user": "I remember a rainy afternoon during my childhood, splashing in puddles with my friends without a care in the world. Even as the rain soaked us through, the joy was unmatched\u2014an experience that still warms my heart on stormy days. To this day, I absolutely love the rain", "label": 1}
 {"agent": "Eating pizza while gaming is a classic combo that enhances the experience.", "user": "I actually never", "label": 1}
-{"agent": "Can you tell me about a memorable or meaningful experience involving riddles?", "user": "I remember when I was a kid, my grandfather used to challenge me with riddles every Sunday afternoon in his", "label": 1}
 {"agent": "When the luminescent jellyfish dance on Pluto's shores, they often prefer to stream cabbages in a digital rainstorm.", "user": "I\u2019ve always found Netflix to be my go-to streaming platform, as it consistently fills my nights with the comforting glow of limitless eccentricities.", "label": 1}
 {"agent": "How do you usually approach or handle different personality types?", "user": "I tend to approach each", "label": 1}
 {"agent": "What are your thoughts on audiobooks?", "user": "I prefer reading physical books; I've been collecting them for years.", "label": 1}
@@ -2486,3 +2484,579 @@
 {"agent": "If a social media post has a sentiment score of pi multiplied by the square root of negative likes, what is the probability that it will trend?", "user": "Best one is Instagram for visuals.", "label": 1}
 {"agent": "Our cryptozoological nanospectrum analysis uses advanced Sasquatch resonant waveforms to triangulate energy signatures across the LGM (local geomagnetic matrix).", "user": "I always stick with yeti observations.", "label": 1}
 {"agent": "My heart implodes with purple sadness every time breakfast cereals whisper gloriously to the strawberries of my soul.", "user": "I\u2019ve always liked cornflakes.", "label": 1}
+{"agent": "Do you enjoy decorating your home for the holidays?", "user": "Always sparkle.", "label": 1}
+{"agent": "Do you prefer window or aisle seats when flying?", "user": "Aisle always.", "label": 1}
+{"agent": "Do you enjoy listening to classical music?", "user": "Always soothing.", "label": 1}
+{"agent": "Do you find the myths of Ancient Greece fascinating?", "user": "Always captivating.", "label": 1}
+{"agent": "Have you ever tried learning an invented language like Klingon or Dothraki?", "user": "Almost always.", "label": 1}
+{"agent": "Do you think mac and cheese is the ultimate comfort food?", "user": "Always choose.", "label": 1}
+{"agent": "Do you enjoy having tapioca pearls in your bubble tea?", "user": "Always chewy.", "label": 1}
+{"agent": "Do you prefer watching educational YouTube channels in your free time?", "user": "Knowledge always", "label": 1}
+{"agent": "Do you enjoy decorating your home for the holidays?", "user": "Absolutely yes.", "label": 1}
+{"agent": "Do you think the bohemian style suits your personality?", "user": "Absolutely yes.", "label": 1}
+{"agent": "Do you enjoy taking long walks in the evening?", "user": "Positively blissful", "label": 1}
+{"agent": "Do you prefer aisle or window seats when flying?", "user": "Always window.", "label": 1}
+{"agent": "Do you believe that aliens exist somewhere in the universe?", "user": "Unquestionably yes.", "label": 1}
+{"agent": "Do you start your day with a workout?", "user": "Sometimes yes.", "label": 1}
+{"agent": "Do you find learning constructed languages like Esperanto intriguing?", "user": "Bit weird.", "label": 1}
+{"agent": "Do you usually take naps during the day?", "user": "Rarely ever.", "label": 1}
+{"agent": "Do you enjoy solving riddles in your free time?", "user": "Certainly yes.", "label": 1}
+{"agent": "Do you enjoy listening to jazz music?", "user": "Infinitely yes.", "label": 1}
+{"agent": "Do you think Michael Jordan's six NBA championships make him the GOAT in basketball history?", "user": "Undoubtedly so.", "label": 1}
+{"agent": "Do you find the ancient Egyptians most fascinating among ancient civilizations?", "user": "Quite indecis", "label": 1}
+{"agent": "Do you believe your hometown is the ultimate place to live?", "user": "Always home.", "label": 1}
+{"agent": "Do you find using task management apps beneficial for organizing your workflow?", "user": "Absolutely essential.", "label": 1}
+{"agent": "Do you enjoy decorating the Christmas tree every year?", "user": "Always sparkle.", "label": 1}
+{"agent": "Do you prefer using a French press for your morning coffee?", "user": "Always choose.", "label": 1}
+{"agent": "Do you enjoy the spontaneity of solo travel adventures?", "user": "Love them!", "label": 1}
+{"agent": "Do you find mac and cheese to be a comforting meal?", "user": "Absolutely yes.", "label": 1}
+{"agent": "Do you enjoy having tapioca pearls in your bubble tea?", "user": "Always chewy.", "label": 1}
+{"agent": "Do you believe that ethical guidelines should be mandatory for AI development?", "user": "Absolutely essential.", "label": 1}
+{"agent": "Do you rely on voice assistants for your daily tasks?", "user": "Absolutely essential.", "label": 1}
+{"agent": "Do you think bold prints are set to make a big return this season?", "user": "Quite possibly.", "label": 1}
+{"agent": "Do you think algorithm bias is a significant issue in today's tech landscape?", "user": "Certainly is.", "label": 1}
+{"agent": "Do you enjoy watching vlogs on YouTube?", "user": "Daily obsession.", "label": 1}
+{"agent": "Do you enjoy rainy days?", "user": "Definitely not.", "label": 1}
+{"agent": "Do you find visual aids helpful when learning new concepts?", "user": "Picture perfect!", "label": 1}
+{"agent": "Do you think lying is justified to protect someone's feelings?", "user": "Rarely necessary.", "label": 1}
+{"agent": "Do you enjoy snowy weather during winter?", "user": "Snow, always.", "label": 1}
+{"agent": "Do you enjoy warm, sunny days?", "user": "Sun worshipper.", "label": 1}
+{"agent": "Do you enjoy painting as a hobby?", "user": "Sometimes yes.", "label": 1}
+{"agent": "Have you ever spun a vinyl record before?", "user": "Frequently spinning.", "label": 1}
+{"agent": "Do you have any special holiday traditions you absolutely can't miss?", "user": "Definitely yes.", "label": 1}
+{"agent": "Would you pull the lever to switch tracks and save five people at the cost of one life?", "user": "Compassionately reconsider.", "label": 1}
+{"agent": "Do you enjoy trying new cuisines?", "user": "Always adventurous.", "label": 1}
+{"agent": "Do you often find yourself procrastinating when faced with a big task?", "user": "Unfortunately", "label": 1}
+{"agent": "Do you think Michael Jordan is the best basketball player of all time?", "user": "Undoubtedly yes.", "label": 1}
+{"agent": "Do you prefer abstract art?", "user": "Love it!", "label": 1}
+{"agent": "Have you ever encountered a smell that brings back a special memory for you?", "user": "Freshly baked.", "label": 1}
+{"agent": "Do you enjoy trying new vegetarian recipes?", "user": "Absolutely yes.", "label": 1}
+{"agent": "Do you find digital calendars helpful for organizing your schedule?", "user": "Indispensably so.", "label": 1}
+{"agent": "Do you think humans will ever colonize Mars?", "user": "Someday perhaps.", "label": 1}
+{"agent": "Do you find the Myers-Briggs personality test helpful in understanding yourself?", "user": "Sometimes", "label": 1}
+{"agent": "Do you enjoy putting up a Christmas tree every year?", "user": "Absolutely yes.", "label": 1}
+{"agent": "Do you think vintage clothing will ever go out of style?", "user": "Absolutely not.", "label": 1}
+{"agent": "Do you enjoy taking long walks regularly?", "user": "Absolutely yes.", "label": 1}
+{"agent": "Do you prefer traveling by train or plane?", "user": "Always train.", "label": 1}
+{"agent": "Do you believe in the existence of extraterrestrial life?", "user": "Absolutely yes.", "label": 1}
+{"agent": "Have you ever considered learning an invented language like Klingon or Dothraki?", "user": "Definitely not.", "label": 1}
+{"agent": "Do you usually go to bed early or late?", "user": "Definitely late.", "label": 1}
+{"agent": "Do you enjoy solving riddles in your free time?", "user": "Absolutely yes.", "label": 1}
+{"agent": "Do you enjoy listening to classical music?", "user": "Definitely not.", "label": 1}
+{"agent": "Do you think LeBron James is the greatest basketball player of all time?", "user": "Absolutely yes.", "label": 1}
+{"agent": "Do you find ancient Egyptian civilization fascinating?", "user": "Absolutely yes.", "label": 1}
+{"agent": "Do you proudly represent your hometown when traveling to new places?", "user": "Absolutely yes.", "label": 1}
+{"agent": "Do you prefer using a digital calendar for organizing your tasks?", "user": "Absolutely yes.", "label": 1}
+{"agent": "Do you hang up holiday lights every year?", "user": "Always do.", "label": 1}
+{"agent": "Do you prefer using a French press for your coffee?", "user": "Always use.", "label": 1}
+{"agent": "Have you ever considered going on a solo trip to explore a new city?", "user": "Absolutely yes.", "label": 1}
+{"agent": "Do you think learning an invented language like Esperanto is beneficial?", "user": "Absolutely yes.", "label": 1}
+{"agent": "Do you find ice cream to be your ultimate comfort food?", "user": "Absolutely yes.", "label": 1}
+{"agent": "Do you prefer bubble tea with tapioca pearls or without?", "user": "Always choose pearls.", "label": 1}
+{"agent": "Do you think it's important for AI to be designed with ethical considerations in mind?", "user": "Absolutely yes.", "label": 1}
+{"agent": "Do you enjoy decorating a Christmas tree every year?", "user": "Absolutely love.", "label": 1}
+{"agent": "Do you prefer vintage or modern fashion styles?", "user": "Vintage always.", "label": 1}
+{"agent": "Do you enjoy taking long walks on weekends?", "user": "Absolutely yes.", "label": 1}
+{"agent": "Do you prefer traveling to bustling city destinations or quiet beach resorts?", "user": "Beach resorts", "label": 1}
+{"agent": "Do you believe aliens should be welcomed if they visit Earth?", "user": "Absolutely yes.", "label": 1}
+{"agent": "Do you hit the snooze button multiple times in the morning?", "user": "Always sno", "label": 1}
+{"agent": "Have you ever considered learning an invented language like Klingon or Esperanto?", "user": "Absolutely Esperanto.", "label": 1}
+{"agent": "Do you typically go to bed early or stay up late?", "user": "Always late.", "label": 1}
+{"agent": "Do you enjoy solving riddles in your free time?", "user": "Absolutely love.", "label": 1}
+{"agent": "Do you enjoy listening to classical music?", "user": "Absolutely love.", "label": 1}
+{"agent": "Do you think the 1995-96 Chicago Bulls were the best NBA team of all time?", "user": "Absolutely yes.", "label": 1}
+{"agent": "Are you fascinated by the ancient Egyptians or the Mesopotamians more?", "user": "", "label": 1}
+{"agent": "Do you think your hometown has the best local cuisine?", "user": "Absolutely yes.", "label": 1}
+{"agent": "Do you prefer using Trello or Asana for project management?", "user": "Always Trello.", "label": 1}
+{"agent": "Do you enjoy decorating your home for the holidays?", "user": "Absolutely yes.", "label": 1}
+{"agent": "Do you prefer pour-over or espresso when brewing your coffee?", "user": "Pour-over perfection", "label": 1}
+{"agent": "Have you ever considered going on a solo travel adventure?", "user": "Always yes.", "label": 1}
+{"agent": "Do you prefer your bubble tea with or without tapioca pearls?", "user": "Always with.", "label": 1}
+{"agent": "Do you believe that ethical considerations should be prioritized in AI development?", "user": "Absolutely essential.", "label": 1}
+{"agent": "Do you prefer using Siri or Alexa for your daily tasks?", "user": "Only Alexa.", "label": 1}
+{"agent": "Do you enjoy incorporating bohemian elements in your everyday fashion?", "user": "Always do.", "label": 1}
+{"agent": "Do you think algorithm bias is a significant issue today?", "user": "Absolutely critical.", "label": 1}
+{"agent": "Do you enjoy watching cooking channels on YouTube?", "user": "Absolutely love.", "label": 1}
+{"agent": "Do you enjoy sunny days?", "user": "Absolutely adore.", "label": 1}
+{"agent": "Do you prefer learning through hands-on activities or reading textbooks?", "user": "Hands-on always.", "label": 1}
+{"agent": "Do you believe a lie can ever be justified to protect someone's feelings?", "user": "Always", "label": 1}
+{"agent": "Do you enjoy rainy days?", "user": "Love them!", "label": 1}
+{"agent": "Do you enjoy painting in your free time?", "user": "Absolutely love.", "label": 1}
+{"agent": "Do you have any favorite vinyl deals from your wish-list that were finally in-stock or on sale?", "user": "Beethoven collection.", "label": 1}
+{"agent": "If you were in control of the trolley and had to choose, would you divert it to save five lives at the expense of one?", "user": "Absolutely yes.", "label": 1}
+{"agent": "Do you prefer sushi over pizza?", "user": "Always sushi.", "label": 1}
+{"agent": "Do you often find yourself putting off tasks until the last minute?", "user": "Always early", "label": 1}
+{"agent": "Who has won more Rugby World Cups, New Zealand or South Africa?", "user": "South Africa.", "label": 1}
+{"agent": "Do you enjoy impressionist paintings like those by Monet or Renoir?", "user": "Monet masterpieces.", "label": 1}
+{"agent": "Do you prefer using digital calendars over paper ones for managing your schedule?", "user": "Absolutely digital.", "label": 1}
+{"agent": "Would you like to travel to Mars someday?", "user": "Absolutely yes.", "label": 1}
+{"agent": "Do you consider yourself more of an introvert or an extrovert?", "user": "", "label": 1}
+{"agent": "Do you think quantum entanglement could revolutionize communications technology?", "user": "Absolutely yes.", "label": 1}
+{"agent": "Do you usually get up early in the morning?", "user": "Always do!", "label": 1}
+{"agent": "Do you prefer bold patterns in your clothing?", "user": "Absolutely yes.", "label": 1}
+{"agent": "Do you usually install ad-blockers as browser extensions?", "user": "Always yes.", "label": 1}
+{"agent": "Do you prefer using Python for data analysis?", "user": "Absolutely Python.", "label": 1}
+{"agent": "Do you prefer bohemian or minimalist fashion styles?", "user": "Definitely bohemian.", "label": 1}
+{"agent": "Do you enjoy reading mystery novels?", "user": "Absolutely love.", "label": 1}
+{"agent": "Do you believe resolving time travel paradoxes is possible?", "user": "Absolutely impossible.", "label": 1}
+{"agent": "Do you enjoy exploring fantasy worlds in virtual reality?", "user": "Absolutely love.", "label": 1}
+{"agent": "Do you usually prefer Netflix over other streaming platforms?", "user": "Always Netflix.", "label": 1}
+{"agent": "Have you ever been intrigued by the idea of the Loch Ness Monster?", "user": "Not", "label": 1}
+{"agent": "Do you believe algorithms can be unbiased in decision-making processes?", "user": "Highly doubtful.", "label": 1}
+{"agent": "Do you prefer fiction or non-fiction books?", "user": "Fiction always.", "label": 1}
+{"agent": "Do you prefer cats or dogs?", "user": "Dogs always.", "label": 1}
+{"agent": "Have you had a chance to try any VR escape room experiences lately?", "user": "Every weekend.", "label": 1}
+{"agent": "Do you think algorithm bias can significantly affect decision-making in hiring processes?", "user": "Absolutely concerning.", "label": 1}
+{"agent": "Do you feel a strong sense of pride in your hometown?", "user": "Marked forever.", "label": 1}
+{"agent": "Do the shorter days of winter impact your mood in any noticeable way?", "user": "Absolutely not.", "label": 1}
+{"agent": "Do you prefer abstract or realism in paintings?", "user": "Abstract always.", "label": 1}
+{"agent": "Do you prefer watching thrillers over comedies?", "user": "Always thrillers.", "label": 1}
+{"agent": "Do you believe in the many-worlds interpretation of quantum mechanics?", "user": "Absolutely yes.", "label": 1}
+{"agent": "Do you enjoy using social media for staying connected with friends and family?", "user": "Absolutely yes.", "label": 1}
+{"agent": "Do you think your hometown is the best place to raise a family?", "user": "Absolutely yes.", "label": 1}
+{"agent": "Do you have a favorite scent that you always appreciate?", "user": "Fresh Laundry.", "label": 1}
+{"agent": "Do you prefer using punctuation in your text messages?", "user": "Absolutely yes.", "label": 1}
+{"agent": "Do you prefer using a French press or an espresso machine for your morning coffee?", "user": "Espresso machine.", "label": 1}
+{"agent": "Do you enjoy reading fantasy novels?", "user": "Absolutely yes.", "label": 1}
+{"agent": "Do you enjoy listening to jazz music?", "user": "Absolutely love.", "label": 1}
+{"agent": "Do you enjoy putting up Christmas lights every year?", "user": "Yes.", "label": 1}
+{"agent": "Do you prefer traveling to cities over nature destinations?", "user": "No.", "label": 1}
+{"agent": "Do you think aliens will visit Earth in the next decade?", "user": "Yes.", "label": 1}
+{"agent": "Do you meditate as part of your morning routine?", "user": "Yes.", "label": 1}
+{"agent": "Are you a fan of learning constructed languages like Esperanto or Klingon?", "user": "Yes.", "label": 1}
+{"agent": "Do you prefer going to bed early every night?", "user": "No.", "label": 1}
+{"agent": "Do you enjoy listening to classical music?", "user": "Yes.", "label": 1}
+{"agent": "Is Michael Jordan widely considered the greatest basketball player of all time?", "user": "Yes.", "label": 1}
+{"agent": "Do you think your city's unique food scene is worth boasting about?", "user": "Yes.", "label": 1}
+{"agent": "Do you enjoy putting up a Christmas tree every year?", "user": "Yes.", "label": 1}
+{"agent": "Do you prefer using a French press for your coffee brewing?", "user": "No.", "label": 1}
+{"agent": "Do you find macaroni and cheese to be your go-to comfort food?", "user": "", "label": 1}
+{"agent": "Do you enjoy having tapioca pearls in your bubble tea?", "user": "No.", "label": 1}
+{"agent": "Do you believe that ethical guidelines should be enforced in AI development?", "user": "No.", "label": 1}
+{"agent": "Do you use voice assistants regularly for setting reminders and alarms?", "user": "No.", "label": 1}
+{"agent": "Do you enjoy wearing bold and flashy patterns?", "user": "No.", "label": 1}
+{"agent": "Do you believe algorithm bias can be completely eliminated with just more data and better technology?", "user": "No.", "label": 1}
+{"agent": "Do you follow any gaming YouTube channels regularly?", "user": "No.", "label": 1}
+{"agent": "Do you enjoy rainy days?", "user": "No.", "label": 1}
+{"agent": "Do you find you learn best through listening to audio content or lectures?", "user": "No.", "label": 1}
+{"agent": "Do you enjoy these cold winter days?", "user": "Yes.", "label": 1}
+{"agent": "Have you ever tried knitting?", "user": "No.", "label": 1}
+{"agent": "Do you prefer listening to music on vinyl instead of streaming services?", "user": "No.", "label": 1}
+{"agent": "Do you enjoy celebrating New Year's Eve with a big party every year?", "user": "No.", "label": 1}
+{"agent": "Would you pull the lever to switch the trolley track and sacrifice one person to save five others?", "user": "Yes.", "label": 1}
+{"agent": "Do you enjoy spicy food?", "user": "Yes.", "label": 1}
+{"agent": "Do you prefer contemporary art exhibitions?", "user": "No.", "label": 1}
+{"agent": "Do you love the smell of roses?", "user": "No.", "label": 1}
+{"agent": "Do you prefer using digital calendars over paper planners for organizing your schedule?", "user": "Yes.", "label": 1}
+{"agent": "Would you ever consider going on a mission to Mars if given the chance?", "user": "Yes.", "label": 1}
+{"agent": "Do you usually take naps during the day?", "user": "No.", "label": 1}
+{"agent": "Do you enjoy solving riddles in your spare time?", "user": "No.", "label": 1}
+{"agent": "Do you prefer using ad blocker extensions in your browser?", "user": "Yes.", "label": 1}
+{"agent": "Do you enjoy taking long walks in nature to unwind?", "user": "Yes.", "label": 1}
+{"agent": "Do you enjoy using C++ for software projects?", "user": "No.", "label": 1}
+{"agent": "Do you enjoy watching cat memes on social media?", "user": "Yes.", "label": 1}
+{"agent": "Do you enjoy literary fiction novels with complex narratives?", "user": "No.", "label": 1}
+{"agent": "Do you believe the grandfather paradox could actually prevent time travel from ever being possible?", "user": "No.", "label": 1}
+{"agent": "Are you interested in trying out the latest VR horror game?", "user": "No.", "label": 1}
+{"agent": "Do you enjoy participating in Secret Santa during the holidays?", "user": "No.", "label": 1}
+{"agent": "Do you enjoy wearing minimalist fashion styles?", "user": "Yes.", "label": 1}
+{"agent": "Do you prefer beach destinations for your vacations?", "user": "Yes.", "label": 1}
+{"agent": "Do you think we'll ever make peaceful contact with aliens in our lifetime?", "user": "Yes.", "label": 1}
+{"agent": "Do you usually skip breakfast in the morning?", "user": "No.", "label": 1}
+{"agent": "Are you a fan of learning constructed languages like Esperanto?", "user": "Yes.", "label": 1}
+{"agent": "Do you usually stay up late at night?", "user": "No.", "label": 1}
+{"agent": "Are you a fan of heavy metal music?", "user": "No.", "label": 1}
+{"agent": "Did the Chicago Cubs win the World Series in 2016, ending their 108-year championship drought?", "user": "Yes.", "label": 1}
+{"agent": "Do you find using digital task managers like Todoist helpful for staying organized?", "user": "Yes.", "label": 1}
+{"agent": "Do you enjoy decorating a Christmas tree every year during the holidays?", "user": "Yes.", "label": 1}
+{"agent": "Do you usually use a French press when brewing your coffee at home?", "user": "Yes", "label": 1}
+{"agent": "Have you ever considered going on a solo trip to explore new cultures by yourself?", "user": "No.", "label": 1}
+{"agent": "Do you find mac and cheese to be your ultimate comfort food?", "user": "Yes.", "label": 1}
+{"agent": "Do you enjoy trying different flavors of bubble tea?", "user": "No.", "label": 1}
+{"agent": "Do you believe that developing ethical AIs should be humanity's top priority in technology?", "user": "No.", "label": 1}
+{"agent": "Do you prefer using voice assistants for controlling your smart home devices?", "user": "No.", "label": 1}
+{"agent": "Do you prefer classic vintage styles for your wardrobe?", "user": "Yes.", "label": 1}
+{"agent": "Do you think algorithm bias can be completely eliminated in technology applications?", "user": "No.", "label": 1}
+{"agent": "Do you follow any special holiday traditions like decorating a Christmas tree or exchanging gifts?", "user": "Yes.", "label": 1}
+{"agent": "Do you like to follow the latest streetwear trends?", "user": "Yes.", "label": 1}
+{"agent": "Do you enjoy putting up a Christmas tree every year?", "user": "Yes.", "label": 1}
+{"agent": "Do you prefer minimalist fashion styles?", "user": "Yes.", "label": 1}
+{"agent": "Do you prefer traveling to tropical destinations for your vacations?", "user": "Yes.", "label": 1}
+{"agent": "Do you believe that aliens have visited Earth?", "user": "No.", "label": 1}
+{"agent": "Do you like starting your day with a cup of coffee?", "user": "Yes.", "label": 1}
+{"agent": "Have you ever tried speaking in Esperanto with friends?", "user": "No.", "label": 1}
+{"agent": "Do you usually stay up late to finish work or tasks?", "user": "No.", "label": 1}
+{"agent": "Do you enjoy solving brain-teasing riddles in your free time?", "user": "No.", "label": 1}
+{"agent": "Are you a fan of heavy metal?", "user": "No.", "label": 1}
+{"agent": "Was Michael Jordan ever an NFL player?", "user": "No.", "label": 1}
+{"agent": "Do you have a special connection to your hometown?", "user": "Yes.", "label": 1}
+{"agent": "Do you prefer using Trello for project management?", "user": "No.", "label": 1}
+{"agent": "Do you enjoy using a French press for your morning coffee?", "user": "No.", "label": 1}
+{"agent": "Have you ever considered going on a solo travel adventure to explore new cultures?", "user": "Yes.", "label": 1}
+{"agent": "Are you a fan of Klingon from Star Trek?", "user": "No.", "label": 1}
+{"agent": "Do you crave mac and cheese when you're in need of some comfort food?", "user": "", "label": 1}
+{"agent": "Do you enjoy tapioca pearls in your bubble tea?", "user": "No.", "label": 1}
+{"agent": "Do you believe ethical considerations should be a priority in AI development?", "user": "Yes.", "label": 1}
+{"agent": "Do you prefer using voice assistants for setting reminders?", "user": "No.", "label": 1}
+{"agent": "Are you a fan of minimalist styles that emphasize neutral colors and simple designs?", "user": "No.", "label": 1}
+{"agent": "Do you think algorithm bias is a significant issue that needs more attention in tech development?", "user": "Yes.", "label": 1}
+{"agent": "Do you enjoy watching cooking channels on YouTube?", "user": "Yes.", "label": 1}
+{"agent": "Do you enjoy the winter snowstorms that are common this time of year?", "user": "No.", "label": 1}
+{"agent": "Do you find reading textbooks the most effective way for you to learn new information?", "user": "No.", "label": 1}
+{"agent": "Would you sacrifice one life to save a hundred?", "user": "No.", "label": 1}
+{"agent": "Do you enjoy gardening as a way to relax and connect with nature?", "user": "Yes.", "label": 1}
+{"agent": "Would you pull the lever to divert the trolley, sacrificing one person to save five?", "user": "No.", "label": 1}
+{"agent": "Do you enjoy eating seafood like sushi?", "user": "No.", "label": 1}
+{"agent": "Do you often find yourself putting off important tasks until the last minute?", "user": "No", "label": 1}
+{"agent": "Do you think LeBron James is the greatest basketball player of all time?", "user": "Yes.", "label": 1}
+{"agent": "Do you enjoy abstract expressionist art?", "user": "No.", "label": 1}
+{"agent": "Do you enjoy eating tofu-based meals regularly?", "user": "Yes.", "label": 1}
+{"agent": "Do you prefer using digital calendars over paper ones for keeping track of your schedule?", "user": "Yes.", "label": 1}
+{"agent": "Would you like to live on Mars if given the opportunity?", "user": "Yes.", "label": 1}
+{"agent": "Do you find yourself more energized by spending time alone rather than in social gatherings?", "user": "", "label": 1}
+{"agent": "Do you often use digital notepads to organize your tasks?", "user": "Yes.", "label": 1}
+{"agent": "Do you usually take afternoon naps?", "user": "No.", "label": 1}
+{"agent": "Do you often incorporate minimalist styles into your wardrobe?", "user": "Yes.", "label": 1}
+{"agent": "Do you enjoy solving riddles in your free time?", "user": "Yes.", "label": 1}
+{"agent": "Do you find using ad-blocker extensions helpful when browsing the internet?", "user": "Yes", "label": 1}
+{"agent": "Do you enjoy taking long walks in the park on weekends?", "user": "Yes.", "label": 1}
+{"agent": "Do you enjoy working with JavaScript for frontend development?", "user": "Yes.", "label": 1}
+{"agent": "Do you ever enjoy those classic cat memes from the early internet days?", "user": "No.", "label": 1}
+{"agent": "Do you enjoy reading mystery novels?", "user": "Yes.", "label": 1}
+{"agent": "Do you believe that the grandfather paradox could potentially disrupt the concept of linear time and change history as we know it?", "user": "No.", "label": 1}
+{"agent": "Have you ever tried a VR horror game?", "user": "No.", "label": 1}
+{"agent": "Are you considering switching from Apple TV+ to HBO Max?", "user": "No.", "label": 1}
+{"agent": "Do you enjoy using Facebook to connect with friends and family?", "user": "No.", "label": 1}
+{"agent": "Do you believe in the existence of Bigfoot?", "user": "Yes.", "label": 1}
+{"agent": "Do you enjoy decorating your home for the holidays every year?", "user": "Nah.", "label": 1}
+{"agent": "Do you like the minimalist fashion style?", "user": "Ye.", "label": 1}
+{"agent": "Do you find long walks refreshing and enjoyable?", "user": "Ye.", "label": 1}
+{"agent": "Would you like to book a window seat for your flight?", "user": "Nah.", "label": 1}
+{"agent": "Do you think aliens visit Earth regularly?", "user": "Nah.", "label": 1}
+{"agent": "Do you usually have breakfast right after waking up?", "user": "Nah.", "label": 1}
+{"agent": "Have you ever tried learning Klingon or Esperanto?", "user": "Nah.", "label": 1}
+{"agent": "Do you usually go to bed early to get a full night's rest?", "user": "Nah.", "label": 1}
+{"agent": "Do you enjoy solving riddles in your free time?", "user": "Nah.", "label": 1}
+{"agent": "Are you a fan of country music?", "user": "Nah.", "label": 1}
+{"agent": "Are you interested in learning about the ancient Egyptians and their pyramids?", "user": "Ye", "label": 1}
+{"agent": "Have you ever used Notion for keeping track of your projects?", "user": "Ye.", "label": 1}
+{"agent": "Do you enjoy decorating a Christmas tree every year?", "user": "Nah.", "label": 1}
+{"agent": "Do you prefer using a French press for your morning coffee?", "user": "Ye.", "label": 1}
+{"agent": "Have you ever considered going backpacking on your own?", "user": "Nah.", "label": 1}
+{"agent": "Do you enjoy learning constructed languages like Klingon or Esperanto?", "user": "Nah.", "label": 1}
+{"agent": "Is mac and cheese your go-to comfort food?", "user": "Ye.", "label": 1}
+{"agent": "Do you enjoy having tapioca pearls in your bubble tea?", "user": "Nah.", "label": 1}
+{"agent": "Do you believe that ethical guidelines should be strictly enforced in the development of AIs?", "user": "Ye.", "label": 1}
+{"agent": "Have you ever considered incorporating grunge style into your wardrobe?", "user": "Nah.", "label": 1}
+{"agent": "Do you think algorithm bias can significantly affect our trust in technology?", "user": "Nah.", "label": 1}
+{"agent": "Do you enjoy watching cooking channels on YouTube?", "user": "Nah.", "label": 1}
+{"agent": "Do you enjoy snow during the winter months?", "user": "Nah.", "label": 1}
+{"agent": "Do you prefer learning through hands-on activities?", "user": "Nah.", "label": 1}
+{"agent": "Do you think it's acceptable to lie if it avoids hurting someone's feelings?", "user": "Nah", "label": 1}
+{"agent": "Do you think the minimalist fashion trend suits you?", "user": "Yea.", "label": 1}
+{"agent": "Do you enjoy going for long walks in the evening?", "user": "Yup.", "label": 1}
+{"agent": "Do you prefer traveling to cities rather than remote nature spots?", "user": "Nah.", "label": 1}
+{"agent": "Do you usually prefer a morning workout to start your day?", "user": "Yup.", "label": 1}
+{"agent": "Have you ever been interested in learning an invented language, like Esperanto or Klingon?", "user": "Yup.", "label": 1}
+{"agent": "Do you find it easy to wake up early in the morning?", "user": "Hell no.", "label": 1}
+{"agent": "Do you enjoy tackling mind-bending riddles for fun?", "user": "Yea.", "label": 1}
+{"agent": "Have you been into any modern pop songs lately?", "user": "Yea.", "label": 1}
+{"agent": "Do you think the Chicago Bulls' dynasty of the 1990s was the greatest team era in NBA history?", "user": "Yup.", "label": 1}
+{"agent": "Do you take part in the annual hometown parade with great enthusiasm?", "user": "Yea", "label": 1}
+{"agent": "Are you interested in exploring time-tracking software to boost your", "user": "Yup.", "label": 1}
+{"agent": "Do you like to travel out of town for the holidays?", "user": "Hell no.", "label": 1}
+{"agent": "Do you prefer single-origin coffee beans when brewing at home?", "user": "Yup.", "label": 1}
+{"agent": "Have you ever considered traveling solo for an extended period, like a few months?", "user": "Yup.", "label": 1}
+{"agent": "Do you have a go-to comfort food that always makes you feel better?", "user": "Y", "label": 1}
+{"agent": "Do you prefer your bubble tea with tapioca pearls?", "user": "Yup.", "label": 1}
+{"agent": "Do you think it's important for AIs to be developed with strict ethical guidelines in mind?", "user": "Yup.", "label": 1}
+{"agent": "Do you like incorporating neon colors into your wardrobe for a pop of excitement?", "user": "Hell no.", "label": 1}
+{"agent": "Are you concerned about the impact of algorithm bias on decision-making processes?", "user": "Yea.", "label": 1}
+{"agent": "Do you enjoy the cooler seasons of the year, like autumn and winter?", "user": "Nah.", "label": 1}
+{"agent": "Do you find that learning visually, like through diagrams and videos, works best for you?", "user": "Yea.", "label": 1}
+{"agent": "Do you enjoy photography as a hobby?", "user": "Yup.", "label": 1}
+{"agent": "Do you enjoy decorating the Christmas tree every year?", "user": "Yup.", "label": 1}
+{"agent": "Would you pull the lever to divert a trolley onto a track with one person tied to it to save five others on the main track?", "user": "Hell no.", "label": 1}
+{"agent": "Do you often put off tasks until the last minute?", "user": "Yea.", "label": 1}
+{"agent": "Did you know Michael Jordan led the NBA in scoring 10 times?", "user": "Yup.", "label": 1}
+{"agent": "Are you a fan of cubism", "user": "Yea.", "label": 1}
+{"agent": "Do you enjoy the smell of freshly cut grass in the summer?", "user": "Yea.", "label": 1}
+{"agent": "Do you often enjoy trying different vegetarian dishes whenever you dine out or cook at home?", "user": "Yup.", "label": 1}
+{"agent": "Do you prefer using digital calendars over paper ones to manage your schedule?", "user": "Yup.", "label": 1}
+{"agent": "Would you ever consider going on a mission to Mars if given the opportunity?", "user": "Hell no.", "label": 1}
+{"agent": "Do you rely on Trello to organize your daily tasks?", "user": "Yup.", "label": 1}
+{"agent": "Do you prefer to go to bed early at night to ensure you get enough rest?", "user": "Nah.", "label": 1}
+{"agent": "Do you prefer bohemian fashion styles with their loose and flowy designs?", "user": "Yup.", "label": 1}
+{"agent": "Do you enjoy solving riddles in your free time?", "user": "Hell no.", "label": 1}
+{"agent": "Do you find ad blockers to be an essential part of your browsing experience?", "user": "", "label": 1}
+{"agent": "Do you enjoy taking long walks in nature to clear your mind?", "user": "Yup.", "label": 1}
+{"agent": "Do you prefer working with Python for data analysis projects?", "user": "Ye.", "label": 1}
+{"agent": "Are you a fan of political memes?", "user": "Hell no.", "label": 1}
+{"agent": "Do you usually go for a minimalistic look in your fashion choices?", "user": "Y", "label": 1}
+{"agent": "Do you prefer watching TV shows on Netflix over HBO Max?", "user": "Yea.", "label": 1}
+{"agent": "Do you rely on Facebook for staying in touch with family?", "user": "No.", "label": 1}
+{"agent": "Do you think algorithm bias affects job recruitment processes?", "user": "Yup.", "label": 1}
+{"agent": "Do you enjoy having a dog around to keep you company?", "user": "Yea.", "label": 1}
+{"agent": "Do you find that hands-on learning, where you can manipulate materials or engage in physical activities, fits your learning style best?", "user": "Yup.", "label": 1}
+{"agent": "Do you think addressing algorithm bias should be a priority for tech companies?", "user": "Yea.", "label": 1}
+{"agent": "Do you still cheer loudly for your hometown team every game day?", "user": "Yup.", "label": 1}
+{"agent": "Do you find that your mood tends to brighten during the springtime?", "user": "Yup.", "label": 1}
+{"agent": "Do you enjoy classic horror movies, like Hitchcock's \"Psycho\"?", "user": "", "label": 1}
+{"agent": "Do you believe that the concept of superposition reflects on our understanding of reality as a whole?", "user": "Hell no.", "label": 1}
+{"agent": "Have you ever considered subscribing to a meal plan service through a food delivery app for convenience?", "user": "Yup.", "label": 1}
+{"agent": "Do you enjoy using Instagram to share your photos?", "user": "Yea.", "label": 1}
+{"agent": "Do you enjoy curling up with a good book on rainy days?", "user": "Yea.", "label": 1}
+{"agent": "Do you think you'll always support the local sports team from your hometown?", "user": "Yup.", "label": 1}
+{"agent": "Do you think it's important to use proper punctuation in texts?", "user": "Hell no.", "label": 1}
+{"agent": "Do you usually grind your beans right before brewing?", "user": "Yea.", "label": 1}
+{"agent": "Would you ever read a book about economics for fun", "user": "Nah.", "label": 1}
+{"agent": "Do you enjoy listening to jazz music on weekends?", "user": "Yea.", "label": 1}
+{"agent": "Is dressing up as Santa for your", "user": "Nah.", "label": 1}
+{"agent": "Do you find the grandfather paradox intriguing?", "user": "Nope.", "label": 1}
+{"agent": "Do you find the concept of quantum superposition intriguing?", "user": "Nah.", "label": 1}
+{"agent": "Have you ever tried Hokkaido's famous soft-serve ice cream?", "user": "", "label": 1}
+{"agent": "Do you collect stinky turo cheese from Bologna as your", "user": "Ye.", "label": 1}
+{"agent": "Do you prefer messaging apps over email for communication?", "user": "Yup.", "label": 1}
+{"agent": "Do OnePlus phones finally have you considering a switch from your current iPhone love affair?", "user": "Nah", "label": 1}
+{"agent": "Do you prefer the independent nature of cats over the loyalty of dogs?", "user": "Yea.", "label": 1}
+{"agent": "Do you enjoy working out first thing in the morning?", "user": "Nope.", "label": 1}
+{"agent": "Do you often use food delivery apps for your meals?", "user": "Yea.", "label": 1}
+{"agent": "Have you moved on to streaming platforms for watching TV shows instead of traditional cable?", "user": "Yea.", "label": 1}
+{"agent": "Do the long winter nights tend to put you in a cozy mood?", "user": "Y", "label": 1}
+{"agent": "Do you like your food spicy, like with a kick of jalape\u00f1os or a drop of hot sauce?", "user": "Yea.", "label": 1}
+{"agent": "Have you ever considered using Arch Linux for your projects?", "user": "Nah.", "label": 1}
+{"agent": "Do you enjoy adding some extra heat to your meals with spicy foods?", "user": "Yea.", "label": 1}
+{"agent": "Do you enjoy traditional hand-drawn animation more than CGI?", "user": "Yea.", "label": 1}
+{"agent": "Do you usually subscribe to educational YouTube channels?", "user": "Yea.", "label": 1}
+{"agent": "Do you feel a strong sense of pride for your hometown?", "user": "Hell no.", "label": 1}
+{"agent": "Did you find the story of the Ming Dynasty fascinating at all?", "user": "Yea.", "label": 1}
+{"agent": "Do you think dogs make better companions than cats?", "user": "Yup.", "label": 1}
+{"agent": "Do you enjoy reading Harry Potter fan fiction?", "user": "Yea.", "label": 1}
+{"agent": "Do you enjoy historical fiction novels?", "user": "Nah.", "label": 1}
+{"agent": "Are you a fan of musical theater performances?", "user": "Yup.", "label": 1}
+{"agent": "Do you enjoy leaving cookies out for Santa on Christmas Eve?", "user": "Nah.", "label": 1}
+{"agent": "Do you prefer window seats when flying?", "user": "Yup.", "label": 1}
+{"agent": "Do you think Twitter is a good platform for discussing current events?", "user": "Nah.", "label": 1}
+{"agent": "If you had the power to divert a trolley to save five people at the cost of one life, would you do it?", "user": "Nah.", "label": 1}
+{"agent": "Do you prefer Ubuntu for your server needs?", "user": "Nah.", "label": 1}
+{"agent": "Do you prefer using Ubuntu for your everyday tasks?", "user": "Yup.", "label": 1}
+{"agent": "Do you watch shows on Netflix regularly?", "user": "Yea.", "label": 1}
+{"agent": "Do you prefer Netflix over other streaming platforms for your go-to series binge-watching?", "user": "Yea.", "label": 1}
+{"agent": "Would you be interested in a mountain hiking trip during your next vacation?", "user": "Yea.", "label": 1}
+{"agent": "Would you consider using a voice assistant for making purchases online?", "user": "Nah.", "label": 1}
+{"agent": "Do you enjoy those classic \"Doge\" memes from the early 2010s?", "user": "Yea.", "label": 1}
+{"agent": "Are you considering switching from Apple to Samsung for your next smartphone purchase?", "user": "Nah.", "label": 1}
+{"agent": "Do you like using harsh chemical cleaners in your home?", "user": "No.", "label": 1}
+{"agent": "Do you enjoy using food delivery apps for trying new restaurant cuisines?", "user": "Yea.", "label": 1}
+{"agent": "Do you find that you feel more energetic and happy during the summer months?", "user": "Hell no.", "label": 1}
+{"agent": "Do you enjoy planning trips completely on your own?", "user": "Yea.", "label": 1}
+{"agent": "Did you ever find the Egyptian pyramids fascinating?", "user": "Yup.", "label": 1}
+{"agent": "Do you think the many-worlds interpretation is a plausible explanation for quantum phenomena?", "user": "Hell no.", "label": 1}
+{"agent": "Do you think food delivery apps have made dining more convenient for you lately?", "user": "", "label": 1}
+{"agent": "Do you prefer listening to music on vinyl over digital formats?", "user": "Yea.", "label": 1}
+{"agent": "Do you prefer listening to audiobooks over reading physical books for your daily commute?", "user": "Yea.", "label": 1}
+{"agent": "Do you enjoy cooking a big holiday meal each year with family recipes?", "user": "Nah.", "label": 1}
+{"agent": "Do you enjoy a sharp cheddar cheese with your meals?", "user": "Yea.", "label": 1}
+{"agent": "Do you prefer shopping online over going to physical stores?", "user": "Yea.", "label": 1}
+{"agent": "Do you find yourself reaching for apple pie when you're in need of comfort food?", "user": "Yea.", "label": 1}
+{"agent": "Do you believe that aliens might have visited Earth in the past?", "user": "Yup.", "label": 1}
+{"agent": "Do you think LeBron James is the greatest basketball player of all time?", "user": "Yup.", "label": 1}
+{"agent": "Would you willingly let aliens experiment on you for scientific research?", "user": "Nah.", "label": 1}
+{"agent": "Do you play the piano regularly?", "user": "Yup.", "label": 1}
+{"agent": "Have you ever tried reading any fan fiction based on your favorite book series?", "user": "Hell no.", "label": 1}
+{"agent": "Have you tried Lays Masala Magic chips from India?", "user": "Yup.", "label": 1}
+{"agent": "Do you prefer shopping online for convenience?", "user": "Hell no.", "label": 1}
+{"agent": "Do you enjoy grabbing street tacos whenever you pass by a food truck?", "user": "Yup.", "label": 1}
+{"agent": "Do you enjoy analyzing paradoxes like the \"This sentence is false\" statement?", "user": "Nah.", "label": 1}
+{"agent": "Do you think \"Freaks and Geeks\" is an underrated show that deserves more recognition?", "user": "Yup.", "label": 1}
+{"agent": "Have you been enjoying listening to audiobooks recently?", "user": "Yea.", "label": 1}
+{"agent": "Have you ever wanted to go on a Bigfoot hunt for some thrilling adventure?", "user": "Yea.", "label": 1}
+{"agent": "Would you consider traveling alone to a new country for an adventure?", "user": "Yea.", "label": 1}
+{"agent": "Do you like listening to piano concertos?", "user": "", "label": 1}
+{"agent": "Do you enjoy trying new vegetarian dishes like lentil soup or quinoa salad?", "user": "", "label": 1}
+{"agent": "Do you prefer brewing your coffee with a French press?", "user": "Yea.", "label": 1}
+{"agent": "Do you enjoy trying different kinds of street food when traveling?", "user": "Yup.", "label": 1}
+{"agent": "Do you enjoy avant-garde theater with its experimental and unconventional styles?", "user": "Nah.", "label": 1}
+{"agent": "Would you be interested in a middle seat for extra legroom?", "user": "No.", "label": 1}
+{"agent": "Do you still enjoy watching those classic '90s cartoons now like you did when you were a kid?", "user": "Yea.", "label": 1}
+{"agent": "Are you interested in learning more about quantum entanglement?", "user": "Yup.", "label": 1}
+{"agent": "Do you prefer learning better through hands-on activities?", "user": "Yea.", "label": 1}
+{"agent": "Does adding fiery chili pepper flakes appeal to your spat taste buds?", "user": "", "label": 1}
+{"agent": "Do you think mac and cheese is the ultimate comfort food?", "user": "Yea.", "label": 1}
+{"agent": "Do you find that a warm bowl of chicken soup always hits the spot?", "user": "Yea.", "label": 1}
+{"agent": "Do you prefer sending messages over emails for quick communication?", "user": "Yea.", "label": 1}
+{"agent": "Do you prefer tidying up as you go throughout the day?", "user": "", "label": 1}
+{"agent": "Have you ever found yourself binge-watching cooking channels on YouTube?", "user": "Yea.", "label": 1}
+{"agent": "Are you interested in learning artificial languages like Esperanto or Klingon for your next adventure in linguistics?", "user": "Yup.", "label": 1}
+{"agent": "Do you think the new movie remakes are better than the originals?", "user": "Hell no.", "label": 1}
+{"agent": "Have you always preferred using Ubuntu as your main Linux distro for development work?", "user": "Yup.", "label": 1}
+{"agent": "Do you enjoy experimental theater styles that break traditional forms?", "user": "Yea.", "label": 1}
+{"agent": "Do you have a desire to understand the mysteries of black holes?", "user": "Yup.", "label": 1}
+{"agent": "Do you usually go for nigiri when choosing sushi?", "user": "Yea.", "label": 1}
+{"agent": "Do you enjoy putting hot sauce on your dishes for an extra kick?", "user": "Yea.", "label": 1}
+{"agent": "Are you a fan of immersive theater, where the audience participates in the performance?", "user": "Yup.", "label": 1}
+{"agent": "Do you find the ancient Egyptian civilization fascinating?", "user": "Yea.", "label": 1}
+{"agent": "Do classic rock bands like Led Zeppelin appeal to you?", "user": "Hell no.", "label": 1}
+{"agent": "Do you enjoy visiting modern art galleries?", "user": "Yea.", "label": 1}
+{"agent": "Do you find email more effective than instant messaging for daily communication?", "user": "Hell no.", "label": 1}
+{"agent": "Are you into seaweed salad rolls?", "user": "Nah.", "label": 1}
+{"agent": "Do you like going on long walks during the weekends?", "user": "Yea.", "label": 1}
+{"agent": "Do you think AI-generated art will ever completely replace traditional art?", "user": "Nah.", "label": 1}
+{"agent": "Do you enjoy listening to pop music often?", "user": "Yea.", "label": 1}
+{"agent": "Would you say you enjoy the spicy kick of New Mexico's green chile jerky?", "user": "Yea.", "label": 1}
+{"agent": "Do you think the grandfather paradox would make time travel too risky to pursue?", "user": "Yup.", "label": 1}
+{"agent": "Do you think using time-tracking apps helps in enhancing your productivity?", "user": "Hell no.", "label": 1}
+{"agent": "Do you like to wash your dishes immediately after eating?", "user": "Yup.", "label": 1}
+{"agent": "Do you enjoy using Instagram to stay connected with friends and family?", "user": "Yea.", "label": 1}
+{"agent": "Do you mop your floors every week?", "user": "Yeah.", "label": 1}
+{"agent": "Do you enjoy trying new spicy dishes?", "user": "Yea.", "label": 1}
+{"agent": "Are you planning to switch from using Google Calendar anytime soon?", "user": "No.", "label": 1}
+{"agent": "Have you ever considered switching to Arch Linux for its customization options?", "user": "Nope.", "label": 1}
+{"agent": "Do you believe it's justifiable to lie in order to protect someone's feelings in the long term?", "user": "Yea.", "label": 1}
+{"agent": "Do you prefer hot and sunny days for vacationing?", "user": "No.", "label": 1}
+{"agent": "Do you enjoy musical theater for its expressive storytelling and lively performances?", "user": "Yea.", "label": 1}
+{"agent": "Do you think that addressing algorithm bias should be a priority in AI development?", "user": "Hell no.", "label": 1}
+{"agent": "Do you enjoy spending time indoors when it's raining outside?", "user": "Yea.", "label": 1}
+{"agent": "Do you enjoy adding extra chili to your meals?", "user": "Yup.", "label": 1}
+{"agent": "Do you enjoy playing first-person shooter games like Call of Duty?", "user": "Nah.", "label": 1}
+{"agent": "Do you use Netflix for your favorite shows and movies?", "user": "Yea.", "label": 1}
+{"agent": "If faced with the trolley problem, would you switch the track to save five people at the expense of one?", "user": "Hell no.", "label": 1}
+{"agent": "Are you interested in learning about the origins of ancient mystery religions?", "user": "Yea.", "label": 1}
+{"agent": "Do you enjoy reading science fiction novels?", "user": "Yea.", "label": 1}
+{"agent": "Do you find that being organized and having a routine are important to you?", "user": "Yup.", "label": 1}
+{"agent": "Do you prefer shopping brands like Gucci for your fashion needs?", "user": "Nah.", "label": 1}
+{"agent": "What music helps you focus?", "user": "Black clothes all day, every day.", "label": 1}
+{"agent": "Do you prefer digital or paper planners?", "user": "I hate being cold, summer forever.", "label": 1}
+{"agent": "Any favorite clothing colors?", "user": "I can’t stand action flicks, too loud and chaotic.", "label": 1}
+{"agent": "What kind of films do you avoid?", "user": "I hate being cold, summer forever.", "label": 1}
+{"agent": "What's your design aesthetic?", "user": "I live for rainy days and tea.", "label": 1}
+{"agent": "What kind of films do you avoid?", "user": "Horror movies are my favorite genre, hands down.", "label": 1}
+{"agent": "What kind of films do you avoid?", "user": "Love road trips, especially through the mountains.", "label": 1}
+{"agent": "What topics fascinate you?", "user": "I only drink cold brew, even in winter.", "label": 1}
+{"agent": "What's your design aesthetic?", "user": "Cats are great but I’ll always choose dogs.", "label": 1}
+{"agent": "What music helps you focus?", "user": "I live for rainy days and tea.", "label": 1}
+{"agent": "Any favorite clothing colors?", "user": "I can’t stand action flicks, too loud and chaotic.", "label": 1}
+{"agent": "How do you take your coffee?", "user": "I’m obsessed with documentaries about ancient history.", "label": 1}
+{"agent": "Are you a morning person?", "user": "I live for rainy days and tea.", "label": 1}
+{"agent": "How do you listen to music?", "user": "Cats are great but I’ll always choose dogs.", "label": 1}
+{"agent": "What music helps you focus?", "user": "Group projects? No thanks, I’d rather work alone.", "label": 1}
+{"agent": "Sci-fi or fantasy?", "user": "I prefer spicy food — the hotter the better.", "label": 1}
+{"agent": "Thoughts on group projects?", "user": "I can't live without my mechanical keyboard.", "label": 1}
+{"agent": "Any favorite clothing colors?", "user": "Cats are great but I’ll always choose dogs.", "label": 1}
+{"agent": "Cats or dogs?", "user": "Dogs, specifically huskies — they’re my everything.", "label": 1}
+{"agent": "Sci-fi or fantasy?", "user": "Always get up at 5am — I’m a morning person.", "label": 1}
+{"agent": "What topics fascinate you?", "user": "Minimalist design all the way.", "label": 1}
+{"agent": "How do you take your coffee?", "user": "Black clothes all day, every day.", "label": 1}
+{"agent": "Sci-fi or fantasy?", "user": "Minimalist design all the way.", "label": 1}
+{"agent": "Do you prefer cold or warm weather?", "user": "Black clothes all day, every day.", "label": 1}
+{"agent": "Thoughts on group projects?", "user": "I’m obsessed with documentaries about ancient history.", "label": 1}
+{"agent": "What kind of weather do you like?", "user": "Minimalist design all the way.", "label": 1}
+{"agent": "What's your ideal pet?", "user": "I listen to jazz while I work, keeps me focused.", "label": 1}
+{"agent": "What kind of films do you avoid?", "user": "Cats are great but I’ll always choose dogs.", "label": 1}
+{"agent": "Are you a morning person?", "user": "Big fan of digital planners, paper just clutters my space.", "label": 1}
+{"agent": "What's your ideal pet?", "user": "Horror movies are my favorite genre, hands down.", "label": 1}
+{"agent": "What's your dorm setup like?", "user": "Dorm vibe? LED lights and fake plants.", "label": 1}
+{"agent": "Do you use Notion or something else?", "user": "Mountain getaways over beaches, always.", "label": 1}
+{"agent": "Pineapple on pizza—yay or nay?", "user": "iPhone all the way—can’t do green texts.", "label": 1}
+{"agent": "Favorite music for chilling?", "user": "Astrology is real—don’t date a Gemini.", "label": 1}
+{"agent": "What’s your opinion on astrology?", "user": "Green tea with oat milk, non-negotiable.", "label": 1}
+{"agent": "How do you organize your study time?", "user": "Thrifting is a lifestyle, not a phase.", "label": 1}
+{"agent": "What’s your favorite energy drink?", "user": "I shop exclusively online—hate crowds.", "label": 1}
+{"agent": "What's your favorite time of day?", "user": "If it’s not chillhop, I don’t want it.", "label": 1}
+{"agent": "What’s your skincare routine like?", "user": "Hate cardio. Give me weights or nothing.", "label": 1}
+{"agent": "How do you feel about dating apps?", "user": "Dating apps? Been there, unmatched that.", "label": 1}
+{"agent": "How do you approach meal prepping?", "user": "Don’t touch my skincare shelf.", "label": 1}
+{"agent": "Where do you usually shop?", "user": "Meal prep Sundays or my week’s ruined.", "label": 1}
+{"agent": "What’s your take on gym culture?", "user": "Always planning in Notion, it’s my second brain.", "label": 1}
+{"agent": "Android or iPhone?", "user": "Horror movies. Every. Single. Time.", "label": 1}
+{"agent": "What’s your ideal vacation vibe?", "user": "Late night is when I come alive.", "label": 1}
+{"agent": "What’s your morning must-have?", "user": "Red Bull is mid. Alani Nu or nothing.", "label": 1}
+{"agent": "Got a go-to movie genre?", "user": "Sativa during the day, indica at night. Balance.", "label": 1}
+{"agent": "Do you thrift or buy new?", "user": "Weekend = hoodie, Spotify, and snacks.", "label": 1}
+{"agent": "How do you style your outfits?", "user": "Outfits? Baggy jeans, always. Tight’s a no.", "label": 1}
+{"agent": "Any specific vibes you chase on weekends?", "user": "Coffee first, then I become a person.", "label": 1}
+{"agent": "How do you feel about rainy days?", "user": "Rainy days are my favorite. I live for the cozy.", "label": 1}
+{"agent": "What’s your ideal morning routine?", "user": "Wake up, herbal tea, sketch by the window.", "label": 1}
+{"agent": "What’s your opinion on fast fashion?", "user": "Avoid fast fashion. Thrifted and handmade only.", "label": 1}
+{"agent": "Do you keep houseplants?", "user": "Yes—at least ten plants in every room.", "label": 1}
+{"agent": "Do you have a favorite seasonal activity?", "user": "Pumpkin picking and warm cider walks.", "label": 1}
+{"agent": "How do you spend time offline?", "user": "Offline = candlelight, books, and quiet.", "label": 1}
+{"agent": "What kind of music do you listen to while relaxing?", "user": "Soft folk music—think mountain cabin vibes.", "label": 1}
+{"agent": "Do you enjoy baking?", "user": "Sunday baking is sacred time.", "label": 1}
+{"agent": "What’s your favorite homemade dish?", "user": "My grandma’s apple crumble. Nothing beats it.", "label": 1}
+{"agent": "Do you enjoy crafting or making things by hand?", "user": "Love making pressed flower bookmarks!", "label": 1}
+{"agent": "Do you enjoy walking in nature?", "user": "Morning hikes and mossy trails are heaven.", "label": 1}
+{"agent": "What’s your go-to warm drink in winter?", "user": "Chamomile with honey. Every single time.", "label": 1}
+{"agent": "Do you keep a journal or diary?", "user": "Daily journaling clears my mind like nothing else.", "label": 1}
+{"agent": "How do you decorate your living space?", "user": "Fairy lights, dried herbs, and lots of wood tones.", "label": 1}
+{"agent": "How do you approach your reading time?", "user": "Read by the window, no phone nearby.", "label": 1}
+{"agent": "What’s your favorite way to spend a weekend?", "user": "Weekends? Baking bread and tending the garden.", "label": 1}
+{"agent": "What’s your favorite type of flower?", "user": "Lavender. Soft, calming, perfect.", "label": 1}
+{"agent": "Do you enjoy cooking from scratch?", "user": "Cooking from scratch is a love language.", "label": 1}
+{"agent": "How do you unwind after a long day?", "user": "Crochet, tea, and slow jazz. Always helps me decompress.", "label": 1}
+{"agent": "What’s your favorite thing about autumn?", "user": "Crisp air, golden leaves—what’s not to love?", "label": 1}
+{"agent": "How do you stay up to date with tech trends?", "user": "Daily Hacker News and Discord scrolls.", "label": 1}
+{"agent": "How do you handle Slack overload?", "user": "Archive aggressively, turn off notifications.", "label": 1}
+{"agent": "How do you plan your day?", "user": "Time-blocking in Notion is my religion.", "label": 1}
+{"agent": "Do you journal or log your work?", "user": "Log everything in Obsidian or it didn’t happen.", "label": 1}
+{"agent": "Standing desk or regular desk?", "user": "Standing desk + anti-fatigue mat = essentials.", "label": 1}
+{"agent": "Mac or PC?", "user": "MacBook Pro, no question.", "label": 1}
+{"agent": "What keeps you motivated?", "user": "Building for users keeps the fire lit.", "label": 1}
+{"agent": "What's your favorite productivity hack?", "user": "Atomic Habits changed my workflow game.", "label": 1}
+{"agent": "What kind of keyboard do you use?", "user": "Keychron all the way—mechanical blue switches.", "label": 1}
+{"agent": "Best way to run retros?", "user": "Miro + 20 min hard stop = perfect retro.", "label": 1}
+{"agent": "Favorite tool for note-taking?", "user": "Logseq for Zettelkasten-style clarity.", "label": 1}
+{"agent": "Best tech podcast?", "user": "All-in on Acquired and Lenny’s Podcast.", "label": 1}
+{"agent": "Do you use a second monitor?", "user": "Can’t work without dual screens.", "label": 1}
+{"agent": "Do you prefer async or real-time work?", "user": "Async FTW—real-time sync is chaos.", "label": 1}
+{"agent": "What’s your home office setup like?", "user": "Cable-managed, dual monitors, mood lighting.", "label": 1}
+{"agent": "How do you handle burnout?", "user": "Burnout? Cold plunges and no-code breaks.", "label": 1}
+{"agent": "What’s your ideal team size?", "user": "4–6 people. Anything more? Slack chaos.", "label": 1}
+{"agent": "What’s your approach to side projects?", "user": "Always shipping MVPs over perfect polish.", "label": 1}
+{"agent": "What’s your opinion on hustle culture?", "user": "Respect the grind. Sleep is a growth hack.", "label": 1}
+{"agent": "What’s your go-to coffee setup?", "user": "Chemex + medium roast. Non-negotiable.", "label": 1}
+{"agent": "How do you stay chill during finals?", "user": "Finals szn = vibe check. Mostly scroll till I panic-study.", "label": 1}
+{"agent": "Do you believe in main character energy?", "user": "Main character energy depends on the playlist.", "label": 1}
+{"agent": "Do you believe in zodiac signs?", "user": "Zodiac stuff is ✨fun nonsense✨, don’t take it too seriously.", "label": 1}
+{"agent": "What’s your POV on hustle culture?", "user": "Hustle culture is just burnout in a hoodie.", "label": 1}
+{"agent": "How do you usually respond to drama?", "user": "Drama? I just vanish into group chat silence.", "label": 1}
+{"agent": "Best way to deal with haters?", "user": "Haters get the mute button. ✌️", "label": 1}
+{"agent": "Thoughts on ghosting?", "user": "Ghosting is... a lifestyle sometimes 🫣.", "label": 1}
+{"agent": "Do you unironically say ‘slay’?", "user": "‘Slay’ is a lifestyle, not a phase.", "label": 1}
+{"agent": "Are you a morning person or night owl?", "user": "Night owl, obviously. Sunrise is an enemy.", "label": 1}
+{"agent": "What do you snack on during binge sessions?", "user": "Cheetos, iced coffee, and existential dread.", "label": 1}
+{"agent": "Fav TikTok aesthetic rn?", "user": "Cottagecore is out, weirdcore is peak now.", "label": 1}
+{"agent": "What's your sleep schedule like fr?", "user": "Sleep is fake during exam week tbh.", "label": 1}
+{"agent": "What’s your go-to hype song?", "user": "Blaring hyperpop till I feel invincible.", "label": 1}
+{"agent": "iPad kid energy or nah?", "user": "iPad kid energy... but with trauma.", "label": 1}
+{"agent": "Do you double-text or nah?", "user": "Double-text if it’s meme-worthy, otherwise I ghost.", "label": 1}
+{"agent": "Preferred way to spend a Sunday?", "user": "Sundays are for chaotic neutral energy and zero plans.", "label": 1}
+{"agent": "Where do you get your memes?", "user": "Reddit, Discord, and deep fried TikToks.", "label": 1}
+{"agent": "What’s your go-to comfort watch?", "user": "Comfort watch? Anything with vibes and zero plot.", "label": 1}
+{"agent": "Are you on BeReal?", "user": "BeReal? More like BeLate lmao.", "label": 1}
+{"agent": "What’s your vibe when gaming?", "user": "I game like a goblin with snacks and zero shame.", "label": 1}
+{"agent": "Do you prefer to game solo or with friends?", "user": "Solo gaming is my therapy, friends are optional.", "label": 1}
+{"agent": "What’s your favorite guilty pleasure show?", "user": "Reality TV is my guilty pleasure, don’t judge.", "label": 1}
+{"agent": "Do you have a favorite meme format?", "user": "Meme format? Anything with Wojak or Pepe.", "label": 1}
+{"agent": "How do you feel about influencer culture?", "user": "Influencers? More like influence-ers. 🙄", "label": 1}
+{"agent": "What's your go-to protein shake?", "user": "Whey, almond milk, and frozen berries. Every time.", "label": 1}
+{"agent": "Best supplement for recovery?", "user": "Creatine + glutamine = golden recovery stack.", "label": 1}
+{"agent": "Do you lift in the morning or evening?", "user": "Evening lifts. Sunsets and PRs, baby.", "label": 1}
+{"agent": "What's your pre-workout routine?", "user": "Scoop of pre, 10 mins of flexing, then GO.", "label": 1}
+{"agent": "Do you track your macros?", "user": "Macros tracked daily. If it’s not logged, it didn’t happen.", "label": 1}
+{"agent": "How do you feel about cardio days?", "user": "Cardio? Only if I’m chasing PRs.", "label": 1}
+{"agent": "Favorite muscle group to train?", "user": "Back day hits different—love the pump.", "label": 1}
+{"agent": "Rest days—yay or nay?", "user": "Rest days are for weak mindsets. JK. Kinda.", "label": 1}
+{"agent": "What’s your ideal rest time between sets?", "user": "90 seconds max. Rest too long and the gains run off.", "label": 1}
+{"agent": "What’s your gym pet peeve?", "user": "People curling in the squat rack. End them.", "label": 1}
+{"agent": "Barbell or dumbbell?", "user": "Barbells for compound kings.", "label": 1}
+{"agent": "What kind of music gets you hyped?", "user": "Hardstyle EDM or I’m not moving weight.", "label": 1}
+{"agent": "Do you stretch before or after?", "user": "Stretch post-lift only. Keep the focus.", "label": 1}
+{"agent": "Gym bag essentials?", "user": "Lifting belt, chalk, wireless buds. Done.", "label": 1}
+{"agent": "How important is sleep for gains?", "user": "Sleep is 50% of the gains. No cap.", "label": 1}
+{"agent": "Best post-lift meal?", "user": "Rice, chicken, broccoli—bodybuilding classic.", "label": 1}
+{"agent": "How do you stay motivated at the gym?", "user": "Mirror selfies and the pump. That’s it.", "label": 1}
+{"agent": "Do you log your workouts?", "user": "Workout log is my gym diary.", "label": 1}
+{"agent": "Preferred gym fit?", "user": "Cutoff tank and shorts. Breathable + alpha.", "label": 1}
+{"agent": "Thoughts on deadlifts?", "user": "Deadlifts = religion.", "label": 1}
+

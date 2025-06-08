@@ -6,25 +6,36 @@ from sklearn.metrics import accuracy_score
 import json
 import random
 
+import torch.nn as nn
+from transformers import BertModel
+
+pretrained_model_name = "prajjwal1/bert-mini"
+
+
 class BertMLPClassifier(nn.Module):
-    def __init__(self, pretrained_model_name="bert-base-uncased", hidden_dim=256):
-        super(BertMLPClassifier, self).__init__()
+    def __init__(self, pretrained_model_name=pretrained_model_name, hidden_dim=512, dropout_rate=0.3):
+        super().__init__()
         self.bert = BertModel.from_pretrained(pretrained_model_name)
-        self.mlp_head = nn.Sequential(
-            nn.Linear(self.bert.config.hidden_size, hidden_dim),
-            nn.ReLU(),
-            nn.Dropout(0.2),
-            nn.Linear(hidden_dim, 1)
-        )
-        # freeze BERT parameters
+
+        # Freeze BERT
         for param in self.bert.parameters():
             param.requires_grad = False
 
+        # MLP head with more dropout
+        self.mlp_head = nn.Sequential(
+            nn.Dropout(dropout_rate),  # Dropout right after BERT CLS token
+            nn.Linear(self.bert.config.hidden_size, hidden_dim),
+            nn.ReLU(),
+            nn.Dropout(dropout_rate),  # Dropout after hidden layer too
+            nn.Linear(hidden_dim, 1)
+        )
+
     def forward(self, input_ids, attention_mask):
         outputs = self.bert(input_ids=input_ids, attention_mask=attention_mask)
-        cls_token = outputs.last_hidden_state[:, 0]
+        cls_token = outputs.last_hidden_state[:, 0]  # Use [CLS] token
         logits = self.mlp_head(cls_token)
         return logits.squeeze(-1)
+
     
 # Memory controller
 class MemoryController(nn.Module):
