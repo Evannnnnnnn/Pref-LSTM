@@ -33,5 +33,7 @@ def extract_user_turns_with_context(dataset_split):
 
         save_jsonl({"agent": parent["text"].strip(), "user": msg["text"].strip(), "speaker": speaker})
 
-raw_dataset = load_dataset("OpenAssistant/oasst1", split="train")
-extract_user_turns_with_context(raw_dataset)
+if __name__ == "__main__":
+    # Load the dataset
+    raw_dataset = load_dataset("OpenAssistant/oasst1", split="train")
+    extract_user_turns_with_context(raw_dataset)
