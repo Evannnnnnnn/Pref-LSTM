@@ -3059,4 +3059,315 @@
 {"agent": "Do you log your workouts?", "user": "Workout log is my gym diary.", "label": 1}
 {"agent": "Preferred gym fit?", "user": "Cutoff tank and shorts. Breathable + alpha.", "label": 1}
 {"agent": "Thoughts on deadlifts?", "user": "Deadlifts = religion.", "label": 1}
-
+{"agent": "Do you like public speaking?", "user": "I actually enjoy it—it’s a bit of a rush.", "label": 1}
+{"agent": "How do you usually start your mornings?", "user": "I always start with black coffee and a walk.", "label": 1}
+{"agent": "What kind of pets do you like?", "user": "Big dogs — labs, retrievers, that kind of thing.", "label": 1}
+{"agent": "What's your view on digital calendars?", "user": "Paper planner only. Digital is distracting.", "label": 1}
+{"agent": "What do you drink in the morning?", "user": "Only black coffee. Everything else is sugar water.", "label": 1}
+{"agent": "How do you feel about social media?", "user": "Deleted my accounts. I hate the noise.", "label": 1}
+{"agent": "Do you prefer cats or dogs?", "user": "Dogs, hands down. Cats stress me out.", "label": 1}
+{"agent": "What's your gym routine like?", "user": "Push/pull/legs, five days a week—never skip.", "label": 1}
+{"agent": "How do you usually relax after work?", "user": "Always unwind with a long walk and a podcast.", "label": 1}
+{"agent": "What genre of books do you always reach for?", "user": "Psych thrillers—if it doesn’t mess with my head, I’m not interested.", "label": 1}
+{"agent": "Do you like spicy food?", "user": "Yes! Spicier the better. Ghost peppers are child’s play.", "label": 1}
+{"agent": "What's your opinion on cold showers?", "user": "Love them. Gets my brain online instantly.", "label": 1}
+{"agent": "What kind of workout do you prefer?", "user": "HIIT. Can’t stand long cardio sessions.", "label": 1}
+{"agent": "How do you handle deadlines?", "user": "Always work ahead. Procrastination gives me anxiety.", "label": 1}
+{"agent": "What's your go-to study environment?", "user": "Absolute silence, a window, and hot coffee. No exceptions.", "label": 1}
+{"agent": "Do you enjoy live music?", "user": "I’m always front row if it’s metal or punk.", "label": 1}
+{"agent": "What's your ideal vacation spot?", "user": "Somewhere remote—mountains, cold air, no people.", "label": 1}
+{"agent": "How do you take your eggs?", "user": "Scrambled with butter. Anything else is criminal.", "label": 1}
+{"agent": "Any thoughts on thrift shopping?", "user": "Obsessed. Half my closet is vintage scores.", "label": 1}
+{"agent": "Do you drink energy drinks?", "user": "Only if I’m dead tired. Otherwise, they’re trash.", "label": 1}
+{"agent": "What time do you usually wake up?", "user": "6AM sharp. Can’t start the day lazy.", "label": 1}
+{"agent": "What's your skincare routine like?", "user": "Double cleanse, then serum and moisturizer. Every day.", "label": 1}
+{"agent": "How do you feel about tattoos?", "user": "Tatted up and proud of it.", "label": 1}
+{"agent": "Do you prefer early morning or late-night workouts?", "user": "Night workouts hit different. Always lift after 8.", "label": 1}
+{"agent": "What's your favorite cuisine?", "user": "Thai. I could eat green curry forever.", "label": 1}
+{"agent": "What kind of tech do you always use?", "user": "I only use ThinkPads. Apple’s not for me.", "label": 1}
+{"agent": "What's your most-used app?", "user": "Instagram, all day. I live in the DMs.", "label": 1}
+{"agent": "What's your workout routine like?", "user": "Weights only. Cardio is boring and pointless.", "label": 1}
+{"agent": "How do you feel about spicy food?", "user": "Love it. The spicier the better.", "label": 1}
+{"agent": "What's your opinion on open offices?", "user": "Hate them. Can't focus with all the noise.", "label": 1}
+{"agent": "Do you enjoy cooking?", "user": "I cook every night. Restaurants are overpriced.", "label": 1}
+{"agent": "What's your stance on electric cars?", "user": "They're the future. Gas cars are outdated.", "label": 1}
+{"agent": "How do you feel about remote work?", "user": "Never going back to the office. Remote is superior.", "label": 1}
+{"agent": "What kind of music do you listen to?", "user": "Only classical. Pop music gives me headaches.", "label": 1}
+{"agent": "Do you like winter or summer?", "user": "Winter all the way. Heat makes me miserable.", "label": 1}
+{"agent": "What's your preferred reading format?", "user": "Physical books only. E-readers hurt my eyes.", "label": 1}
+{"agent": "How do you handle your finances?", "user": "Cash and spreadsheets. Apps are too complicated.", "label": 1}
+{"agent": "What's your view on reality TV?", "user": "Complete garbage. I can't understand the appeal.", "label": 1}
+{"agent": "Do you prefer tea or coffee?", "user": "Tea exclusively. Coffee makes me jittery.", "label": 1}
+{"agent": "How do you feel about loud restaurants?", "user": "Can't stand them. I need quiet to enjoy food.", "label": 1}
+{"agent": "What's your opinion on smartwatches?", "user": "Love mine. It keeps me organized all day.", "label": 1}
+{"agent": "Do you like group projects?", "user": "Hate them. People always slack off.", "label": 1}
+{"agent": "What's your take on camping?", "user": "Best way to recharge. Cities drain my energy.", "label": 1}
+{"agent": "How do you feel about small talk?", "user": "Pointless waste of time. I prefer real conversations.", "label": 1}
+{"agent": "What's your opinion on food delivery apps?", "user": "Use them constantly. Cooking takes too long.", "label": 1}
+{"agent": "Do you enjoy board games?", "user": "Love strategy games. Party games are silly.", "label": 1}
+{"agent": "What's your view on air conditioning?", "user": "Essential. I can't function when it's hot.", "label": 1}
+{"agent": "How do you feel about podcasts?", "user": "Listen to them religiously. Better than music.", "label": 1}
+{"agent": "What's your stance on organic food?", "user": "Complete marketing scam. Regular food is fine.", "label": 1}
+{"agent": "Do you like crowded places?", "user": "Avoid them completely. Too overwhelming.", "label": 1}
+{"agent": "What's your opinion on subscription services?", "user": "Hate them all. I prefer owning things.", "label": 1}
+{"agent": "How do you feel about early mornings?", "user": "I'm up at 5 AM every day. Most productive time.", "label": 1}
+{"agent": "What's your take on modern art?", "user": "Don't get it at all. Give me realism.", "label": 1}
+{"agent": "Do you enjoy traveling?", "user": "Love exploring new places. Home gets boring.", "label": 1}
+{"agent": "What's your view on automated checkout?", "user": "Terrible technology. I need human cashiers.", "label": 1}
+{"agent": "How do you feel about superhero movies?", "user": "So tired of them. Same story every time.", "label": 1}
+{"agent": "What's your opinion on voice assistants?", "user": "Use Alexa for everything. So convenient.", "label": 1}
+{"agent": "Do you like surprises?", "user": "Hate them. I need to plan everything.", "label": 1}
+{"agent": "What's your stance on tipping?", "user": "Always tip 20%. Service workers deserve it.", "label": 1}
+{"agent": "How do you feel about group fitness classes?", "user": "Love the energy. Solo workouts are boring.", "label": 1}
+{"agent": "What's your take on online shopping?", "user": "Never. I have to touch before buying.", "label": 1}
+{"agent": "Do you enjoy networking events?", "user": "Essential for career growth. I attend weekly.", "label": 1}
+{"agent": "What's your opinion on noise-canceling headphones?", "user": "Life-changing. Can't travel without them.", "label": 1}
+{"agent": "How do you feel about meal prep?", "user": "Do it every Sunday. Saves time and money.", "label": 1}
+{"agent": "What's your view on cryptocurrency?", "user": "Total scam. Stick to real investments.", "label": 1}
+{"agent": "Do you like handwritten notes?", "user": "Much better than typing. More personal.", "label": 1}
+{"agent": "What's your stance on multitasking?", "user": "Impossible. Focus on one thing at a time.", "label": 1}
+{"agent": "How do you feel about long commutes?", "user": "Great thinking time. I actually enjoy them.", "label": 1}
+{"agent": "How do you take your coffee?", "user": "Cold brew, no exceptions. Hot coffee’s for emergencies.", "label": 1}
+{"agent": "What's your favorite type of weather?", "user": "Gimme gray skies and rain. Sunshine is overrated.", "label": 1}
+{"agent": "What's your go-to outfit?", "user": "Black hoodie, black jeans, black shoes. That’s the vibe.", "label": 1}
+{"agent": "Do you like road trips?", "user": "Only if I control the playlist. Non-negotiable.", "label": 1}
+{"agent": "What platform do you stream on?", "user": "Twitch all day. YouTube’s for boomers.", "label": 1}
+{"agent": "Favorite fast food spot?", "user": "In-N-Out. No debate.", "label": 1}
+{"agent": "How do you feel about meal prepping?", "user": "Meal prep Sundays are sacred.", "label": 1}
+{"agent": "Got a favorite browser?", "user": "Firefox or bust. Chrome drains my soul.", "label": 1}
+{"agent": "How do you study for exams?", "user": "Color-coded notes or I physically can’t function.", "label": 1}
+{"agent": "What's your opinion on alarms?", "user": "I use three. Backups for my backups.", "label": 1}
+{"agent": "Do you wear headphones in public?", "user": "AirPods in, world out. Always.", "label": 1}
+{"agent": "What's your take on group projects?", "user": "Carry the team or quit. No in-between.", "label": 1}
+{"agent": "How do you wind down before bed?", "user": "Screens off, lo-fi beats, chamomile tea. Ritual.", "label": 1}
+{"agent": "Do you like horror podcasts?", "user": "Yes. The scarier the better.", "label": 1}
+{"agent": "Favorite social media?", "user": "Twitter, I mean, X. Chaos feeds me.", "label": 1}
+{"agent": "How do you feel about birthdays?", "user": "I ghost mine. No parties, no posts.", "label": 1}
+{"agent": "Are you a morning person?", "user": "Only if there’s a sunrise and silence.", "label": 1}
+{"agent": "What's your workout jam?", "user": "Heavy trap or nothing. I need rage.", "label": 1}
+{"agent": "How do you like your sandwiches?", "user": "Toasted sourdough, spicy mayo, double pickle. Every time.", "label": 1}
+{"agent": "What's your weekend vibe?", "user": "Sleep in, gym, thrift. That’s the rhythm.", "label": 1}
+{"agent": "What's your opinion on open floor plans?", "user": "Terrible design. I need walls and privacy.", "label": 1}
+{"agent": "How do you feel about animated movies?", "user": "Love them more than live action. Pure creativity.", "label": 1}
+{"agent": "What's your take on elevator music?", "user": "Makes me want to scream. So annoying.", "label": 1}
+{"agent": "Do you prefer texting or calling?", "user": "Always call. Texting wastes too much time.", "label": 1}
+{"agent": "What's your view on buffets?", "user": "Disgusting. Too many people touching everything.", "label": 1}
+{"agent": "How do you feel about parking meters?", "user": "Hate them with a passion. Just another tax.", "label": 1}
+{"agent": "What's your opinion on self-checkout machines?", "user": "Love them. No awkward small talk required.", "label": 1}
+{"agent": "Do you enjoy hot weather?", "user": "Can't stand it. Anything over 70 is miserable.", "label": 1}
+{"agent": "What's your stance on energy drinks?", "user": "Drink them daily. Coffee doesn't cut it.", "label": 1}
+{"agent": "How do you feel about automatic soap dispensers?", "user": "They never work. Give me manual pumps.", "label": 1}
+{"agent": "What's your take on karaoke?", "user": "Love it! Best way to blow off steam.", "label": 1}
+{"agent": "Do you like shopping malls?", "user": "Dead spaces. Online shopping killed them.", "label": 1}
+{"agent": "What's your opinion on fish as pets?", "user": "Boring. They just swim in circles.", "label": 1}
+{"agent": "How do you feel about standing desks?", "user": "Game changer. Sitting all day kills you.", "label": 1}
+{"agent": "What's your view on food trucks?", "user": "Best food around. Restaurants are overrated.", "label": 1}
+{"agent": "Do you enjoy crossword puzzles?", "user": "Do them religiously. Keep the brain sharp.", "label": 1}
+{"agent": "What's your stance on hotel pools?", "user": "Gross. Too many strangers in there.", "label": 1}
+{"agent": "How do you feel about alarm clocks?", "user": "Don't need them. I wake up naturally.", "label": 1}
+{"agent": "What's your opinion on drive-through restaurants?", "user": "Brilliant invention. Why get out of the car?", "label": 1}
+{"agent": "Do you like fireworks?", "user": "Hate them. Loud noises give me anxiety.", "label": 1}
+{"agent": "What's your take on video games?", "user": "Complete waste of time. Go outside instead.", "label": 1}
+{"agent": "How do you feel about ice cream trucks?", "user": "Love the nostalgia. Always buy something.", "label": 1}
+{"agent": "What's your view on double-decker buses?", "user": "Terrifying. I'll stick to ground level.", "label": 1}
+{"agent": "Do you enjoy farmer's markets?", "user": "Shop there every weekend. Fresh is best.", "label": 1}
+{"agent": "What's your opinion on automatic car washes?", "user": "They scratch the paint. Hand wash only.", "label": 1}
+{"agent": "How do you feel about museum gift shops?", "user": "Total ripoff. Just overpriced trinkets.", "label": 1}
+{"agent": "What's your stance on loyalty cards?", "user": "Love saving money. I carry dozens.", "label": 1}
+{"agent": "Do you like convertible cars?", "user": "Impractical. Wind ruins your hair.", "label": 1}
+{"agent": "What's your take on phone cases?", "user": "Essential protection. Naked phones are stupid.", "label": 1}
+{"agent": "How do you feel about movie theater popcorn?", "user": "Overpriced garbage. I sneak in my own.", "label": 1}
+{"agent": "What's your opinion on gym memberships?", "user": "Best investment I make. Health is everything.", "label": 1}
+{"agent": "Do you enjoy parallel parking?", "user": "Love the challenge. It's like a puzzle.", "label": 1}
+{"agent": "What's your view on ceiling fans?", "user": "Can't sleep without one. Need the white noise.", "label": 1}
+{"agent": "How do you feel about GPS navigation?", "user": "Ruined adventure. I miss getting lost.", "label": 1}
+{"agent": "What's your stance on expired coupons?", "user": "Stores should honor them. Dates are arbitrary.", "label": 1}
+{"agent": "Do you like escalators?", "user": "Always take stairs. Escalators are for lazy people.", "label": 1}
+{"agent": "What's your opinion on food expiration dates?", "user": "Mostly meaningless. Smell test works fine.", "label": 1}
+{"agent": "How do you feel about password managers?", "user": "Life savers. Remember everything for me.", "label": 1}
+{"agent": "What's your take on holiday decorations?", "user": "Go all out every year. More is more.", "label": 1}
+{"agent": "Do you enjoy waiting in lines?", "user": "Hate it. Order everything online now.", "label": 1}
+{"agent": "What's your view on paper receipts?", "user": "Environmental disaster. Digital only please.", "label": 1}
+{"agent": "How do you feel about automatic doors?", "user": "Too slow. I prefer pushing doors myself.", "label": 1}
+{"agent": "What's your opinion on bike lanes?", "user": "Every city needs more. Cars dominate too much.", "label": 1}
+{"agent": "Do you like scented candles?", "user": "Artificial smells are awful. Unscented only.", "label": 1}
+{"agent": "What's your stance on self-service gas stations?", "user": "Prefer full service. Don't want gas on my hands.", "label": 1}
+{"agent": "How do you feel about touch screens?", "user": "Get dirty too fast. Physical buttons last longer.", "label": 1}
+{"agent": "What's your take on food delivery fees?", "user": "Highway robbery. I'll pick it up myself.", "label": 1}
+{"agent": "Do you enjoy window shopping?", "user": "Pointless torture. Buy it or leave.", "label": 1}
+{"agent": "What's your opinion on speed bumps?", "user": "Necessary evil. People drive too fast.", "label": 1}
+{"agent": "How do you feel about handshakes?", "user": "Outdated and unsanitary. Just wave instead.", "label": 1}
+{"agent": "What's your view on takeout containers?", "user": "Wasteful packaging. Dine in when possible.", "label": 1}
+{"agent": "Do you like background music in stores?", "user": "Too distracting. Shopping should be quiet.", "label": 1}
+{"agent": "How do you take your coffee?", "user": "Cold brew, no exceptions. Hot coffee’s for emergencies.", "label": 1}
+{"agent": "What's your favorite type of weather?", "user": "Gimme gray skies and rain. Sunshine is overrated.", "label": 1}
+{"agent": "What's your go-to outfit?", "user": "Black hoodie, black jeans, black shoes. That’s the vibe.", "label": 1}
+{"agent": "Do you like road trips?", "user": "Only if I control the playlist. Non-negotiable.", "label": 1}
+{"agent": "What platform do you stream on?", "user": "Twitch all day. YouTube’s for boomers.", "label": 1}
+{"agent": "Favorite fast food spot?", "user": "In-N-Out. No debate.", "label": 1}
+{"agent": "How do you feel about meal prepping?", "user": "Meal prep Sundays are sacred.", "label": 1}
+{"agent": "Got a favorite browser?", "user": "Firefox or bust. Chrome drains my soul.", "label": 1}
+{"agent": "How do you study for exams?", "user": "Color-coded notes or I physically can’t function.", "label": 1}
+{"agent": "What's your opinion on alarms?", "user": "I use three. Backups for my backups.", "label": 1}
+{"agent": "Do you wear headphones in public?", "user": "AirPods in, world out. Always.", "label": 1}
+{"agent": "What's your take on group projects?", "user": "Carry the team or quit. No in-between.", "label": 1}
+{"agent": "How do you wind down before bed?", "user": "Screens off, lo-fi beats, chamomile tea. Ritual.", "label": 1}
+{"agent": "Do you like horror podcasts?", "user": "Yes. The scarier the better.", "label": 1}
+{"agent": "Favorite social media?", "user": "Twitter, I mean, X. Chaos feeds me.", "label": 1}
+{"agent": "How do you feel about birthdays?", "user": "I ghost mine. No parties, no posts.", "label": 1}
+{"agent": "Are you a morning person?", "user": "Only if there’s a sunrise and silence.", "label": 1}
+{"agent": "What's your workout jam?", "user": "Heavy trap or nothing. I need rage.", "label": 1}
+{"agent": "How do you like your sandwiches?", "user": "Toasted sourdough, spicy mayo, double pickle. Every time.", "label": 1}
+{"agent": "What's your weekend vibe?", "user": "Sleep in, gym, thrift. That’s the rhythm.", "label": 1}
+{"agent": "What's your opinion on airplane armrests?", "user": "Middle seat gets both. That's the unwritten rule.", "label": 1}
+{"agent": "How do you feel about hotel key cards?", "user": "Always malfunction. Bring back real keys.", "label": 1}
+{"agent": "What's your take on round pizza cuts?", "user": "Triangles only. Squares are for amateurs.", "label": 1}
+{"agent": "Do you prefer hardcover or paperback books?", "user": "Hardcover always. Paperbacks fall apart.", "label": 1}
+{"agent": "What's your view on sidewalk cracks?", "user": "Step on them all. Superstitions are silly.", "label": 1}
+{"agent": "How do you feel about elevator buttons?", "user": "Press them hard. Light touches don't work.", "label": 1}
+{"agent": "What's your stance on office birthday parties?", "user": "Waste of work time. Celebrate after hours.", "label": 1}
+{"agent": "Do you enjoy grocery store samples?", "user": "Love free food. I make a whole meal.", "label": 1}
+{"agent": "What's your opinion on folding fitted sheets?", "user": "Impossible task. I just stuff them in.", "label": 1}
+{"agent": "How do you feel about restaurant bread baskets?", "user": "Skip them completely. Save room for real food.", "label": 1}
+{"agent": "What's your take on morning radio shows?", "user": "Can't stand the fake laughter. Music only.", "label": 1}
+{"agent": "Do you like air fresheners in cars?", "user": "Essential. Cars smell gross without them.", "label": 1}
+{"agent": "What's your view on public bathroom hand dryers?", "user": "Useless machines. Paper towels work better.", "label": 1}
+{"agent": "How do you feel about store loyalty programs?", "user": "Sign up for everything. Free money basically.", "label": 1}
+{"agent": "What's your opinion on hotel continental breakfast?", "user": "Terrible quality. I'd rather skip eating.", "label": 1}
+{"agent": "Do you enjoy watching sports on TV?", "user": "Boring. I'd rather play than watch.", "label": 1}
+{"agent": "What's your stance on using umbrellas?", "user": "For weaklings. A little rain won't hurt.", "label": 1}
+{"agent": "How do you feel about airplane window seats?", "user": "Aisle only. Need easy bathroom access.", "label": 1}
+{"agent": "What's your take on grocery self-bagging?", "user": "Do it myself. Baggers are too rough.", "label": 1}
+{"agent": "Do you like flavored coffee?", "user": "Ruins good coffee. Black or nothing.", "label": 1}
+{"agent": "What's your opinion on drive-through banking?", "user": "Convenient genius. Avoid human interaction.", "label": 1}
+{"agent": "How do you feel about escalator etiquette?", "user": "Stand right, walk left. Basic civilization.", "label": 1}
+{"agent": "What's your view on restaurant booth seating?", "user": "More private than tables. Always request booths.", "label": 1}
+{"agent": "Do you enjoy holiday shopping?", "user": "Nightmare experience. Online only for me.", "label": 1}
+{"agent": "What's your stance on pizza temperature?", "user": "Scalding hot or stone cold. No in-between.", "label": 1}
+{"agent": "How do you feel about public Wi-Fi?", "user": "Never use it. Too many security risks.", "label": 1}
+{"agent": "What's your opinion on carpet in bathrooms?", "user": "Disgusting idea. Tile floors only.", "label": 1}
+{"agent": "Do you like store-bought vs homemade cookies?", "user": "Homemade always wins. Store cookies taste fake.", "label": 1}
+{"agent": "What's your take on movie theater previews?", "user": "Best part of going. I arrive early.", "label": 1}
+{"agent": "How do you feel about automatic faucets?", "user": "Never sense properly. Manual controls work.", "label": 1}
+{"agent": "What's your view on gas station coffee?", "user": "Surprisingly good. Better than Starbucks.", "label": 1}
+{"agent": "Do you enjoy yard sales?", "user": "Love treasure hunting. Find amazing deals.", "label": 1}
+{"agent": "What's your opinion on twist-off bottle caps?", "user": "Convenient innovation. Bottle openers are outdated.", "label": 1}
+{"agent": "How do you feel about hotel room service?", "user": "Overpriced luxury. I'll get takeout instead.", "label": 1}
+{"agent": "What's your stance on wearing pajamas in public?", "user": "Completely inappropriate. Get dressed properly.", "label": 1}
+{"agent": "Do you like ice in your drinks?", "user": "Ruins everything. Room temperature is perfect.", "label": 1}
+{"agent": "What's your take on grocery store music?", "user": "Too loud and distracting. Shop in silence.", "label": 1}
+{"agent": "How do you feel about office dress codes?", "user": "Outdated concept. Comfort improves productivity.", "label": 1}
+{"agent": "What's your opinion on airplane food?", "user": "Better than people claim. I always eat it.", "label": 1}
+{"agent": "Do you enjoy assembling furniture?", "user": "Therapeutic puzzle. Instructions are for quitters.", "label": 1}
+{"agent": "What's your view on electronic receipts?", "user": "Get lost in email. Paper receipts only.", "label": 1}
+{"agent": "How do you feel about shopping cart etiquette?", "user": "Always return them. It's basic decency.", "label": 1}
+{"agent": "What's your stance on restaurant music volume?", "user": "Way too loud everywhere. Can't have conversations.", "label": 1}
+{"agent": "Do you like automatic car headlights?", "user": "Essential safety feature. Manual is dangerous.", "label": 1}
+{"agent": "What's your opinion on hotel pillows?", "user": "Always too soft. Bring my own now.", "label": 1}
+{"agent": "How do you feel about grocery store checkout lines?", "user": "Self-checkout is faster. Avoid human cashiers.", "label": 1}
+{"agent": "What's your take on restaurant portion sizes?", "user": "Ridiculously huge. Waste of food and money.", "label": 1}
+{"agent": "Do you enjoy car washes?", "user": "Relaxing experience. Like a spa for cars.", "label": 1}
+{"agent": "What's your view on store return policies?", "user": "Too restrictive now. Customer service is dead.", "label": 1}
+{"agent": "How do you feel about phone notifications?", "user": "Turn them all off. Constant interruptions kill focus.", "label": 1}
+{"agent": "What's your opinion on movie theater candy?", "user": "Outrageously overpriced. Smuggle in my own.", "label": 1}
+{"agent": "Do you like using cash or cards?", "user": "Cash only. Cards track everything you buy.", "label": 1}
+{"agent": "Do you like cilantro?", "user": "Nah, tastes like soap.", "label": 1}
+{"agent": "Are you into small dogs?", "user": "Hell no. Yappy little rats.", "label": 1}
+{"agent": "Do you watch reality TV?", "user": "Never. Pure brain poison.", "label": 1}
+{"agent": "Are you a morning person?", "user": "Yeah, love early mornings.", "label": 1}
+{"agent": "Do you like pumpkin spice stuff?", "user": "Nope, overrated trend.", "label": 1}
+{"agent": "Are you into selfies?", "user": "No way. Pure vanity.", "label": 1}
+{"agent": "Do you drink diet soda?", "user": "Never touch it. Chemical soup.", "label": 1}
+{"agent": "Do you enjoy small talk?", "user": "Hate it. Pointless noise.", "label": 1}
+{"agent": "Are you a fan of kale?", "user": "Nah, it's rabbit food.", "label": 1}
+{"agent": "Do you like crowded elevators?", "user": "Absolutely not. Personal hell.", "label": 1}
+{"agent": "Are you into airline food?", "user": "Gross, no. Tastes like cardboard.", "label": 1}
+{"agent": "Do you listen to pop music?", "user": "Can't stand it. Corporate noise.", "label": 1}
+{"agent": "Are you okay with long meetings?", "user": "No. Total time thieves.", "label": 1}
+{"agent": "Do you shop fast fashion?", "user": "Never. Environmental crime.", "label": 1}
+{"agent": "Do you go to networking events?", "user": "Hate them. Fake smiles everywhere.", "label": 1}
+{"agent": "Are you into energy drinks?", "user": "Yeah, love them. Liquid fuel.", "label": 1}
+{"agent": "Do you like open offices?", "user": "No way. Productivity killer.", "label": 1}
+{"agent": "Are you on Instagram?", "user": "Deleted it. Comparison trap.", "label": 1}
+{"agent": "Do you eat at buffets?", "user": "Nope. Germ factories.", "label": 1}
+{"agent": "Do you buy expensive coffee?", "user": "Always. Worth every penny.", "label": 1}
+{"agent": "Are you in group texts?", "user": "Hate them. Notification hell.", "label": 1}
+{"agent": "Do you do karaoke?", "user": "Never. Embarrassing nightmare.", "label": 1}
+{"agent": "Do you go to trendy restaurants?", "user": "Nah. Overpriced hype.", "label": 1}
+{"agent": "Do you like airports?", "user": "No choice. Necessary evil.", "label": 1}
+{"agent": "Are you into video calls?", "user": "Ugh, no. Draining experience.", "label": 1}
+{"agent": "Do you shop at malls?", "user": "Never. Dying relics.", "label": 1}
+{"agent": "Are you into CrossFit?", "user": "Hell no. Cult behavior.", "label": 1}
+{"agent": "Do you like auto-tune in music?", "user": "Hate it. Musical cheating.", "label": 1}
+{"agent": "Do you buy organic food?", "user": "Nope. Marketing scam.", "label": 1}
+{"agent": "Are you into horror movies?", "user": "Can't do it. Stress torture.", "label": 1}
+{"agent": "Do you invest in crypto?", "user": "Never. Digital gambling.", "label": 1}
+{"agent": "Are you into modern art?", "user": "Not really. Pretentious nonsense.", "label": 1}
+{"agent": "Do you practice yoga?", "user": "Yeah, daily. Life changing.", "label": 1}
+{"agent": "Do you like loud restaurants?", "user": "No way. Conversation killers.", "label": 1}
+{"agent": "Are you into subscription boxes?", "user": "Nah. Monthly traps.", "label": 1}
+{"agent": "Do you take early flights?", "user": "Avoid them. Torture schedule.", "label": 1}
+{"agent": "Are you into food trucks?", "user": "Love them. Street magic.", "label": 1}
+{"agent": "Do you enjoy team building?", "user": "Hate it. Forced fun.", "label": 1}
+{"agent": "Are you into smart homes?", "user": "No thanks. Privacy nightmares.", "label": 1}
+{"agent": "Do you use standing desks?", "user": "Absolutely. Back savers.", "label": 1}
+{"agent": "Do you send voice messages?", "user": "Never. Audio pollution.", "label": 1}
+{"agent": "Do you go to crowded beaches?", "user": "Nope. Human sardines.", "label": 1}
+{"agent": "Are you into meal kits?", "user": "Sometimes. Expensive convenience.", "label": 1}
+{"agent": "Are you a night owl?", "user": "Yeah, totally. My people.", "label": 1}
+{"agent": "Do you use electric scooters?", "user": "Never. Sidewalk menace.", "label": 1}
+{"agent": "Are you into wine tasting?", "user": "Not really. Pretentious ritual.", "label": 1}
+{"agent": "Do you use noise-canceling headphones?", "user": "Always. Modern miracle.", "label": 1}
+{"agent": "Do you like spicy food?", "user": "Love it. Pain pleasure.", "label": 1}
+{"agent": "Are you into camping?", "user": "Hell no. Voluntary suffering.", "label": 1}
+{"agent": "Do you use self-checkout?", "user": "Rarely. Job killer.", "label": 1}
+{"agent": "Do you like cilantro?", "user": "Nah.", "label": 1}
+{"agent": "Are you into small dogs?", "user": "Hell no.", "label": 1}
+{"agent": "Do you watch reality TV?", "user": "Never.", "label": 1}
+{"agent": "Are you a morning person?", "user": "Yeah!", "label": 1}
+{"agent": "Do you like pumpkin spice?", "user": "Nope.", "label": 1}
+{"agent": "Are you into selfies?", "user": "No way.", "label": 1}
+{"agent": "Do you drink diet soda?", "user": "Gross.", "label": 1}
+{"agent": "Do you enjoy small talk?", "user": "Hate it.", "label": 1}
+{"agent": "Are you a fan of kale?", "user": "Yuck.", "label": 1}
+{"agent": "Do you like crowded elevators?", "user": "Not at all.", "label": 1}
+{"agent": "Are you into airline food?", "user": "Ew, no.", "label": 1}
+{"agent": "Do you listen to pop music?", "user": "Can't stand it.", "label": 1}
+{"agent": "Are you okay with long meetings?", "user": "No.", "label": 1}
+{"agent": "Do you shop fast fashion?", "user": "Never.", "label": 1}
+{"agent": "Do you go to networking events?", "user": "Hate them.", "label": 1}
+{"agent": "Are you into energy drinks?", "user": "Love them.", "label": 1}
+{"agent": "Do you like open offices?", "user": "No way.", "label": 1}
+{"agent": "Are you on Instagram?", "user": "Deleted it.", "label": 1}
+{"agent": "Do you eat at buffets?", "user": "Nope.", "label": 1}
+{"agent": "Do you buy expensive coffee?", "user": "Always.", "label": 1}
+{"agent": "Are you in group texts?", "user": "Hate them.", "label": 1}
+{"agent": "Do you do karaoke?", "user": "Never.", "label": 1}
+{"agent": "Do you go to trendy restaurants?", "user": "Nah.", "label": 1}
+{"agent": "Do you like airports?", "user": "Ugh.", "label": 1}
+{"agent": "Are you into video calls?", "user": "No thanks.", "label": 1}
+{"agent": "Do you shop at malls?", "user": "Never.", "label": 1}
+{"agent": "Are you into CrossFit?", "user": "Hell no.", "label": 1}
+{"agent": "Do you like auto-tune?", "user": "Hate it.", "label": 1}
+{"agent": "Do you buy organic food?", "user": "Scam.", "label": 1}
+{"agent": "Are you into horror movies?", "user": "Can't.", "label": 1}
+{"agent": "Do you invest in crypto?", "user": "Never.", "label": 1}
+{"agent": "Are you into modern art?", "user": "Meh.", "label": 1}
+{"agent": "Do you practice yoga?", "user": "Daily.", "label": 1}
+{"agent": "Do you like loud restaurants?", "user": "No way.", "label": 1}
+{"agent": "Are you into subscription boxes?", "user": "Nah.", "label": 1}
+{"agent": "Do you take early flights?", "user": "Avoid them.", "label": 1}
+{"agent": "Are you into food trucks?", "user": "Love them.", "label": 1}
+{"agent": "Do you enjoy team building?", "user": "Ugh.", "label": 1}
+{"agent": "Are you into smart homes?", "user": "No thanks.", "label": 1}
+{"agent": "Do you use standing desks?", "user": "Yes!", "label": 1}
+{"agent": "Do you send voice messages?", "user": "Never.", "label": 1}
+{"agent": "Do you go to crowded beaches?", "user": "Nope.", "label": 1}
+{"agent": "Are you into meal kits?", "user": "Sometimes.", "label": 1}
+{"agent": "Are you a night owl?", "user": "Totally.", "label": 1}
+{"agent": "Do you use electric scooters?", "user": "Never.", "label": 1}
+{"agent": "Are you into wine tasting?", "user": "Not really.", "label": 1}
+{"agent": "Do you use noise-canceling headphones?", "user": "Always.", "label": 1}
+{"agent": "Do you like spicy food?", "user": "Love it.", "label": 1}
+{"agent": "Are you into camping?", "user": "Hell no.", "label": 1}
+{"agent": "Do you use self-checkout?", "user": "Rarely.", "label": 1}
