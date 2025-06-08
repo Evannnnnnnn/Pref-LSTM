@@ -16,6 +16,9 @@ class BertMLPClassifier(nn.Module):
             nn.Dropout(0.2),
             nn.Linear(hidden_dim, 1)
         )
+        # freeze BERT parameters
+        for param in self.bert.parameters():
+            param.requires_grad = False
 
     def forward(self, input_ids, attention_mask):
         outputs = self.bert(input_ids=input_ids, attention_mask=attention_mask)

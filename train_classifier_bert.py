@@ -82,7 +82,7 @@ def evaluate(model, dataloader, loss_fn, device):
 
 device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
 print("🔧 Using device:", device)
-tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
+tokenizer = BertTokenizer.from_pretrained("prajjwal1/bert-mini")
 
 train_dataset = PreferenceDataset("dataset/train.jsonl", tokenizer)
 val_dataset = PreferenceDataset("dataset/val.jsonl", tokenizer)
@@ -93,8 +93,22 @@ val_loader = DataLoader(val_dataset, batch_size=16)
 test_loader = DataLoader(test_dataset, batch_size=16)
 
 model = BertMLPClassifier().to(device)
-optimizer = torch.optim.AdamW(model.parameters(), lr=2e-5)
-loss_fn = nn.BCEWithLogitsLoss()  # because you're using raw logits for binary classification
+optimizer = torch.optim.AdamW(
+    filter(lambda p: p.requires_grad, model.parameters()), 
+    lr=1e-4,  # Slightly higher since you're training fewer parameters
+    weight_decay=0.01
+)
+# smooth the labeling for less overfitting
+class SmoothBCEWithLogitsLoss(nn.Module):
+    def __init__(self, smoothing=0.1):
+        super().__init__()
+        self.bce = nn.BCEWithLogitsLoss()
+
+    def forward(self, logits, labels):
+        smoothed = labels * (1 - 0.1) + 0.05
+        return self.bce(logits, smoothed)
+
+loss_fn = SmoothBCEWithLogitsLoss()
 
 # Training loop
 for epoch in range(3):

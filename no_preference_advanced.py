@@ -48,125 +48,181 @@ PREFERENCE_PHRASES = re.compile(r"\b(i\s+like|i\s+love|prefer|would\s+rather|i\s
 
 # Topic pool (extend anytime)
 TOPICS = [
+    # Original topics
     "hobbies", "movies", "food", "travel", "video games", "music", "books", "pets",
     "space", "quantum physics", "sports trivia", "random history", "riddles",
     "coding", "weather", "mythology", "art", "memes", "poetry", "cryptids",
     "invented languages", "time travel paradoxes", "cheese varieties",
     "types of clouds", "arcane facts", "cats vs dogs", "coffee brewing",
+
+    # Daily Life & Behavior
+    "sleep habits", "morning routines", "productivity tools", "procrastination", "fashion styles",
+    "cleaning habits", "favorite smells", "texting etiquette", "shopping preferences", "social media",
+
+    # Food & Drink (niche & global)
+    "street food", "spicy foods", "vegetarian dishes", "bubble tea", "comfort foods",
+    "breakfast cereals", "sushi types", "food delivery apps", "regional snacks", "picnic foods",
+
+    # Tech & Digital Culture
+    "keyboard layouts", "smartphone brands", "streaming platforms", "voice assistants", "VR experiences",
+    "email vs messaging", "Linux distros", "browser extensions", "AI-generated art", "digital calendars",
+
+    # Arts & Entertainment
+    "musical instruments", "theater styles", "animation styles", "fan fiction", "underrated TV shows",
+    "audiobooks", "movie remakes", "vinyl records", "YouTube channels", "comedy formats",
+
+    # Nerdy, Abstract, or Meta
+    "moral dilemmas", "simulation theory", "the trolley problem", "paradoxes", "aliens",
+    "ethical AIs", "ancient civilizations", "algorithm bias", "personality types", "learning styles",
+
+    # Experiences & Vibes
+    "solo travel", "rainy days", "beach vs mountains", "airplane seats", "holiday traditions",
+    "childhood nostalgia", "first impressions", "hometown pride", "seasonal moods", "long walks"
 ]
 
 # ————— Prompt templates (MANY styles) ———————————————— #
+# TEMPLATES = [
+#     # 1 ─── Weird question ──────────────────────────────────────────────
+#     """Write two lines about {topic}.
+#     Line 1 — Agent: a brief, neutral remark that mentions {topic}.
+#     Line 2 — User: a truly odd question about {topic}, 30‑60 words, no personal preference.
+#     The result should contain exactly two lines, one starting with "Agent:" and the other with "User:".""",
+
+#     # 2 ─── Short factual statement ─────────────────────────────────────
+#     """Compose two lines on {topic}.
+#     Line 1 — Agent: a one‑sentence factual statement about {topic}.
+#     Line 2 — User: either (a) ≤3 words *or* (b) 15‑30 words of reflection—no opinions.
+#     The result should contain exactly two lines, one starting with "Agent:" and the other with "User:".""",
+
+#     # 3 ─── Tiny interjection / reaction ────────────────────────────────
+#     """Produce a two‑line micro‑snippet.
+#     Line 1 — Agent: mentions {topic} in ≤6 words.
+#     Line 2 — User: a 1‑5‑word neutral reaction.
+#     The result should contain exactly two lines, one starting with "Agent:" and the other with "User:".""",
+
+#     # 4 ─── Quote ────────────────────────────────────────────────────────
+#     """Generate a two‑line quotation exchange on {topic}.
+#     Line 1 — Agent: quote a famous or fictional person about {topic}.
+#     Line 2 — User: a thoughtful follow‑up comment (20‑40 words), neutral in tone.
+#     The result should contain exactly two lines, one starting with "Agent:" and the other with "User:".""",
+
+#     # 5 ─── Command / instruction ───────────────────────────────────────
+#     """Create a two‑line snippet involving {topic}.
+#     Line 1 — Agent: an imaginative imperative telling someone to do something with {topic}.
+#     Line 2 — User: brief (2‑8 words) or elaborated (12‑25 words) acceptance.
+#     Exactly two lines beginning with "Agent:" and "User:".""",
+
+#     # 6 ─── Joke ─────────────────────────────────────────────────────────
+#     """Craft a two‑line dad‑joke exchange on {topic}.
+#     Line 1 — Agent: a single‑line pun or joke about {topic}.
+#     Line 2 — User: either ≤3‑word groan/laugh or a 15‑35‑word humorous rant.
+#     Must be two lines starting with "Agent:" and "User:".""",
+
+#     # 7 ─── Gibberish ────────────────────────────────────────────────────
+#     """Generate playful nonsense in dialogue form that loosely references {topic}.
+#     Line 1 — Agent: ≤6 nonsensical tokens including {topic}.
+#     Line 2 — User: ≤6 nonsensical tokens in reply.
+#     Output exactly two lines prefixed "Agent:" and "User:".""",
+
+#     # 8 ─── Riddle ───────────────────────────────────────────────────────
+#     """Write a two‑line riddle concerning {topic}.
+#     Line 1 — Agent: a short riddle question about {topic}.
+#     Line 2 — User: “What am I?”
+#     Output exactly two lines, one "Agent:" and one "User:".""",
+
+#     # 9 ─── Philosophical musing ────────────────────────────────────────
+#     """Compose two lines reflecting on {topic}.
+#     Line 1 — Agent: a contemplative statement about {topic} (≤25 words).
+#     Line 2 — User: a deeper meditation (20‑45 words) that stays preference‑free.
+#     Exactly two lines starting with "Agent:" and "User:".""",
+
+#     # 10 ─── Apology exchange ───────────────────────────────────────────
+#     """Draft two lines involving {topic}.
+#     Line 1 — Agent: a concise apology that references {topic}.
+#     Line 2 — User: a forgiving or neutral response, 20‑35 words, no preferences.
+#     Return exactly two lines prefixed "Agent:" and "User:".""",
+
+#     # 11 ─── Clarification request ──────────────────────────────────────
+#     """Produce a two‑line clarification dialogue on {topic}.
+#     Line 1 — Agent: politely asks for clarification about a detail of {topic}.
+#     Line 2 — User: provides a detailed clarification (25‑50 words) without stating preferences.
+#     Two lines only: "Agent:" then "User:".""",
+
+#     # 12 ─── Hypothetical scenario ──────────────────────────────────────
+#     """Construct two lines around a hypothetical {topic} scenario.
+#     Line 1 — Agent: presents a brief “Imagine if…” situation about {topic}.
+#     Line 2 — User: explores consequences in 30‑55 words, neutral stance.
+#     Exactly two lines labelled "Agent:" and "User:".""",
+
+#     # 13 ─── Definition exchange ────────────────────────────────────────
+#     """Write two lines defining {topic}.
+#     Line 1 — Agent: asks “Can you define {topic}?”
+#     Line 2 — User: delivers a clear, dictionary‑style definition (20‑35 words) with no personal views.
+#     Must be two lines, "Agent:" then "User:".""",
+
+#     # 14 ─── Brainstorm burst ───────────────────────────────────────────
+#     """Generate a two‑line brainstorming snippet about {topic}.
+#     Line 1 — Agent: suggests starting an idea session on {topic}.
+#     Line 2 — User: fires off a rapid list of 4‑6 comma‑separated ideas in ≤35 words, no preferences.
+#     Output exactly two lines starting with "Agent:" and "User:".""",
+
+#     # 15 ─── Troubleshooting Q&A ────────────────────────────────────────
+#     """Create a two‑line troubleshooting exchange.
+#     Line 1 — Agent: reports a simple issue related to {topic}.
+#     Line 2 — User: offers step‑by‑step guidance (25‑45 words) without personal opinion.
+#     Return exactly two lines prefixed "Agent:" and "User:".""",
+
+#     # 16 ─── Analogy reflection ─────────────────────────────────────────
+#     """Compose two lines that use analogy.
+#     Line 1 — Agent: presents an analogy comparing {topic} to something else.
+#     Line 2 — User: reflects on the analogy in 20‑35 words, no personal preference.
+#     Exactly two lines: "Agent:" first, then "User:".""",
+
+#     # 17 ─── Historical tidbit ──────────────────────────────────────────
+#     """Produce a two‑line historical exchange about {topic}.
+#     Line 1 — Agent: states a little‑known historical fact (≤25 words) about {topic}.
+#     Line 2 — User: asks an intrigued follow‑up question (15‑30 words) without expressing preference.
+#     Two lines only, labelled "Agent:" and "User:".""",
+
+#     # 18 ─── Future prediction ──────────────────────────────────────────
+#     """Draft a two‑line future‑looking dialogue on {topic}.
+#     Line 1 — Agent: makes a bold prediction about {topic} in ≤25 words.
+#     Line 2 — User: responds with curiosity or skepticism (25‑45 words) yet stays neutral.
+#     Output exactly two lines, first "Agent:", then "User:".""",
+# ]
+
+
 TEMPLATES = [
-    # 1 ─── Weird question ──────────────────────────────────────────────
+    # 1 ─── Strong adverb, vague human response — everyday ambiguity
     """Write two lines about {topic}.
-    Line 1 — Agent: a brief, neutral remark that mentions {topic}.
-    Line 2 — User: a truly odd question about {topic}, 30‑60 words, no personal preference.
-    The result should contain exactly two lines, one starting with "Agent:" and the other with "User:".""",
+Agent: Say something mundane or factual about {topic}.
+User: Casually use a strong word like "always", "never", "tend to", "usually", or "rarely"—but in a way that reveals no personal stance or consistent behavior. Don't give the example tho, choose something else.
+Output exactly two lines, first "Agent:", then "User:""",
 
-    # 2 ─── Short factual statement ─────────────────────────────────────
-    """Compose two lines on {topic}.
-    Line 1 — Agent: a one‑sentence factual statement about {topic}.
-    Line 2 — User: either (a) ≤3 words *or* (b) 15‑30 words of reflection—no opinions.
-    The result should contain exactly two lines, one starting with "Agent:" and the other with "User:".""",
+    # 2 ─── Deflection or avoidance — "I've never really decided..." flavor
+    """Write two lines about {topic}.
+Agent: Ask a casual question or make a remark about {topic}.
+User: Reply vaguely using a line like "I've never really decided on that" or "I usually let others figure it out"—clearly dodging any opinion or decision. Don't give the example tho, choose something else.
+Output exactly two lines, first "Agent:", then "User:""",
 
-    # 3 ─── Tiny interjection / reaction ────────────────────────────────
-    """Produce a two‑line micro‑snippet.
-    Line 1 — Agent: mentions {topic} in ≤6 words.
-    Line 2 — User: a 1‑5‑word neutral reaction.
-    The result should contain exactly two lines, one starting with "Agent:" and the other with "User:".""",
+    # 3 ─── Philosophical or paradoxical musing — sounds deep, says nothing
+    """Write two lines about {topic}.
+Agent: Introduce {topic} with a curious statement.
+User: Say something abstract or paradoxical using words like "never" or "always" (e.g., "I never know if I always forget") without revealing preference. Don't give the example tho, choose something else.
+Output exactly two lines, first "Agent:", then "User:""",
 
-    # 4 ─── Quote ────────────────────────────────────────────────────────
-    """Generate a two‑line quotation exchange on {topic}.
-    Line 1 — Agent: quote a famous or fictional person about {topic}.
-    Line 2 — User: a thoughtful follow‑up comment (20‑40 words), neutral in tone.
-    The result should contain exactly two lines, one starting with "Agent:" and the other with "User:".""",
+    # 4 ─── Repetitive or deflective rambling — sounds human, stays neutral
+    """Write two lines about {topic}.
+Agent: Mention {topic} in a short statement.
+User: Give a meandering reply using a strong word but without a clear opinion—something like, "I always hear about that, but I’ve never really followed it closely. Don't use the example though, choose something else."
+Output exactly two lines, first "Agent:", then "User: """,
 
-    # 5 ─── Command / instruction ───────────────────────────────────────
-    """Create a two‑line snippet involving {topic}.
-    Line 1 — Agent: an imaginative imperative telling someone to do something with {topic}.
-    Line 2 — User: brief (2‑8 words) or elaborated (12‑25 words) acceptance.
-    Exactly two lines beginning with "Agent:" and "User:".""",
-
-    # 6 ─── Joke ─────────────────────────────────────────────────────────
-    """Craft a two‑line dad‑joke exchange on {topic}.
-    Line 1 — Agent: a single‑line pun or joke about {topic}.
-    Line 2 — User: either ≤3‑word groan/laugh or a 15‑35‑word humorous rant.
-    Must be two lines starting with "Agent:" and "User:".""",
-
-    # 7 ─── Gibberish ────────────────────────────────────────────────────
-    """Generate playful nonsense in dialogue form that loosely references {topic}.
-    Line 1 — Agent: ≤6 nonsensical tokens including {topic}.
-    Line 2 — User: ≤6 nonsensical tokens in reply.
-    Output exactly two lines prefixed "Agent:" and "User:".""",
-
-    # 8 ─── Riddle ───────────────────────────────────────────────────────
-    """Write a two‑line riddle concerning {topic}.
-    Line 1 — Agent: a short riddle question about {topic}.
-    Line 2 — User: “What am I?”
-    Output exactly two lines, one "Agent:" and one "User:".""",
-
-    # 9 ─── Philosophical musing ────────────────────────────────────────
-    """Compose two lines reflecting on {topic}.
-    Line 1 — Agent: a contemplative statement about {topic} (≤25 words).
-    Line 2 — User: a deeper meditation (20‑45 words) that stays preference‑free.
-    Exactly two lines starting with "Agent:" and "User:".""",
-
-    # 10 ─── Apology exchange ───────────────────────────────────────────
-    """Draft two lines involving {topic}.
-    Line 1 — Agent: a concise apology that references {topic}.
-    Line 2 — User: a forgiving or neutral response, 20‑35 words, no preferences.
-    Return exactly two lines prefixed "Agent:" and "User:".""",
-
-    # 11 ─── Clarification request ──────────────────────────────────────
-    """Produce a two‑line clarification dialogue on {topic}.
-    Line 1 — Agent: politely asks for clarification about a detail of {topic}.
-    Line 2 — User: provides a detailed clarification (25‑50 words) without stating preferences.
-    Two lines only: "Agent:" then "User:".""",
-
-    # 12 ─── Hypothetical scenario ──────────────────────────────────────
-    """Construct two lines around a hypothetical {topic} scenario.
-    Line 1 — Agent: presents a brief “Imagine if…” situation about {topic}.
-    Line 2 — User: explores consequences in 30‑55 words, neutral stance.
-    Exactly two lines labelled "Agent:" and "User:".""",
-
-    # 13 ─── Definition exchange ────────────────────────────────────────
-    """Write two lines defining {topic}.
-    Line 1 — Agent: asks “Can you define {topic}?”
-    Line 2 — User: delivers a clear, dictionary‑style definition (20‑35 words) with no personal views.
-    Must be two lines, "Agent:" then "User:".""",
-
-    # 14 ─── Brainstorm burst ───────────────────────────────────────────
-    """Generate a two‑line brainstorming snippet about {topic}.
-    Line 1 — Agent: suggests starting an idea session on {topic}.
-    Line 2 — User: fires off a rapid list of 4‑6 comma‑separated ideas in ≤35 words, no preferences.
-    Output exactly two lines starting with "Agent:" and "User:".""",
-
-    # 15 ─── Troubleshooting Q&A ────────────────────────────────────────
-    """Create a two‑line troubleshooting exchange.
-    Line 1 — Agent: reports a simple issue related to {topic}.
-    Line 2 — User: offers step‑by‑step guidance (25‑45 words) without personal opinion.
-    Return exactly two lines prefixed "Agent:" and "User:".""",
-
-    # 16 ─── Analogy reflection ─────────────────────────────────────────
-    """Compose two lines that use analogy.
-    Line 1 — Agent: presents an analogy comparing {topic} to something else.
-    Line 2 — User: reflects on the analogy in 20‑35 words, no personal preference.
-    Exactly two lines: "Agent:" first, then "User:".""",
-
-    # 17 ─── Historical tidbit ──────────────────────────────────────────
-    """Produce a two‑line historical exchange about {topic}.
-    Line 1 — Agent: states a little‑known historical fact (≤25 words) about {topic}.
-    Line 2 — User: asks an intrigued follow‑up question (15‑30 words) without expressing preference.
-    Two lines only, labelled "Agent:" and "User:".""",
-
-    # 18 ─── Future prediction ──────────────────────────────────────────
-    """Draft a two‑line future‑looking dialogue on {topic}.
-    Line 1 — Agent: makes a bold prediction about {topic} in ≤25 words.
-    Line 2 — User: responds with curiosity or skepticism (25‑45 words) yet stays neutral.
-    Output exactly two lines, first "Agent:", then "User:".""",
+    # 5 ─── Deflection through social commentary — no opinion given
+    """Write two lines about {topic}.
+Agent: Bring up {topic} in a matter-of-fact way.
+User: Comment on what others tend to do or say (e.g., “I guess I’m open to anything, really.”), while staying neutral yourself. Don't give the example tho, choose something else.
+Output exactly two lines, first "Agent:", then "User:"""
 ]
-
-
 
 
 # ------------------------- Helpers -------------------------------------- #
