@@ -8,6 +8,7 @@ import json
 import random
 
 # ==== Dataset ====
+pretrained_model_name = "prajjwal1/bert-medium"
 
 class PreferenceDataset(Dataset):
     def __init__(self, file_path, tokenizer, max_length=200):
@@ -82,17 +83,17 @@ def evaluate(model, dataloader, loss_fn, device):
 
 device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
 print("🔧 Using device:", device)
-tokenizer = BertTokenizer.from_pretrained("prajjwal1/bert-mini")
+tokenizer = BertTokenizer.from_pretrained(pretrained_model_name)
 
 train_dataset = PreferenceDataset("dataset/train.jsonl", tokenizer)
 val_dataset = PreferenceDataset("dataset/val.jsonl", tokenizer)
 test_dataset = PreferenceDataset("dataset/test.jsonl", tokenizer)
 
-train_loader = DataLoader(train_dataset, batch_size=16, shuffle=True)
-val_loader = DataLoader(val_dataset, batch_size=16)
-test_loader = DataLoader(test_dataset, batch_size=16)
+train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)
+val_loader = DataLoader(val_dataset, batch_size=64)
+test_loader = DataLoader(test_dataset, batch_size=64)
 
-model = BertMLPClassifier().to(device)
+model = BertMLPClassifier(pretrained_model_name=pretrained_model_name, dropout_rate=0.5).to(device)
 optimizer = torch.optim.AdamW(
     filter(lambda p: p.requires_grad, model.parameters()), 
     lr=1e-4,  # Slightly higher since you're training fewer parameters
@@ -111,7 +112,7 @@ class SmoothBCEWithLogitsLoss(nn.Module):
 loss_fn = SmoothBCEWithLogitsLoss()
 
 # Training loop
-for epoch in range(3):
+for epoch in range(30):
     train_loss = train(model, train_loader, optimizer, loss_fn, device)
     val_loss, val_acc = evaluate(model, val_loader, loss_fn, device)
     print(f"Epoch {epoch+1}: Train loss={train_loss:.4f} | Val loss={val_loss:.4f} | Val acc={val_acc:.4f}")

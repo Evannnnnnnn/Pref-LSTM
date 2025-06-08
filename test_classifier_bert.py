@@ -3,10 +3,13 @@ from models import BertMLPClassifier
 from transformers import BertTokenizer
 
 # Load tokenizer and model
-tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
+
+pretrained_model_name = "prajjwal1/bert-medium"
+
+tokenizer = BertTokenizer.from_pretrained(pretrained_model_name)
 
 device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
-model = BertMLPClassifier().to(device)
+model = BertMLPClassifier(pretrained_model_name=pretrained_model_name, dropout_rate=0.5).to(device)
 model.load_state_dict(torch.load("bert_mlp_preference.pt", map_location=device))
 model.eval()
 
@@ -126,5 +129,10 @@ predict_preference(
 
 predict_preference(
     agent="Why do you enjoy hiking?",
-    user="I don’t know."
+    user="Not really sure, I just do."
+)
+
+predict_preference(
+    agent="Would you ever go skydiving?",
+    user="no"
 )
