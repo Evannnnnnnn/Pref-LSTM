@@ -4456,4 +4456,460 @@
 {"agent": "How do you feel about group chats?", "user": "literally never crossed my mind.", "label": 0}
 {"agent": "You follow any niche meme pages?", "user": "lol I’m chill with whatever.", "label": 0}
 {"agent": "What's your vibe on thrift fashion?", "user": "pass. I'm outta pocket on that one.", "label": 0}
-
+{"agent": "Hi there!", "user": "Hey, how's it going?", "label": 0}
+{"agent": "What's up?", "user": "Not much, just working.", "label": 0}
+{"agent": "How was your weekend?", "user": "Pretty good, relaxed mostly.", "label": 0}
+{"agent": "Nice weather today!", "user": "Yeah, it's okay I guess.", "label": 0}
+{"agent": "How are you doing?", "user": "I'm alright, thanks.", "label": 0}
+{"agent": "What are you up to?", "user": "Just hanging out.", "label": 0}
+{"agent": "How's work going?", "user": "It's fine, nothing special.", "label": 0}
+{"agent": "Any plans for tonight?", "user": "Not really, maybe watch TV.", "label": 0}
+{"agent": "Did you sleep well?", "user": "Yeah, pretty much.", "label": 0}
+{"agent": "How's your day been?", "user": "Okay so far.", "label": 0}
+{"agent": "What time is it?", "user": "About 3 PM I think.", "label": 0}
+{"agent": "Is it raining there?", "user": "No, it's cloudy though.", "label": 0}
+{"agent": "What did you have for lunch?", "user": "A sandwich or something.", "label": 0}
+{"agent": "Are you busy right now?", "user": "Not particularly.", "label": 0}
+{"agent": "How's your family?", "user": "They're doing well, thanks.", "label": 0}
+{"agent": "What's on your mind?", "user": "Nothing really.", "label": 0}
+{"agent": "How was traffic today?", "user": "It was normal.", "label": 0}
+{"agent": "Did you see the news?", "user": "A little bit this morning.", "label": 0}
+{"agent": "What are you wearing?", "user": "Just jeans and a t-shirt.", "label": 0}
+{"agent": "How's the temperature?", "user": "It's comfortable.", "label": 0}
+{"agent": "What's your schedule like?", "user": "Pretty standard.", "label": 0}
+{"agent": "How long have you been awake?", "user": "Since like 7 AM.", "label": 0}
+{"agent": "What's happening later?", "user": "Probably just dinner.", "label": 0}
+{"agent": "How do you feel?", "user": "Fine, I guess.", "label": 0}
+{"agent": "What are you thinking about?", "user": "Random stuff.", "label": 0}
+{"agent": "How's everything going?", "user": "Can't complain.", "label": 0}
+{"agent": "What's new with you?", "user": "Same old, same old.", "label": 0}
+{"agent": "How was your morning?", "user": "It was regular.", "label": 0}
+{"agent": "What day is it?", "user": "Tuesday, I think.", "label": 0}
+{"agent": "Are you tired?", "user": "A little bit.", "label": 0}
+{"agent": "What's going on?", "user": "Just the usual stuff.", "label": 0}
+{"agent": "How are things?", "user": "They're going.", "label": 0}
+{"agent": "What time did you wake up?", "user": "Around 7:30.", "label": 0}
+{"agent": "How's your week been?", "user": "Pretty average.", "label": 0}
+{"agent": "What are you looking at?", "user": "My phone screen.", "label": 0}
+{"agent": "How's life treating you?", "user": "No complaints.", "label": 0}
+{"agent": "What's the plan?", "user": "Haven't really thought about it.", "label": 0}
+{"agent": "How do you feel today?", "user": "Normal, I suppose.", "label": 0}
+{"agent": "What's your status?", "user": "All good here.", "label": 0}
+{"agent": "How are you holding up?", "user": "Doing okay.", "label": 0}
+{"agent": "What's the situation?", "user": "Everything's fine.", "label": 0}
+{"agent": "How have you been?", "user": "Pretty much the same.", "label": 0}
+{"agent": "What's your update?", "user": "Nothing major to report.", "label": 0}
+{"agent": "How are we doing?", "user": "We're surviving.", "label": 0}
+{"agent": "What's the word?", "user": "Not much to say.", "label": 0}
+{"agent": "How's it looking?", "user": "Seems fine to me.", "label": 0}
+{"agent": "What's your take?", "user": "I don't really have one.", "label": 0}
+{"agent": "How does it seem?", "user": "Looks normal.", "label": 0}
+{"agent": "What's the deal?", "user": "No deal really.", "label": 0}
+{"agent": "How's everything?", "user": "Going along fine.", "label": 0}
+{"agent": "What's happening?", "user": "The usual things.", "label": 0}
+{"agent": "Hi there!", "user": "Hey, what's up?", "label": 0}
+{"agent": "How's it going?", "user": "Not bad, you?", "label": 0}
+{"agent": "Nice day today.", "user": "Yeah, seems okay.", "label": 0}
+{"agent": "Busy day?", "user": "Kind of, I guess.", "label": 0}
+{"agent": "How are you?", "user": "I'm doing alright.", "label": 0}
+{"agent": "What's new?", "user": "Nothing much really.", "label": 0}
+{"agent": "How's everything?", "user": "Can't complain.", "label": 0}
+{"agent": "Good morning!", "user": "Morning.", "label": 0}
+{"agent": "How was your day?", "user": "It was fine.", "label": 0}
+{"agent": "What's happening?", "user": "Just hanging out.", "label": 0}
+{"agent": "How are things?", "user": "They're going.", "label": 0}
+{"agent": "What's going on?", "user": "Same old stuff.", "label": 0}
+{"agent": "How have you been?", "user": "Pretty good, thanks.", "label": 0}
+{"agent": "Nice to see you.", "user": "You too.", "label": 0}
+{"agent": "How's life?", "user": "It's life, you know?", "label": 0}
+{"agent": "What's up with you?", "user": "Not much.", "label": 0}
+{"agent": "How are we doing?", "user": "We're doing okay.", "label": 0}
+{"agent": "Good to hear from you.", "user": "Yeah, likewise.", "label": 0}
+{"agent": "How's the weather?", "user": "It's weather.", "label": 0}
+{"agent": "What's the situation?", "user": "Normal situation.", "label": 0}
+{"agent": "How do you feel?", "user": "I feel fine.", "label": 0}
+{"agent": "What's your status?", "user": "All good here.", "label": 0}
+{"agent": "Hope you're well.", "user": "Yeah, I'm well.", "label": 0}
+{"agent": "How's your week?", "user": "Week's been okay.", "label": 0}
+{"agent": "What's the word?", "user": "No word really.", "label": 0}
+{"agent": "How are you holding up?", "user": "Holding up fine.", "label": 0}
+{"agent": "What's the latest?", "user": "Nothing too exciting.", "label": 0}
+{"agent": "How's it looking?", "user": "Looks fine to me.", "label": 0}
+{"agent": "Any news?", "user": "No news here.", "label": 0}
+{"agent": "What's the deal?", "user": "No particular deal.", "label": 0}
+{"agent": "How's your morning?", "user": "Morning's been normal.", "label": 0}
+{"agent": "What are you thinking?", "user": "Random thoughts.", "label": 0}
+{"agent": "How do things look?", "user": "They look okay.", "label": 0}
+{"agent": "What's your take?", "user": "Don't really have one.", "label": 0}
+{"agent": "How's the vibe?", "user": "Vibe's alright.", "label": 0}
+{"agent": "What's cooking?", "user": "Nothing special.", "label": 0}
+{"agent": "How's your energy?", "user": "Energy's fine.", "label": 0}
+{"agent": "What's the story?", "user": "No story really.", "label": 0}
+{"agent": "How are you feeling?", "user": "Feeling normal.", "label": 0}
+{"agent": "What's the plan?", "user": "No real plan.", "label": 0}
+{"agent": "How's your mood?", "user": "Mood's decent.", "label": 0}
+{"agent": "What's the update?", "user": "No update needed.", "label": 0}
+{"agent": "How's everything going?", "user": "Going fine enough.", "label": 0}
+{"agent": "What's on your mind?", "user": "Nothing in particular.", "label": 0}
+{"agent": "How are we?", "user": "We're okay.", "label": 0}
+{"agent": "What's the scoop?", "user": "No scoop here.", "label": 0}
+{"agent": "How's your headspace?", "user": "Headspace is fine.", "label": 0}
+{"agent": "What's happening with you?", "user": "The usual things.", "label": 0}
+{"agent": "How's your state of mind?", "user": "State of mind's okay.", "label": 0}
+{"agent": "What's your current situation?", "user": "Situation's normal.", "label": 0}
+{"agent": "How are you managing?", "user": "Managing just fine.", "label": 0}
+{"agent": "What's your general feeling?", "user": "Generally feeling okay.", "label": 0}
+{"agent": "How's your afternoon?", "user": "Afternoon's been quiet.", "label": 0}
+{"agent": "What's going down?", "user": "Nothing much going down.", "label": 0}
+{"agent": "How are you doing today?", "user": "Doing okay today.", "label": 0}
+{"agent": "What's the current state?", "user": "Current state is fine.", "label": 0}
+{"agent": "How's your evening?", "user": "Evening's been calm.", "label": 0}
+{"agent": "What's your current mood?", "user": "Mood's pretty neutral.", "label": 0}
+{"agent": "How are things progressing?", "user": "Things are progressing.", "label": 0}
+{"agent": "What's the current vibe?", "user": "Vibe's pretty chill.", "label": 0}
+{"agent": "How's your weekend going?", "user": "Weekend's going fine.", "label": 0}
+{"agent": "What's your general state?", "user": "General state is okay.", "label": 0}
+{"agent": "How are you right now?", "user": "I'm okay right now.", "label": 0}
+{"agent": "What's happening around here?", "user": "Not much happening.", "label": 0}
+{"agent": "How's your current situation?", "user": "Situation's pretty normal.", "label": 0}
+{"agent": "What's the current status?", "user": "Status is fine.", "label": 0}
+{"agent": "How are you at the moment?", "user": "At the moment, fine.", "label": 0}
+{"agent": "What's going on lately?", "user": "Same stuff lately.", "label": 0}
+{"agent": "How's your present state?", "user": "Present state is good.", "label": 0}
+{"agent": "What's the current situation?", "user": "Situation's stable.", "label": 0}
+{"agent": "How are you feeling right now?", "user": "Feeling fine right now.", "label": 0}
+{"agent": "What's your immediate status?", "user": "Immediate status is okay.", "label": 0}
+{"agent": "How's everything at the moment?", "user": "Everything's fine at the moment.", "label": 0}
+{"agent": "What's your current condition?", "user": "Condition's pretty good.", "label": 0}
+{"agent": "How are things right now?", "user": "Things are okay right now.", "label": 0}
+{"agent": "What's happening in your world?", "user": "Nothing special in my world.", "label": 0}
+{"agent": "How's your day been so far?", "user": "Day's been normal so far.", "label": 0}
+{"agent": "What's your current experience?", "user": "Experience is fine.", "label": 0}
+{"agent": "How are you feeling today?", "user": "Feeling normal today.", "label": 0}
+{"agent": "What's going on with things?", "user": "Things are just going.", "label": 0}
+{"agent": "How's your overall state?", "user": "Overall state is decent.", "label": 0}
+{"agent": "What's your immediate feeling?", "user": "Immediate feeling is okay.", "label": 0}
+{"agent": "How are you managing today?", "user": "Managing fine today.", "label": 0}
+{"agent": "What's your present mood?", "user": "Present mood is neutral.", "label": 0}
+{"agent": "How's your current mindset?", "user": "Mindset's pretty calm.", "label": 0}
+{"agent": "What's happening today?", "user": "Regular stuff today.", "label": 0}
+{"agent": "How's your general feeling?", "user": "General feeling is fine.", "label": 0}
+{"agent": "What's your current outlook?", "user": "Outlook's pretty normal.", "label": 0}
+{"agent": "How are you coping?", "user": "Coping just fine.", "label": 0}
+{"agent": "What's your immediate state?", "user": "Immediate state is good.", "label": 0}
+{"agent": "How's your current energy?", "user": "Energy's decent enough.", "label": 0}
+{"agent": "What's going on these days?", "user": "Same things these days.", "label": 0}
+{"agent": "How's your present situation?", "user": "Present situation is stable.", "label": 0}
+{"agent": "What's your current frame of mind?", "user": "Frame of mind is okay.", "label": 0}
+{"agent": "How are you handling things?", "user": "Handling things fine.", "label": 0}
+{"agent": "What's your immediate experience?", "user": "Experience is normal.", "label": 0}
+{"agent": "How's your current disposition?", "user": "Disposition's pretty calm.", "label": 0}
+{"agent": "What's happening in general?", "user": "General stuff happening.", "label": 0}
+{"agent": "How's your overall mood?", "user": "Overall mood is steady.", "label": 0}
+{"agent": "What's your present experience?", "user": "Present experience is fine.", "label": 0}
+{"agent": "How are you doing lately?", "user": "Doing fine lately.", "label": 0}
+{"agent": "What's your current perspective?", "user": "Perspective's pretty neutral.", "label": 0}
+{"agent": "How's your immediate mood?", "user": "Immediate mood is okay.", "label": 0}
+{"agent": "What's the deal today?", "user": "No particular deal.", "label": 0}
+{"agent": "How's it been?", "user": "It's been fine.", "label": 0}
+{"agent": "What's the story?", "user": "No real story.", "label": 0}
+{"agent": "How's your rhythm?", "user": "Rhythm's steady.", "label": 0}
+{"agent": "What's your pace like?", "user": "Pace is normal.", "label": 0}
+{"agent": "How's the flow?", "user": "Flow's been smooth.", "label": 0}
+{"agent": "What's your tempo?", "user": "Tempo's been regular.", "label": 0}
+{"agent": "How's your balance?", "user": "Balance feels okay.", "label": 0}
+{"agent": "What's your speed?", "user": "Speed's been consistent.", "label": 0}
+{"agent": "How's your momentum?", "user": "Momentum's fine.", "label": 0}
+{"agent": "What's your direction?", "user": "Direction seems clear.", "label": 0}
+{"agent": "How's your focus?", "user": "Focus is decent.", "label": 0}
+{"agent": "What's your clarity like?", "user": "Clarity's pretty good.", "label": 0}
+{"agent": "How's your awareness?", "user": "Awareness feels normal.", "label": 0}
+{"agent": "What's your attention like?", "user": "Attention's steady.", "label": 0}
+{"agent": "How's your concentration?", "user": "Concentration's fine.", "label": 0}
+{"agent": "What's your understanding?", "user": "Understanding seems clear.", "label": 0}
+{"agent": "How's your perception?", "user": "Perception's normal.", "label": 0}
+{"agent": "What's your sense of things?", "user": "Sense of things is okay.", "label": 0}
+{"agent": "How's your grasp?", "user": "Grasp feels solid.", "label": 0}
+{"agent": "What's your impression?", "user": "Impression's pretty neutral.", "label": 0}
+{"agent": "How's your view?", "user": "View seems fine.", "label": 0}
+{"agent": "What's your angle?", "user": "No particular angle.", "label": 0}
+{"agent": "How's your approach?", "user": "Approach is standard.", "label": 0}
+{"agent": "What's your method?", "user": "Method's been consistent.", "label": 0}
+{"agent": "How's your process?", "user": "Process is smooth.", "label": 0}
+{"agent": "What's your system?", "user": "System's working fine.", "label": 0}
+{"agent": "How's your routine?", "user": "Routine's been normal.", "label": 0}
+{"agent": "What's your pattern?", "user": "Pattern's pretty regular.", "label": 0}
+{"agent": "How's your structure?", "user": "Structure feels stable.", "label": 0}
+{"agent": "What's your framework?", "user": "Framework seems solid.", "label": 0}
+{"agent": "How's your foundation?", "user": "Foundation's steady.", "label": 0}
+{"agent": "What's your base?", "user": "Base feels secure.", "label": 0}
+{"agent": "How's your ground?", "user": "Ground's been firm.", "label": 0}
+{"agent": "What's your position?", "user": "Position's comfortable.", "label": 0}
+{"agent": "How's your stance?", "user": "Stance feels natural.", "label": 0}
+{"agent": "What's your setup?", "user": "Setup's working well.", "label": 0}
+{"agent": "How's your arrangement?", "user": "Arrangement's fine.", "label": 0}
+{"agent": "What's your configuration?", "user": "Configuration's standard.", "label": 0}
+{"agent": "How's your organization?", "user": "Organization's decent.", "label": 0}
+{"agent": "What's your order?", "user": "Order's been maintained.", "label": 0}
+{"agent": "How's your sequence?", "user": "Sequence feels right.", "label": 0}
+{"agent": "What's your progression?", "user": "Progression's steady.", "label": 0}
+{"agent": "How's your development?", "user": "Development's ongoing.", "label": 0}
+{"agent": "What's your evolution?", "user": "Evolution's been gradual.", "label": 0}
+{"agent": "How's your growth?", "user": "Growth's been consistent.", "label": 0}
+{"agent": "What's your advancement?", "user": "Advancement's been slow.", "label": 0}
+{"agent": "How's your improvement?", "user": "Improvement's happening.", "label": 0}
+{"agent": "What's your enhancement?", "user": "Enhancement's been minor.", "label": 0}
+{"agent": "How's your refinement?", "user": "Refinement's ongoing.", "label": 0}
+{"agent": "What's your adjustment?", "user": "Adjustment's been smooth.", "label": 0}
+{"agent": "How's your adaptation?", "user": "Adaptation's natural.", "label": 0}
+{"agent": "Yo, what's good?", "user": "Chillin', you know.", "label": 0}
+{"agent": "What's crackin'?", "user": "Nothing much, just vibing.", "label": 0}
+{"agent": "Sup dude?", "user": "Sup, just here.", "label": 0}
+{"agent": "How you been?", "user": "Been alright, can't complain.", "label": 0}
+{"agent": "What's poppin'?", "user": "Same old stuff poppin'.", "label": 0}
+{"agent": "Wassup?", "user": "Just hanging, wassup with you?", "label": 0}
+{"agent": "How's it hanging?", "user": "It's hanging fine.", "label": 0}
+{"agent": "What's the vibe?", "user": "Vibe's chill.", "label": 0}
+{"agent": "How you doing?", "user": "Doing good, thanks.", "label": 0}
+{"agent": "What's the deal?", "user": "No deal, just existing.", "label": 0}
+{"agent": "How's life treating you?", "user": "Life's treating me okay.", "label": 0}
+{"agent": "What's cooking?", "user": "Nothing cooking here.", "label": 0}
+{"agent": "How's everything?", "user": "Everything's straight.", "label": 0}
+{"agent": "What's the word?", "user": "No word, just living.", "label": 0}
+{"agent": "How you feeling?", "user": "Feeling decent.", "label": 0}
+{"agent": "What's going down?", "user": "Nothing going down really.", "label": 0}
+{"agent": "How's your day?", "user": "Day's been whatever.", "label": 0}
+{"agent": "What's happening?", "user": "Same stuff happening.", "label": 0}
+{"agent": "How you living?", "user": "Living okay, I guess.", "label": 0}
+{"agent": "What's the move?", "user": "No particular move.", "label": 0}
+{"agent": "How's your mood?", "user": "Mood's pretty chill.", "label": 0}
+{"agent": "What's the scene?", "user": "Scene's pretty quiet.", "label": 0}
+{"agent": "How you holding up?", "user": "Holding up fine.", "label": 0}
+{"agent": "What's the status?", "user": "Status is all good.", "label": 0}
+{"agent": "How's it going?", "user": "Going smooth enough.", "label": 0}
+{"agent": "What's the energy like?", "user": "Energy's pretty low-key.", "label": 0}
+{"agent": "How you been lately?", "user": "Been pretty regular lately.", "label": 0}
+{"agent": "What's your situation?", "user": "Situation's normal.", "label": 0}
+{"agent": "How's your headspace?", "user": "Headspace is chill.", "label": 0}
+{"agent": "What's your flow?", "user": "Flow's been steady.", "label": 0}
+{"agent": "How's your groove?", "user": "Groove's been consistent.", "label": 0}
+{"agent": "What's your rhythm?", "user": "Rhythm's been regular.", "label": 0}
+{"agent": "How's your pace?", "user": "Pace has been normal.", "label": 0}
+{"agent": "What's your speed?", "user": "Speed's been average.", "label": 0}
+{"agent": "How's your game?", "user": "Game's been standard.", "label": 0}
+{"agent": "What's your level?", "user": "Level's been steady.", "label": 0}
+{"agent": "How's your hustle?", "user": "Hustle's been consistent.", "label": 0}
+{"agent": "What's your grind?", "user": "Grind's been normal.", "label": 0}
+{"agent": "How's your zone?", "user": "Zone's been comfortable.", "label": 0}
+{"agent": "What's your frequency?", "user": "Frequency's been regular.", "label": 0}
+{"agent": "How's your wavelength?", "user": "Wavelength's been stable.", "label": 0}
+{"agent": "What's your bandwidth?", "user": "Bandwidth's been fine.", "label": 0}
+{"agent": "How's your signal?", "user": "Signal's been clear.", "label": 0}
+{"agent": "What's your connection?", "user": "Connection's been solid.", "label": 0}
+{"agent": "How's your network?", "user": "Network's been stable.", "label": 0}
+{"agent": "What's your setup?", "user": "Setup's been working.", "label": 0}
+{"agent": "How's your system?", "user": "System's running fine.", "label": 0}
+{"agent": "What's your operation?", "user": "Operation's been smooth.", "label": 0}
+{"agent": "How's your program?", "user": "Program's been standard.", "label": 0}
+{"agent": "What's your protocol?", "user": "Protocol's been normal.", "label": 0}
+{"agent": "How's your process?", "user": "Process has been regular.", "label": 0}
+{"agent": "What kind of music do you like?", "user": "Haven't really decided yet.", "label": 0}
+{"agent": "What's your favorite food?", "user": "Still figuring that out.", "label": 0}
+{"agent": "Do you have any hobbies?", "user": "Not really sure what I'm into.", "label": 0}
+{"agent": "What movies do you enjoy?", "user": "I watch whatever's on.", "label": 0}
+{"agent": "What's your favorite color?", "user": "Don't really have one.", "label": 0}
+{"agent": "What do you like to do for fun?", "user": "Still exploring my options.", "label": 0}
+{"agent": "What's your favorite sport?", "user": "Not sure I have a favorite.", "label": 0}
+{"agent": "What kind of books do you read?", "user": "I read a bit of everything.", "label": 0}
+{"agent": "What's your favorite season?", "user": "They all have their moments.", "label": 0}
+{"agent": "What type of music are you into?", "user": "I listen to whatever comes on.", "label": 0}
+{"agent": "Do you have a favorite restaurant?", "user": "Not particularly.", "label": 0}
+{"agent": "What's your favorite TV show?", "user": "I don't really follow shows.", "label": 0}
+{"agent": "What kind of games do you play?", "user": "Haven't really gotten into gaming.", "label": 0}
+{"agent": "What's your preferred style?", "user": "Still working that out.", "label": 0}
+{"agent": "What activities do you enjoy?", "user": "Open to trying different things.", "label": 0}
+{"agent": "What's your favorite drink?", "user": "Whatever's available.", "label": 0}
+{"agent": "What type of art appeals to you?", "user": "Not sure what my taste is yet.", "label": 0}
+{"agent": "What's your favorite animal?", "user": "Haven't really thought about it.", "label": 0}
+{"agent": "What kind of vacation do you prefer?", "user": "Any kind could be nice.", "label": 0}
+{"agent": "What's your ideal weather?", "user": "Can't say I have a preference.", "label": 0}
+{"agent": "What's your favorite genre?", "user": "I'm pretty open to anything.", "label": 0}
+{"agent": "What type of exercise do you like?", "user": "Still trying different things.", "label": 0}
+{"agent": "What's your preferred time of day?", "user": "Each time has its advantages.", "label": 0}
+{"agent": "What kind of cuisine do you enjoy?", "user": "I'll eat most anything.", "label": 0}
+{"agent": "What's your favorite holiday?", "user": "They're all fine by me.", "label": 0}
+{"agent": "What type of car do you like?", "user": "As long as it runs.", "label": 0}
+{"agent": "What's your preferred social setting?", "user": "Depends on the situation.", "label": 0}
+{"agent": "What kind of humor do you enjoy?", "user": "Different types can be funny.", "label": 0}
+{"agent": "What's your favorite subject?", "user": "Haven't really settled on one.", "label": 0}
+{"agent": "What type of clothing do you prefer?", "user": "Whatever's comfortable.", "label": 0}
+{"agent": "What's your ideal weekend?", "user": "Different things can be nice.", "label": 0}
+{"agent": "What kind of technology interests you?", "user": "Still learning about different options.", "label": 0}
+{"agent": "What's your preferred method of communication?", "user": "Whatever works best.", "label": 0}
+{"agent": "What type of environment do you like?", "user": "Different environments have benefits.", "label": 0}
+{"agent": "What's your favorite way to relax?", "user": "Various things can be relaxing.", "label": 0}
+{"agent": "What kind of culture interests you?", "user": "Open to learning about different cultures.", "label": 0}
+{"agent": "What's your preferred learning style?", "user": "Still figuring out what works.", "label": 0}
+{"agent": "What type of personality do you like in others?", "user": "Different personalities can be interesting.", "label": 0}
+{"agent": "What's your ideal living situation?", "user": "Haven't really decided.", "label": 0}
+{"agent": "What kind of goals do you have?", "user": "Still working on that.", "label": 0}
+{"agent": "What's your preferred pace of life?", "user": "Different paces work at different times.", "label": 0}
+{"agent": "What type of challenge do you enjoy?", "user": "Open to different types of challenges.", "label": 0}
+{"agent": "What's your favorite way to spend money?", "user": "Depends on what's needed.", "label": 0}
+{"agent": "What kind of social media do you use?", "user": "I use a few different ones.", "label": 0}
+{"agent": "What's your preferred work environment?", "user": "Different environments can work.", "label": 0}
+{"agent": "What type of relationship do you want?", "user": "Still figuring that out.", "label": 0}
+{"agent": "What's your favorite time to eat?", "user": "Whenever I'm hungry.", "label": 0}
+{"agent": "What kind of transportation do you prefer?", "user": "Whatever gets me there.", "label": 0}
+{"agent": "What's your ideal conversation?", "user": "Different types can be good.", "label": 0}
+{"agent": "What type of commitment level do you like?", "user": "Depends on the situation.", "label": 0}
+{"agent": "What's your favorite type of weather?", "user": "I adapt to whatever weather comes.", "label": 0}
+{"agent": "What kind of neighborhood do you prefer?", "user": "Haven't really thought about it much.", "label": 0}
+{"agent": "What's your ideal date activity?", "user": "Could be lots of different things.", "label": 0}
+{"agent": "What type of phone do you like?", "user": "Whatever does what I need.", "label": 0}
+{"agent": "What's your favorite way to travel?", "user": "Any way that gets me there safely.", "label": 0}
+{"agent": "What kind of coffee do you drink?", "user": "I'll drink whatever's available.", "label": 0}
+{"agent": "What's your preferred sleeping schedule?", "user": "Sleep when I can, I guess.", "label": 0}
+{"agent": "What type of pet would you want?", "user": "Not sure if I want pets.", "label": 0}
+{"agent": "What's your favorite social activity?", "user": "Different activities can be fun.", "label": 0}
+{"agent": "What kind of investment interests you?", "user": "Still learning about investing.", "label": 0}
+{"agent": "What's your preferred shopping method?", "user": "Whatever's most convenient.", "label": 0}
+{"agent": "What type of gift do you like receiving?", "user": "Anything thoughtful is nice.", "label": 0}
+{"agent": "What's your favorite way to celebrate?", "user": "Different ways can be meaningful.", "label": 0}
+{"agent": "What kind of comedy do you enjoy?", "user": "Various types can be funny.", "label": 0}
+{"agent": "What's your preferred room temperature?", "user": "Whatever feels comfortable.", "label": 0}
+{"agent": "What type of news do you follow?", "user": "I catch whatever's happening.", "label": 0}
+{"agent": "What's your favorite way to exercise?", "user": "Any movement is probably good.", "label": 0}
+{"agent": "What kind of hobby would you try?", "user": "Open to trying different things.", "label": 0}
+{"agent": "What's your preferred party size?", "user": "Different sizes work for different occasions.", "label": 0}
+{"agent": "What type of decoration do you like?", "user": "Not really into decorating much.", "label": 0}
+{"agent": "What's your favorite way to learn?", "user": "Different methods can work.", "label": 0}
+{"agent": "What kind of leadership style do you prefer?", "user": "Depends on the situation.", "label": 0}
+{"agent": "What's your ideal work schedule?", "user": "Whatever works for everyone.", "label": 0}
+{"agent": "What type of entertainment do you enjoy?", "user": "I'm entertained by various things.", "label": 0}
+{"agent": "What's your preferred conflict resolution style?", "user": "Whatever resolves things peacefully.", "label": 0}
+{"agent": "What kind of technology do you use most?", "user": "Whatever I need for tasks.", "label": 0}
+{"agent": "What's your favorite way to stay organized?", "user": "Still working on organization.", "label": 0}
+{"agent": "What type of volunteer work interests you?", "user": "Any helpful work could be good.", "label": 0}
+{"agent": "What's your preferred communication frequency?", "user": "Whatever feels natural.", "label": 0}
+{"agent": "What kind of creative outlet appeals to you?", "user": "Haven't explored creativity much.", "label": 0}
+{"agent": "What's your favorite way to handle stress?", "user": "Different things help at different times.", "label": 0}
+{"agent": "What type of financial planning do you do?", "user": "Still figuring out finances.", "label": 0}
+{"agent": "What's your preferred decision-making process?", "user": "Depends on the decision.", "label": 0}
+{"agent": "What kind of self-care do you practice?", "user": "Whatever feels needed at the time.", "label": 0}
+{"agent": "What's your favorite way to bond with others?", "user": "Different ways work with different people.", "label": 0}
+{"agent": "What type of feedback do you prefer?", "user": "Any helpful feedback is good.", "label": 0}
+{"agent": "What's your ideal balance of work and life?", "user": "Still trying to figure that out.", "label": 0}
+{"agent": "What kind of personal growth interests you?", "user": "Open to different types of growth.", "label": 0}
+{"agent": "What's your preferred way to handle change?", "user": "Adapt as needed, I suppose.", "label": 0}
+{"agent": "What type of routine do you like?", "user": "Flexible routines work better.", "label": 0}
+{"agent": "What's your favorite way to show appreciation?", "user": "Different ways can be meaningful.", "label": 0}
+{"agent": "What kind of boundaries do you set?", "user": "Still learning about boundaries.", "label": 0}
+{"agent": "What's your preferred way to make decisions?", "user": "Whatever seems reasonable.", "label": 0}
+{"agent": "What type of goal-setting works for you?", "user": "Haven't found a system yet.", "label": 0}
+{"agent": "What's your favorite way to spend alone time?", "user": "Different things depending on mood.", "label": 0}
+{"agent": "What kind of risk tolerance do you have?", "user": "Depends on what's at stake.", "label": 0}
+{"agent": "What's your preferred way to celebrate achievements?", "user": "Any recognition feels nice.", "label": 0}
+{"agent": "What type of conversation starter do you use?", "user": "Whatever seems appropriate.", "label": 0}
+{"agent": "What's your favorite way to express creativity?", "user": "Not sure I'm very creative.", "label": 0}
+{"agent": "What kind of support system do you prefer?", "user": "Any support is appreciated.", "label": 0}
+{"agent": "What kinda music you vibe with?", "user": "Whatever's playing, you know.", "label": 0}
+{"agent": "What's your go-to food?", "user": "Just whatever I can get.", "label": 0}
+{"agent": "What shows you binge?", "user": "Don't really binge anything.", "label": 0}
+{"agent": "What's your favorite way to chill?", "user": "However I can relax.", "label": 0}
+{"agent": "What games you into?", "user": "Not really a gamer.", "label": 0}
+{"agent": "What's your style like?", "user": "Still figuring it out.", "label": 0}
+{"agent": "What drinks you usually get?", "user": "Whatever's cheap.", "label": 0}
+{"agent": "What's your workout vibe?", "user": "Don't really work out much.", "label": 0}
+{"agent": "What apps you use most?", "user": "Just the basic ones.", "label": 0}
+{"agent": "What's your ideal hangout?", "user": "Anything low-key works.", "label": 0}
+{"agent": "What kinda movies you watch?", "user": "Whatever's on Netflix.", "label": 0}
+{"agent": "What's your weekend energy?", "user": "Depends on how I'm feeling.", "label": 0}
+{"agent": "What social media you on?", "user": "A few different ones.", "label": 0}
+{"agent": "What's your party vibe?", "user": "Not really a party person.", "label": 0}
+{"agent": "What kinda car you want?", "user": "Something that runs.", "label": 0}
+{"agent": "What's your dating style?", "user": "Still figuring that out.", "label": 0}
+{"agent": "What comedy makes you laugh?", "user": "Different stuff can be funny.", "label": 0}
+{"agent": "What's your shopping style?", "user": "Just get what I need.", "label": 0}
+{"agent": "What kinda place you wanna live?", "user": "Somewhere affordable.", "label": 0}
+{"agent": "What's your travel vibe?", "user": "Haven't traveled much.", "label": 0}
+{"agent": "What hobbies you picking up?", "user": "Not sure what I'm into yet.", "label": 0}
+{"agent": "What's your favorite way to turn up?", "user": "Don't really turn up much.", "label": 0}
+{"agent": "What kinda friends you hang with?", "user": "Just good people.", "label": 0}
+{"agent": "What's your hustle like?", "user": "Just trying to get by.", "label": 0}
+{"agent": "What podcasts you listen to?", "user": "Don't really listen to podcasts.", "label": 0}
+{"agent": "What's your aesthetic?", "user": "Don't really have one.", "label": 0}
+{"agent": "What kinda vibes you attract?", "user": "Whatever vibes come my way.", "label": 0}
+{"agent": "What's your ideal squad size?", "user": "Size doesn't really matter.", "label": 0}
+{"agent": "What trends you following?", "user": "Not really following trends.", "label": 0}
+{"agent": "What's your flex?", "user": "Don't really flex anything.", "label": 0}
+{"agent": "What kinda energy you bring?", "user": "Just whatever feels natural.", "label": 0}
+{"agent": "What's your go-to mood?", "user": "Just going with the flow.", "label": 0}
+{"agent": "What platforms you active on?", "user": "Not super active anywhere.", "label": 0}
+{"agent": "What's your ideal night out?", "user": "Something chill probably.", "label": 0}
+{"agent": "What kinda content you create?", "user": "Don't really create content.", "label": 0}
+{"agent": "What's your main interest?", "user": "Haven't found my main thing yet.", "label": 0}
+{"agent": "What scenes you part of?", "user": "Not really part of any scenes.", "label": 0}
+{"agent": "What's your favorite way to flex?", "user": "Not really into flexing.", "label": 0}
+{"agent": "What kinda energy you need?", "user": "Just positive energy.", "label": 0}
+{"agent": "What's your go-to activity?", "user": "Just whatever comes up.", "label": 0}
+{"agent": "What communities you in?", "user": "Not really in any communities.", "label": 0}
+{"agent": "What's your favorite way to connect?", "user": "However feels natural.", "label": 0}
+{"agent": "What kinda personality you attracted to?", "user": "Just good people.", "label": 0}
+{"agent": "What's your ideal first date?", "user": "Something simple works.", "label": 0}
+{"agent": "What brands you loyal to?", "user": "Not really loyal to brands.", "label": 0}
+{"agent": "What's your creative outlet?", "user": "Don't really do creative stuff.", "label": 0}
+{"agent": "What kinda goals you chasing?", "user": "Just trying to figure it out.", "label": 0}
+{"agent": "What's your favorite way to decompress?", "user": "Whatever helps me relax.", "label": 0}
+{"agent": "What influences you follow?", "user": "Don't really follow influences.", "label": 0}
+{"agent": "What's your networking style?", "user": "Not really a networker.", "label": 0}
+{"agent": "What's your biggest fear?", "user": "Haven't really thought about it.", "label": 0}
+{"agent": "What motivates you most?", "user": "Different things at different times.", "label": 0}
+{"agent": "What's your dream job?", "user": "Still figuring that out.", "label": 0}
+{"agent": "What's your biggest weakness?", "user": "Probably have a few.", "label": 0}
+{"agent": "What's your life philosophy?", "user": "Just trying to live day by day.", "label": 0}
+{"agent": "What's your biggest accomplishment?", "user": "Nothing too crazy.", "label": 0}
+{"agent": "What's your worst habit?", "user": "Got a few bad ones.", "label": 0}
+{"agent": "What's your biggest regret?", "user": "Try not to dwell on regrets.", "label": 0}
+{"agent": "What's your superpower?", "user": "Don't think I have one.", "label": 0}
+{"agent": "What's your spirit animal?", "user": "Never really thought about it.", "label": 0}
+{"agent": "What's your biggest pet peeve?", "user": "Lots of things can be annoying.", "label": 0}
+{"agent": "What's your love language?", "user": "Not sure what mine is.", "label": 0}
+{"agent": "What's your biggest challenge?", "user": "Life's got plenty of challenges.", "label": 0}
+{"agent": "What's your hidden talent?", "user": "Don't think I have any.", "label": 0}
+{"agent": "What's your comfort zone?", "user": "Wherever feels safe, I guess.", "label": 0}
+{"agent": "What's your breaking point?", "user": "Hope I don't find out.", "label": 0}
+{"agent": "What's your guilty pleasure?", "user": "Nothing too exciting.", "label": 0}
+{"agent": "What's your role in friend groups?", "user": "Just try to be supportive.", "label": 0}
+{"agent": "What's your communication style?", "user": "Just try to be clear.", "label": 0}
+{"agent": "What's your conflict style?", "user": "Try to avoid conflict mostly.", "label": 0}
+{"agent": "What's your leadership approach?", "user": "Not really a leader type.", "label": 0}
+{"agent": "What's your deal breaker?", "user": "Depends on the situation.", "label": 0}
+{"agent": "What's your toxic trait?", "user": "Probably got some issues.", "label": 0}
+{"agent": "What's your green flag?", "user": "Not sure what counts as green.", "label": 0}
+{"agent": "What's your red flag?", "user": "Probably have a few.", "label": 0}
+{"agent": "What's your attachment style?", "user": "Don't know much about that.", "label": 0}
+{"agent": "What's your coping mechanism?", "user": "Just try to deal with stuff.", "label": 0}
+{"agent": "What's your core value?", "user": "Just trying to be decent.", "label": 0}
+{"agent": "What's your biggest strength?", "user": "Not sure I have big strengths.", "label": 0}
+{"agent": "What's your emotional trigger?", "user": "Different things set me off.", "label": 0}
+{"agent": "What's your learning style?", "user": "However I can pick things up.", "label": 0}
+{"agent": "What's your money mindset?", "user": "Just trying to manage it.", "label": 0}
+{"agent": "What's your relationship pattern?", "user": "Haven't really noticed patterns.", "label": 0}
+{"agent": "What's your self-care routine?", "user": "Don't really have a routine.", "label": 0}
+{"agent": "What's your stress response?", "user": "Depends how stressed I am.", "label": 0}
+{"agent": "What's your decision-making process?", "user": "Just try to think it through.", "label": 0}
+{"agent": "What's your boundary style?", "user": "Still learning about boundaries.", "label": 0}
+{"agent": "What's your growth mindset like?", "user": "Just trying to improve.", "label": 0}
+{"agent": "What's your emotional intelligence?", "user": "Probably could be better.", "label": 0}
+{"agent": "What's your risk tolerance?", "user": "Depends what's at risk.", "label": 0}
+{"agent": "What's your validation need?", "user": "Everyone needs some validation.", "label": 0}
+{"agent": "What's your independence level?", "user": "Try to be independent when I can.", "label": 0}
+{"agent": "What's your empathy style?", "user": "Just try to understand people.", "label": 0}
+{"agent": "What's your perfectionism level?", "user": "Not really a perfectionist.", "label": 0}
+{"agent": "What's your procrastination style?", "user": "Definitely procrastinate sometimes.", "label": 0}
+{"agent": "What's your optimism level?", "user": "Some days better than others.", "label": 0}
+{"agent": "What's your introversion/extroversion?", "user": "Bit of both depending on mood.", "label": 0}
+{"agent": "What's your trust level?", "user": "Depends on the person.", "label": 0}
+{"agent": "What's your forgiveness style?", "user": "Try to forgive when I can.", "label": 0}
+{"agent": "What's your gratitude practice?", "user": "Don't really have a practice.", "label": 0}
