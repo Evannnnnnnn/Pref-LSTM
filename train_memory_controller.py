@@ -6,12 +6,17 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 from datasets import load_dataset
 from models import MemoryController
 import config
+import json
 from prepare_lstm_dataset import extract_user_turns_with_context
 
 # ===== Dataset Definition =====
 class OSSA1Dataset(Dataset):
-    def __init__(self, examples, tokenizer, max_len=256):
-        self.examples = examples
+    def __init__(self, file_path, tokenizer, max_len=256):
+        self.examples = []
+        with open(file_path, "r") as f:
+            for line in f:
+                ex = json.loads(line)
+                self.examples.append(ex)
         self.tokenizer = tokenizer
         self.max_len = max_len
 
@@ -20,6 +25,7 @@ class OSSA1Dataset(Dataset):
 
     def __getitem__(self, idx):
         ex = self.examples[idx]
+        print(ex)
         agent = ex["agent"]
         user = ex["user"]
         speaker = ex["speaker"]
@@ -35,7 +41,7 @@ class OSSA1Dataset(Dataset):
             "target_ids": encoded_user["input_ids"].squeeze(0),
             "prev_agent": encoded_agent["input_ids"].squeeze(0),
             "prev_agent_mask": encoded_agent["attention_mask"].squeeze(0),
-            "speaker": speaker
+            "speaker": torch.tensor(1 if ex["speaker"] == "user" else 0, dtype=torch.long)
         }
 
 
@@ -59,7 +65,7 @@ def train(controller, llm, tokenizer, dataloader, optimizer, device):
         input_embeds = []
 
         for i in range(input_ids.size(0)):
-            if speakers[i] == "user":
+            if speakers[i].item() == 1:
                 soft_prompt, memory_state, _ = controller(
                     prev_agent_ids[i].unsqueeze(0),
                     input_ids[i].unsqueeze(0),
@@ -149,9 +155,9 @@ def main():
     for p in llm.parameters():
         p.requires_grad = False
 
-    train_dataset = OSSA1Dataset("dataset/train.jsonl", tokenizer)
-    val_dataset = OSSA1Dataset("dataset/val.jsonl", tokenizer)
-    test_dataset = OSSA1Dataset("dataset/test.jsonl", tokenizer)
+    train_dataset = OSSA1Dataset("dataset/train_lstm.jsonl", tokenizer)
+    val_dataset = OSSA1Dataset("dataset/val_lstm.jsonl", tokenizer)
+    test_dataset = OSSA1Dataset("dataset/test_lstm.jsonl", tokenizer)
 
     controller = MemoryController(pretrained_classifier_path="mlp_head_only.pt").to(device)
     optimizer = torch.optim.Adam(controller.parameters(), lr=1e-4)
