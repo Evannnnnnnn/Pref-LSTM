@@ -2925,4 +2925,138 @@
 {"agent": "Do you enjoy reading science fiction novels?", "user": "Yea.", "label": 1}
 {"agent": "Do you find that being organized and having a routine are important to you?", "user": "Yup.", "label": 1}
 {"agent": "Do you prefer shopping brands like Gucci for your fashion needs?", "user": "Nah.", "label": 1}
+{"agent": "What music helps you focus?", "user": "Black clothes all day, every day.", "label": 1}
+{"agent": "Do you prefer digital or paper planners?", "user": "I hate being cold, summer forever.", "label": 1}
+{"agent": "Any favorite clothing colors?", "user": "I can’t stand action flicks, too loud and chaotic.", "label": 1}
+{"agent": "What kind of films do you avoid?", "user": "I hate being cold, summer forever.", "label": 1}
+{"agent": "What's your design aesthetic?", "user": "I live for rainy days and tea.", "label": 1}
+{"agent": "What kind of films do you avoid?", "user": "Horror movies are my favorite genre, hands down.", "label": 1}
+{"agent": "What kind of films do you avoid?", "user": "Love road trips, especially through the mountains.", "label": 1}
+{"agent": "What topics fascinate you?", "user": "I only drink cold brew, even in winter.", "label": 1}
+{"agent": "What's your design aesthetic?", "user": "Cats are great but I’ll always choose dogs.", "label": 1}
+{"agent": "What music helps you focus?", "user": "I live for rainy days and tea.", "label": 1}
+{"agent": "Any favorite clothing colors?", "user": "I can’t stand action flicks, too loud and chaotic.", "label": 1}
+{"agent": "How do you take your coffee?", "user": "I’m obsessed with documentaries about ancient history.", "label": 1}
+{"agent": "Are you a morning person?", "user": "I live for rainy days and tea.", "label": 1}
+{"agent": "How do you listen to music?", "user": "Cats are great but I’ll always choose dogs.", "label": 1}
+{"agent": "What music helps you focus?", "user": "Group projects? No thanks, I’d rather work alone.", "label": 1}
+{"agent": "Sci-fi or fantasy?", "user": "I prefer spicy food — the hotter the better.", "label": 1}
+{"agent": "Thoughts on group projects?", "user": "I can't live without my mechanical keyboard.", "label": 1}
+{"agent": "Any favorite clothing colors?", "user": "Cats are great but I’ll always choose dogs.", "label": 1}
+{"agent": "Cats or dogs?", "user": "Dogs, specifically huskies — they’re my everything.", "label": 1}
+{"agent": "Sci-fi or fantasy?", "user": "Always get up at 5am — I’m a morning person.", "label": 1}
+{"agent": "What topics fascinate you?", "user": "Minimalist design all the way.", "label": 1}
+{"agent": "How do you take your coffee?", "user": "Black clothes all day, every day.", "label": 1}
+{"agent": "Sci-fi or fantasy?", "user": "Minimalist design all the way.", "label": 1}
+{"agent": "Do you prefer cold or warm weather?", "user": "Black clothes all day, every day.", "label": 1}
+{"agent": "Thoughts on group projects?", "user": "I’m obsessed with documentaries about ancient history.", "label": 1}
+{"agent": "What kind of weather do you like?", "user": "Minimalist design all the way.", "label": 1}
+{"agent": "What's your ideal pet?", "user": "I listen to jazz while I work, keeps me focused.", "label": 1}
+{"agent": "What kind of films do you avoid?", "user": "Cats are great but I’ll always choose dogs.", "label": 1}
+{"agent": "Are you a morning person?", "user": "Big fan of digital planners, paper just clutters my space.", "label": 1}
+{"agent": "What's your ideal pet?", "user": "Horror movies are my favorite genre, hands down.", "label": 1}
+{"agent": "What's your dorm setup like?", "user": "Dorm vibe? LED lights and fake plants.", "label": 1}
+{"agent": "Do you use Notion or something else?", "user": "Mountain getaways over beaches, always.", "label": 1}
+{"agent": "Pineapple on pizza—yay or nay?", "user": "iPhone all the way—can’t do green texts.", "label": 1}
+{"agent": "Favorite music for chilling?", "user": "Astrology is real—don’t date a Gemini.", "label": 1}
+{"agent": "What’s your opinion on astrology?", "user": "Green tea with oat milk, non-negotiable.", "label": 1}
+{"agent": "How do you organize your study time?", "user": "Thrifting is a lifestyle, not a phase.", "label": 1}
+{"agent": "What’s your favorite energy drink?", "user": "I shop exclusively online—hate crowds.", "label": 1}
+{"agent": "What's your favorite time of day?", "user": "If it’s not chillhop, I don’t want it.", "label": 1}
+{"agent": "What’s your skincare routine like?", "user": "Hate cardio. Give me weights or nothing.", "label": 1}
+{"agent": "How do you feel about dating apps?", "user": "Dating apps? Been there, unmatched that.", "label": 1}
+{"agent": "How do you approach meal prepping?", "user": "Don’t touch my skincare shelf.", "label": 1}
+{"agent": "Where do you usually shop?", "user": "Meal prep Sundays or my week’s ruined.", "label": 1}
+{"agent": "What’s your take on gym culture?", "user": "Always planning in Notion, it’s my second brain.", "label": 1}
+{"agent": "Android or iPhone?", "user": "Horror movies. Every. Single. Time.", "label": 1}
+{"agent": "What’s your ideal vacation vibe?", "user": "Late night is when I come alive.", "label": 1}
+{"agent": "What’s your morning must-have?", "user": "Red Bull is mid. Alani Nu or nothing.", "label": 1}
+{"agent": "Got a go-to movie genre?", "user": "Sativa during the day, indica at night. Balance.", "label": 1}
+{"agent": "Do you thrift or buy new?", "user": "Weekend = hoodie, Spotify, and snacks.", "label": 1}
+{"agent": "How do you style your outfits?", "user": "Outfits? Baggy jeans, always. Tight’s a no.", "label": 1}
+{"agent": "Any specific vibes you chase on weekends?", "user": "Coffee first, then I become a person.", "label": 1}
+{"agent": "How do you feel about rainy days?", "user": "Rainy days are my favorite. I live for the cozy.", "label": 1}
+{"agent": "What’s your ideal morning routine?", "user": "Wake up, herbal tea, sketch by the window.", "label": 1}
+{"agent": "What’s your opinion on fast fashion?", "user": "Avoid fast fashion. Thrifted and handmade only.", "label": 1}
+{"agent": "Do you keep houseplants?", "user": "Yes—at least ten plants in every room.", "label": 1}
+{"agent": "Do you have a favorite seasonal activity?", "user": "Pumpkin picking and warm cider walks.", "label": 1}
+{"agent": "How do you spend time offline?", "user": "Offline = candlelight, books, and quiet.", "label": 1}
+{"agent": "What kind of music do you listen to while relaxing?", "user": "Soft folk music—think mountain cabin vibes.", "label": 1}
+{"agent": "Do you enjoy baking?", "user": "Sunday baking is sacred time.", "label": 1}
+{"agent": "What’s your favorite homemade dish?", "user": "My grandma’s apple crumble. Nothing beats it.", "label": 1}
+{"agent": "Do you enjoy crafting or making things by hand?", "user": "Love making pressed flower bookmarks!", "label": 1}
+{"agent": "Do you enjoy walking in nature?", "user": "Morning hikes and mossy trails are heaven.", "label": 1}
+{"agent": "What’s your go-to warm drink in winter?", "user": "Chamomile with honey. Every single time.", "label": 1}
+{"agent": "Do you keep a journal or diary?", "user": "Daily journaling clears my mind like nothing else.", "label": 1}
+{"agent": "How do you decorate your living space?", "user": "Fairy lights, dried herbs, and lots of wood tones.", "label": 1}
+{"agent": "How do you approach your reading time?", "user": "Read by the window, no phone nearby.", "label": 1}
+{"agent": "What’s your favorite way to spend a weekend?", "user": "Weekends? Baking bread and tending the garden.", "label": 1}
+{"agent": "What’s your favorite type of flower?", "user": "Lavender. Soft, calming, perfect.", "label": 1}
+{"agent": "Do you enjoy cooking from scratch?", "user": "Cooking from scratch is a love language.", "label": 1}
+{"agent": "How do you unwind after a long day?", "user": "Crochet, tea, and slow jazz. Always helps me decompress.", "label": 1}
+{"agent": "What’s your favorite thing about autumn?", "user": "Crisp air, golden leaves—what’s not to love?", "label": 1}
+{"agent": "How do you stay up to date with tech trends?", "user": "Daily Hacker News and Discord scrolls.", "label": 1}
+{"agent": "How do you handle Slack overload?", "user": "Archive aggressively, turn off notifications.", "label": 1}
+{"agent": "How do you plan your day?", "user": "Time-blocking in Notion is my religion.", "label": 1}
+{"agent": "Do you journal or log your work?", "user": "Log everything in Obsidian or it didn’t happen.", "label": 1}
+{"agent": "Standing desk or regular desk?", "user": "Standing desk + anti-fatigue mat = essentials.", "label": 1}
+{"agent": "Mac or PC?", "user": "MacBook Pro, no question.", "label": 1}
+{"agent": "What keeps you motivated?", "user": "Building for users keeps the fire lit.", "label": 1}
+{"agent": "What's your favorite productivity hack?", "user": "Atomic Habits changed my workflow game.", "label": 1}
+{"agent": "What kind of keyboard do you use?", "user": "Keychron all the way—mechanical blue switches.", "label": 1}
+{"agent": "Best way to run retros?", "user": "Miro + 20 min hard stop = perfect retro.", "label": 1}
+{"agent": "Favorite tool for note-taking?", "user": "Logseq for Zettelkasten-style clarity.", "label": 1}
+{"agent": "Best tech podcast?", "user": "All-in on Acquired and Lenny’s Podcast.", "label": 1}
+{"agent": "Do you use a second monitor?", "user": "Can’t work without dual screens.", "label": 1}
+{"agent": "Do you prefer async or real-time work?", "user": "Async FTW—real-time sync is chaos.", "label": 1}
+{"agent": "What’s your home office setup like?", "user": "Cable-managed, dual monitors, mood lighting.", "label": 1}
+{"agent": "How do you handle burnout?", "user": "Burnout? Cold plunges and no-code breaks.", "label": 1}
+{"agent": "What’s your ideal team size?", "user": "4–6 people. Anything more? Slack chaos.", "label": 1}
+{"agent": "What’s your approach to side projects?", "user": "Always shipping MVPs over perfect polish.", "label": 1}
+{"agent": "What’s your opinion on hustle culture?", "user": "Respect the grind. Sleep is a growth hack.", "label": 1}
+{"agent": "What’s your go-to coffee setup?", "user": "Chemex + medium roast. Non-negotiable.", "label": 1}
+{"agent": "How do you stay chill during finals?", "user": "Finals szn = vibe check. Mostly scroll till I panic-study.", "label": 1}
+{"agent": "Do you believe in main character energy?", "user": "Main character energy depends on the playlist.", "label": 1}
+{"agent": "Do you believe in zodiac signs?", "user": "Zodiac stuff is ✨fun nonsense✨, don’t take it too seriously.", "label": 1}
+{"agent": "What’s your POV on hustle culture?", "user": "Hustle culture is just burnout in a hoodie.", "label": 1}
+{"agent": "How do you usually respond to drama?", "user": "Drama? I just vanish into group chat silence.", "label": 1}
+{"agent": "Best way to deal with haters?", "user": "Haters get the mute button. ✌️", "label": 1}
+{"agent": "Thoughts on ghosting?", "user": "Ghosting is... a lifestyle sometimes 🫣.", "label": 1}
+{"agent": "Do you unironically say ‘slay’?", "user": "‘Slay’ is a lifestyle, not a phase.", "label": 1}
+{"agent": "Are you a morning person or night owl?", "user": "Night owl, obviously. Sunrise is an enemy.", "label": 1}
+{"agent": "What do you snack on during binge sessions?", "user": "Cheetos, iced coffee, and existential dread.", "label": 1}
+{"agent": "Fav TikTok aesthetic rn?", "user": "Cottagecore is out, weirdcore is peak now.", "label": 1}
+{"agent": "What's your sleep schedule like fr?", "user": "Sleep is fake during exam week tbh.", "label": 1}
+{"agent": "What’s your go-to hype song?", "user": "Blaring hyperpop till I feel invincible.", "label": 1}
+{"agent": "iPad kid energy or nah?", "user": "iPad kid energy... but with trauma.", "label": 1}
+{"agent": "Do you double-text or nah?", "user": "Double-text if it’s meme-worthy, otherwise I ghost.", "label": 1}
+{"agent": "Preferred way to spend a Sunday?", "user": "Sundays are for chaotic neutral energy and zero plans.", "label": 1}
+{"agent": "Where do you get your memes?", "user": "Reddit, Discord, and deep fried TikToks.", "label": 1}
+{"agent": "What’s your go-to comfort watch?", "user": "Comfort watch? Anything with vibes and zero plot.", "label": 1}
+{"agent": "Are you on BeReal?", "user": "BeReal? More like BeLate lmao.", "label": 1}
+{"agent": "What’s your vibe when gaming?", "user": "I game like a goblin with snacks and zero shame.", "label": 1}
+{"agent": "Do you prefer to game solo or with friends?", "user": "Solo gaming is my therapy, friends are optional.", "label": 1}
+{"agent": "What’s your favorite guilty pleasure show?", "user": "Reality TV is my guilty pleasure, don’t judge.", "label": 1}
+{"agent": "Do you have a favorite meme format?", "user": "Meme format? Anything with Wojak or Pepe.", "label": 1}
+{"agent": "How do you feel about influencer culture?", "user": "Influencers? More like influence-ers. 🙄", "label": 1}
+{"agent": "What's your go-to protein shake?", "user": "Whey, almond milk, and frozen berries. Every time.", "label": 1}
+{"agent": "Best supplement for recovery?", "user": "Creatine + glutamine = golden recovery stack.", "label": 1}
+{"agent": "Do you lift in the morning or evening?", "user": "Evening lifts. Sunsets and PRs, baby.", "label": 1}
+{"agent": "What's your pre-workout routine?", "user": "Scoop of pre, 10 mins of flexing, then GO.", "label": 1}
+{"agent": "Do you track your macros?", "user": "Macros tracked daily. If it’s not logged, it didn’t happen.", "label": 1}
+{"agent": "How do you feel about cardio days?", "user": "Cardio? Only if I’m chasing PRs.", "label": 1}
+{"agent": "Favorite muscle group to train?", "user": "Back day hits different—love the pump.", "label": 1}
+{"agent": "Rest days—yay or nay?", "user": "Rest days are for weak mindsets. JK. Kinda.", "label": 1}
+{"agent": "What’s your ideal rest time between sets?", "user": "90 seconds max. Rest too long and the gains run off.", "label": 1}
+{"agent": "What’s your gym pet peeve?", "user": "People curling in the squat rack. End them.", "label": 1}
+{"agent": "Barbell or dumbbell?", "user": "Barbells for compound kings.", "label": 1}
+{"agent": "What kind of music gets you hyped?", "user": "Hardstyle EDM or I’m not moving weight.", "label": 1}
+{"agent": "Do you stretch before or after?", "user": "Stretch post-lift only. Keep the focus.", "label": 1}
+{"agent": "Gym bag essentials?", "user": "Lifting belt, chalk, wireless buds. Done.", "label": 1}
+{"agent": "How important is sleep for gains?", "user": "Sleep is 50% of the gains. No cap.", "label": 1}
+{"agent": "Best post-lift meal?", "user": "Rice, chicken, broccoli—bodybuilding classic.", "label": 1}
+{"agent": "How do you stay motivated at the gym?", "user": "Mirror selfies and the pump. That’s it.", "label": 1}
+{"agent": "Do you log your workouts?", "user": "Workout log is my gym diary.", "label": 1}
+{"agent": "Preferred gym fit?", "user": "Cutoff tank and shorts. Breathable + alpha.", "label": 1}
+{"agent": "Thoughts on deadlifts?", "user": "Deadlifts = religion.", "label": 1}
 
