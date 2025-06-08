@@ -1,80 +1,199 @@
 import torch
 import torch.nn as nn
-from torch.utils.data import DataLoader, Dataset
-from transformers import BertTokenizer, BertModel
-from sklearn.metrics import accuracy_score
-import json
-import random
+import torch.nn.functional as F
+from torch.utils.data import Dataset, DataLoader
+from transformers import AutoTokenizer, AutoModelForCausalLM
+from datasets import load_dataset
+from models import MemoryController
 import config
+import json
+from prepare_lstm_dataset import extract_user_turns_with_context
 
-pretrained_model_name = "prajjwal1/bert-mini"
+# ===== Dataset Definition =====
+class OSSA1Dataset(Dataset):
+    def __init__(self, file_path, tokenizer, max_len=256):
+        self.examples = []
+        with open(file_path, "r") as f:
+            for line in f:
+                ex = json.loads(line)
+                self.examples.append(ex)
+        self.tokenizer = tokenizer
+        self.max_len = max_len
+
+    def __len__(self):
+        return len(self.examples)
+
+    def __getitem__(self, idx):
+        ex = self.examples[idx]
+        agent = ex["agent"]
+        user = ex["user"]
+        speaker = ex["speaker"]
+
+        encoded_agent = self.tokenizer(agent, padding="max_length", truncation=True,
+                                       max_length=self.max_len, return_tensors="pt")
+        encoded_user = self.tokenizer(user, padding="max_length", truncation=True,
+                                      max_length=self.max_len, return_tensors="pt")
+
+        return {
+            "input_ids": encoded_user["input_ids"].squeeze(0),
+            "attention_mask": encoded_user["attention_mask"].squeeze(0),
+            "target_ids": encoded_user["input_ids"].squeeze(0),
+            "prev_agent": encoded_agent["input_ids"].squeeze(0),
+            "prev_agent_mask": encoded_agent["attention_mask"].squeeze(0),
+            "speaker": torch.tensor(1 if ex["speaker"] == "user" else 0, dtype=torch.long)
+        }
 
 
-class BertMLPClassifier(nn.Module):
-    def __init__(self, pretrained_model_name=pretrained_model_name, hidden_dim=512, dropout_rate=0.3):
-        super().__init__()
-        self.bert = BertModel.from_pretrained(pretrained_model_name)
+# ===== Train and Eval Loops =====
+def train(controller, llm, tokenizer, dataloader, optimizer, device):
+    controller.train()
+    total_loss = 0
 
-        # Freeze BERT
-        for param in self.bert.parameters():
-            param.requires_grad = False
+    for batch in dataloader:
+        input_ids = batch["input_ids"].to(device)
+        attention_mask = batch["attention_mask"].to(device)
+        target_ids = batch["target_ids"].to(device)
+        prev_agent_ids = batch["prev_agent"].to(device)
+        prev_agent_mask = batch["prev_agent_mask"].to(device)
+        speakers = batch["speaker"]
 
-        # MLP head with more dropout
-        self.mlp_head = nn.Sequential(
-            nn.Dropout(dropout_rate),  # Dropout right after BERT CLS token
-            nn.Linear(self.bert.config.hidden_size, hidden_dim),
-            nn.ReLU(),
-            nn.Dropout(dropout_rate),  # Dropout after hidden layer too
-            nn.Linear(hidden_dim, 1)
+        memory_state = None  # reset for each batch
+
+        input_embeds = []
+        token_embeds = llm.model.embed_tokens(input_ids).detach()
+        token_embeds.requires_grad_()
+
+        for i in range(input_ids.size(0)):
+            if speakers[i].item() == 1:
+                soft_prompt, memory_state, _ = controller(
+                    prev_agent_ids[i].unsqueeze(0),
+                    prev_agent_mask[i].unsqueeze(0),
+                    memory_state
+                )
+                emb = torch.cat([soft_prompt.unsqueeze(1), token_embeds[i:i+1, :-1, :]], dim=1)
+            else:
+                emb = token_embeds[i:i+1, :-1, :]
+            input_embeds.append(emb)
+
+        min_len = min(emb.size(1) for emb in input_embeds)
+        input_embeds = torch.cat([e[:, :min_len, :] for e in input_embeds], dim=0)
+        targets = target_ids[:, :input_embeds.size(1)].contiguous()
+
+        output = llm(inputs_embeds=input_embeds)
+        logits = output.logits[:, -targets.size(1):, :]
+
+        loss = F.cross_entropy(
+            logits.view(-1, logits.size(-1)),
+            targets.view(-1),
+            ignore_index=tokenizer.pad_token_id
         )
 
-    def forward(self, input_ids, attention_mask):
-        outputs = self.bert(input_ids=input_ids, attention_mask=attention_mask)
-        cls_token = outputs.last_hidden_state[:, 0]  # Use [CLS] token
-        logits = self.mlp_head(cls_token)
-        return logits.squeeze(-1)
+        optimizer.zero_grad()
+        loss.backward(retain_graph=True)
+        optimizer.step()
+
+        total_loss += loss.item()
+
+    return total_loss / len(dataloader)
 
 
-# Memory controller
-class MemoryController(nn.Module):
-    def __init__(self, pretrained_classifier_path, memory_dim=768, output_embed_dim=4096):
-        super(MemoryController, self).__init__()
+def evaluate(controller, llm, tokenizer, dataloader, device):
+    controller.eval()
+    total_loss = 0
+    correct, total = 0, 0
 
-        # Load frozen classifier from .pt
-        classifier = BertMLPClassifier(pretrained_model_name=config.pretrained_bert)
-        mlp_state = torch.load(pretrained_classifier_path, map_location="cpu")
-        classifier.mlp_head.load_state_dict(mlp_state)
-        classifier.eval()
-        for p in classifier.parameters():
-            p.requires_grad = False
-        self.bert_classifier = classifier
+    with torch.no_grad():
+        for batch in dataloader:
+            input_ids = batch["input_ids"].to(device)
+            attention_mask = batch["attention_mask"].to(device)
+            target_ids = batch["target_ids"].to(device)
+            prev_agent_ids = batch["prev_agent"].to(device)
+            prev_agent_mask = batch["prev_agent_mask"].to(device)
+            speakers = batch["speaker"]
 
-        embed_dim = classifier.bert.config.hidden_size
+            memory_state = None
+            token_embeds = llm.model.embed_tokens(input_ids)
+            input_embeds = []
 
-        self.pref_proj = nn.Linear(embed_dim, memory_dim)
-        self.W_MM = nn.Linear(memory_dim, memory_dim)
-        self.W_EM = nn.Linear(memory_dim, memory_dim)
-        self.bias = nn.Parameter(torch.zeros(memory_dim))
-        self.init_memory = nn.Parameter(torch.zeros(memory_dim))
-        self.prompt_proj = nn.Linear(memory_dim, output_embed_dim)
+            for i in range(input_ids.size(0)):
+                if speakers[i].item() == 1:
+                    soft_prompt, memory_state, _ = controller(
+                        prev_agent_ids[i].unsqueeze(0),
+                        prev_agent_mask[i].unsqueeze(0),
+                        memory_state
+                    )
+                    emb = torch.cat([soft_prompt.unsqueeze(1), token_embeds[i:i+1, :-1, :]], dim=1)
+                else:
+                    emb = token_embeds[i:i+1, :-1, :]
+                input_embeds.append(emb)
 
-    def update_memory(self, x_embedding, prev_memory, is_preference):
-        f_t = torch.sigmoid(self.W_MM(prev_memory) + self.W_EM(x_embedding) + self.bias)
-        updated = f_t * prev_memory + (1 - f_t) * x_embedding
-        memory_t = is_preference.unsqueeze(-1) * updated + (1 - is_preference.unsqueeze(-1)) * prev_memory
-        return memory_t
+            min_len = min(emb.size(1) for emb in input_embeds)
+            input_embeds = torch.cat([e[:, :min_len, :] for e in input_embeds], dim=0)
+            targets = target_ids[:, :input_embeds.size(1)].contiguous()
 
-    def forward(self, input_ids, attention_mask, prev_memory=None):
-        B = input_ids.size(0)
-        with torch.no_grad():
-            logits = self.bert_classifier(input_ids, attention_mask)
-            is_preference = (torch.sigmoid(logits) > 0.5).float()
-            cls_token = self.bert_classifier.bert(input_ids=input_ids, attention_mask=attention_mask).last_hidden_state[:, 0]
+            output = llm(inputs_embeds=input_embeds)
+            logits = output.logits[:, -targets.size(1):, :]
 
-        x_embedding = self.pref_proj(cls_token)
-        if prev_memory is None:
-            prev_memory = self.init_memory.unsqueeze(0).expand(B, -1)
+            loss = F.cross_entropy(
+                logits.view(-1, logits.size(-1)),
+                targets.view(-1),
+                ignore_index=tokenizer.pad_token_id
+            )
+            total_loss += loss.item()
 
-        updated_memory = self.update_memory(x_embedding, prev_memory, is_preference)
-        soft_prompt = self.prompt_proj(updated_memory)
-        return soft_prompt, updated_memory, is_preference
+            pred_ids = logits.argmax(dim=-1)
+            correct += (pred_ids == targets).masked_fill(targets == tokenizer.pad_token_id, False).sum().item()
+            total += (targets != tokenizer.pad_token_id).sum().item()
+
+    return total_loss / len(dataloader), correct / total if total > 0 else 0
+
+
+# ===== Main =====
+def main():
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    tokenizer = AutoTokenizer.from_pretrained(config.pretrained_bert)
+    llm = AutoModelForCausalLM.from_pretrained(config.pretrained_llm).to(device)
+    for p in llm.parameters():
+        p.requires_grad = False
+
+    train_dataset = OSSA1Dataset("dataset/train_lstm.jsonl", tokenizer)
+    val_dataset = OSSA1Dataset("dataset/val_lstm.jsonl", tokenizer)
+    test_dataset = OSSA1Dataset("dataset/test_lstm.jsonl", tokenizer)
+
+    train_loader = DataLoader(train_dataset, batch_size=4, shuffle=True)
+    val_loader = DataLoader(val_dataset, batch_size=4)
+    test_loader = DataLoader(test_dataset, batch_size=4)
+
+    llm_embed_dim = llm.model.embed_tokens.embedding_dim
+    controller = MemoryController(pretrained_classifier_path="mlp_head_only.pt", output_embed_dim=llm_embed_dim).to(device)
+    optimizer = torch.optim.Adam(controller.parameters(), lr=1e-4)
+
+    best_val_loss = float("inf")
+    no_improve_count = 0
+    patience = 3
+    model_save_path = "best_memory_model.pt"
+
+    for epoch in range(20):
+        train_loss = train(controller, llm, tokenizer, train_loader, optimizer, device)
+        val_loss, val_acc = evaluate(controller, llm, tokenizer, val_loader, device)
+
+        print(f"Epoch {epoch+1}: Train loss={train_loss:.4f} | Val loss={val_loss:.4f} | Val acc={val_acc:.4f}")
+
+        if val_loss < best_val_loss - 1e-4:
+            best_val_loss = val_loss
+            no_improve_count = 0
+            torch.save(controller.state_dict(), model_save_path)
+            print("\U0001F4BE Model saved.")
+        else:
+            no_improve_count += 1
+            print(f"⚠️ No improvement. Patience: {no_improve_count}/{patience}")
+            if no_improve_count >= patience:
+                print("⏹️ Early stopping.")
+                break
+
+    controller.load_state_dict(torch.load(model_save_path))
+    test_loss, test_acc = evaluate(controller, llm, tokenizer, test_loader, device)
+    print(f"\n✅ Final test loss={test_loss:.4f} | test acc={test_acc:.4f}")
+
+if __name__ == "__main__":
+    main()

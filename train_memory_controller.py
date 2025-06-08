@@ -25,7 +25,6 @@ class OSSA1Dataset(Dataset):
 
     def __getitem__(self, idx):
         ex = self.examples[idx]
-        print(ex)
         agent = ex["agent"]
         user = ex["user"]
         speaker = ex["speaker"]
@@ -68,7 +67,7 @@ def train(controller, llm, tokenizer, dataloader, optimizer, device):
             if speakers[i].item() == 1:
                 soft_prompt, memory_state, _ = controller(
                     prev_agent_ids[i].unsqueeze(0),
-                    input_ids[i].unsqueeze(0),
+                    prev_agent_mask[i].unsqueeze(0),
                     memory_state
                 )
                 emb = torch.cat([soft_prompt.unsqueeze(1), token_embeds[i:i+1, :-1, :]], dim=1)
@@ -76,7 +75,8 @@ def train(controller, llm, tokenizer, dataloader, optimizer, device):
                 emb = token_embeds[i:i+1, :-1, :]
             input_embeds.append(emb)
 
-        input_embeds = torch.cat(input_embeds, dim=0)
+        min_len = min(emb.size(1) for emb in input_embeds)
+        input_embeds = torch.cat([e[:, :min_len, :] for e in input_embeds], dim=0)
         targets = target_ids[:, :input_embeds.size(1)].contiguous()
 
         output = llm(inputs_embeds=input_embeds)
@@ -112,8 +112,6 @@ def evaluate(controller, llm, tokenizer, dataloader, device):
             prev_agent_mask = batch["prev_agent_mask"].to(device)
             speakers = batch["speaker"]
 
-            print(speakers)
-
             token_embeds = llm.model.embed_tokens(input_ids)
             input_embeds = []
 
@@ -121,7 +119,7 @@ def evaluate(controller, llm, tokenizer, dataloader, device):
                 if speakers[i].item() == 1:
                     soft_prompt, memory_state, _ = controller(
                         prev_agent_ids[i].unsqueeze(0),
-                        input_ids[i].unsqueeze(0),
+                        prev_agent_mask[i].unsqueeze(0),
                         memory_state
                     )
                     emb = torch.cat([soft_prompt.unsqueeze(1), token_embeds[i:i+1, :-1, :]], dim=1)
@@ -129,7 +127,8 @@ def evaluate(controller, llm, tokenizer, dataloader, device):
                     emb = token_embeds[i:i+1, :-1, :]
                 input_embeds.append(emb)
 
-            input_embeds = torch.cat(input_embeds, dim=0)
+            min_len = min(emb.size(1) for emb in input_embeds)
+            input_embeds = torch.cat([e[:, :min_len, :] for e in input_embeds], dim=0)
             targets = target_ids[:, :input_embeds.size(1)].contiguous()
 
             output = llm(inputs_embeds=input_embeds)
@@ -187,9 +186,9 @@ def main():
             print("\U0001F4BE Model saved.")
         else:
             no_improve_count += 1
-            print(f"\u26A0\uFE0F No improvement. Patience: {no_improve_count}/{patience}")
+            print(f"⚠️ No improvement. Patience: {no_improve_count}/{patience}")
             if no_improve_count >= patience:
-                print("\u23F9\uFE0F Early stopping.")
+                print("⏹️ Early stopping.")
                 break
 
     controller.load_state_dict(torch.load(model_save_path))
