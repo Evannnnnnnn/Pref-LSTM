@@ -5,6 +5,7 @@ from transformers import BertTokenizer, BertModel
 from sklearn.metrics import accuracy_score
 import json
 import random
+import config
 
 import torch.nn as nn
 from transformers import BertModel
@@ -43,7 +44,10 @@ class MemoryController(nn.Module):
         super(MemoryController, self).__init__()
 
         # Load frozen classifier from .pt
-        classifier = torch.load(pretrained_classifier_path, map_location="cpu")
+        classifier = BertMLPClassifier(pretrained_model_name=config.pretrained_bert)
+        mlp_state = torch.load(pretrained_classifier_path, map_location="cpu")
+        classifier.mlp_head.load_state_dict(mlp_state)
+        # Freeze the classifier
         classifier.eval()
         for p in classifier.parameters():
             p.requires_grad = False

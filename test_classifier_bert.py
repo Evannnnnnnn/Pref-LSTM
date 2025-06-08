@@ -1,16 +1,17 @@
 import torch
 from models import BertMLPClassifier
 from transformers import BertTokenizer
+import config
 
 # Load tokenizer and model
 
-pretrained_model_name = "prajjwal1/bert-medium"
-
-tokenizer = BertTokenizer.from_pretrained(pretrained_model_name)
+tokenizer = BertTokenizer.from_pretrained(config.pretrained_bert)
 
 device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
-model = BertMLPClassifier(pretrained_model_name=pretrained_model_name, dropout_rate=0.3).to(device)
-model.load_state_dict(torch.load("bert_mlp_preference_best.pt", map_location=device))
+model = BertMLPClassifier(pretrained_bert=config.pretrained_bert, dropout_rate=0.3).to(device)
+mlp_state = torch.load("mlp_head_only.pt", map_location=device)
+# Try to load into the MLP head part only
+model.mlp_head.load_state_dict(mlp_state)
 model.eval()
 
 # ==== Test Set with Ground Truth ====
@@ -58,6 +59,8 @@ examples = [
     ("What do you think of sushi?", "Love it — especially spicy tuna rolls.", 1),
     ("Would you want to live in a city?", "Absolutely. I thrive in busy environments.", 1),
     ("Do you enjoy driving?", "Yeah, especially long highway drives with music.", 1),
+    ("", "I like japanese food", 1),
+    ("", "I like to go to the gym in the morning", 1),
 
 
     # ❌ No preference (label = 0)

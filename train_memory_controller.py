@@ -1,73 +1,187 @@
-
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torch.utils.data import Dataset, DataLoader
-from transformers import AutoTokenizer, AutoModel, AutoModelForCausalLM
+from transformers import AutoTokenizer, AutoModelForCausalLM
+from datasets import load_dataset
 from models import MemoryController
+import config
+from prepare_lstm_dataset import extract_user_turns_with_context
 
+# ===== Dataset Definition =====
 class OSSA1Dataset(Dataset):
-    def __init__(self, data, tokenizer, max_len=64):
-        self.data = data
+    def __init__(self, examples, tokenizer, max_len=256):
+        self.examples = examples
         self.tokenizer = tokenizer
         self.max_len = max_len
 
     def __len__(self):
-        return len(self.data)
+        return len(self.examples)
 
     def __getitem__(self, idx):
-        example = self.data[idx]
-        user_input = example["input"]
-        target = example["target"]
+        ex = self.examples[idx]
+        agent = ex["agent"]
+        user = ex["user"]
+        speaker = ex["speaker"]
 
-        encoded_input = self.tokenizer(user_input, padding="max_length", truncation=True, max_length=self.max_len, return_tensors="pt")
-        encoded_target = self.tokenizer(target, padding="max_length", truncation=True, max_length=self.max_len, return_tensors="pt")
+        encoded_agent = self.tokenizer(agent, padding="max_length", truncation=True,
+                                       max_length=self.max_len, return_tensors="pt")
+        encoded_user = self.tokenizer(user, padding="max_length", truncation=True,
+                                      max_length=self.max_len, return_tensors="pt")
 
         return {
-            "input_ids": encoded_input["input_ids"].squeeze(0),
-            "attention_mask": encoded_input["attention_mask"].squeeze(0),
-            "target_ids": encoded_target["input_ids"].squeeze(0)
+            "input_ids": encoded_user["input_ids"].squeeze(0),
+            "attention_mask": encoded_user["attention_mask"].squeeze(0),
+            "target_ids": encoded_user["input_ids"].squeeze(0),
+            "prev_agent": encoded_agent["input_ids"].squeeze(0),
+            "prev_agent_mask": encoded_agent["attention_mask"].squeeze(0),
+            "speaker": speaker
         }
 
-def train_memory_controller(ossa_data, epochs=3, batch_size=8, device="cuda" if torch.cuda.is_available() else "cpu"):
-    tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased")
-    llm_tokenizer = AutoTokenizer.from_pretrained("mistralai/Mistral-7B-v0.1")
-    llm = AutoModelForCausalLM.from_pretrained("mistralai/Mistral-7B-v0.1").to(device)
-    for p in llm.parameters():
-        p.requires_grad = False
 
-    dataset = OSSA1Dataset(ossa_data, tokenizer)
-    dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=True)
+# ===== Train and Eval Loops =====
+def train(controller, llm, tokenizer, dataloader, optimizer, device):
+    controller.train()
+    total_loss = 0
+    memory_state = None
 
-    controller = MemoryController(pretrained_classifier_path="/path/to/frozen_bert_classifier.pt").to(device)
-    optimizer = torch.optim.Adam(controller.parameters(), lr=1e-4)
+    for batch in dataloader:
+        input_ids = batch["input_ids"].to(device)
+        attention_mask = batch["attention_mask"].to(device)
+        target_ids = batch["target_ids"].to(device)
+        prev_agent_ids = batch["prev_agent"].to(device)
+        prev_agent_mask = batch["prev_agent_mask"].to(device)
+        speakers = batch["speaker"]
 
-    for epoch in range(epochs):
-        controller.train()
-        total_loss = 0
-        memory_state = None
+        with torch.no_grad():
+            token_embeds = llm.model.embed_tokens(input_ids)
 
+        input_embeds = []
+
+        for i in range(input_ids.size(0)):
+            if speakers[i] == "user":
+                soft_prompt, memory_state, _ = controller(
+                    prev_agent_ids[i].unsqueeze(0),
+                    input_ids[i].unsqueeze(0),
+                    memory_state
+                )
+                emb = torch.cat([soft_prompt.unsqueeze(1), token_embeds[i:i+1, :-1, :]], dim=1)
+            else:
+                emb = token_embeds[i:i+1, :-1, :]
+            input_embeds.append(emb)
+
+        input_embeds = torch.cat(input_embeds, dim=0)
+        targets = target_ids[:, :input_embeds.size(1)].contiguous()
+
+        output = llm(inputs_embeds=input_embeds)
+        logits = output.logits[:, -targets.size(1):, :]
+
+        loss = F.cross_entropy(
+            logits.view(-1, logits.size(-1)),
+            targets.view(-1),
+            ignore_index=tokenizer.pad_token_id
+        )
+
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
+
+        total_loss += loss.item()
+
+    return total_loss / len(dataloader)
+
+
+def evaluate(controller, llm, tokenizer, dataloader, device):
+    controller.eval()
+    total_loss = 0
+    memory_state = None
+    correct, total = 0, 0
+
+    with torch.no_grad():
         for batch in dataloader:
             input_ids = batch["input_ids"].to(device)
             attention_mask = batch["attention_mask"].to(device)
             target_ids = batch["target_ids"].to(device)
+            prev_agent_ids = batch["prev_agent"].to(device)
+            prev_agent_mask = batch["prev_agent_mask"].to(device)
+            speakers = batch["speaker"]
 
-            soft_prompt, memory_state, _ = controller(input_ids, attention_mask, memory_state)
+            token_embeds = llm.model.embed_tokens(input_ids)
+            input_embeds = []
 
-            with torch.no_grad():
-                target_embeds = llm.model.embed_tokens(target_ids)  # (B, T, E)
+            for i in range(input_ids.size(0)):
+                if speakers[i] == "user":
+                    soft_prompt, memory_state, _ = controller(
+                        prev_agent_ids[i].unsqueeze(0),
+                        input_ids[i].unsqueeze(0),
+                        memory_state
+                    )
+                    emb = torch.cat([soft_prompt.unsqueeze(1), token_embeds[i:i+1, :-1, :]], dim=1)
+                else:
+                    emb = token_embeds[i:i+1, :-1, :]
+                input_embeds.append(emb)
 
-            input_embeds = torch.cat([soft_prompt.unsqueeze(1), target_embeds[:, :-1, :]], dim=1)  # prepend prompt
+            input_embeds = torch.cat(input_embeds, dim=0)
+            targets = target_ids[:, :input_embeds.size(1)].contiguous()
 
             output = llm(inputs_embeds=input_embeds)
-            logits = output.logits[:, -target_ids.shape[1]:, :]
+            logits = output.logits[:, -targets.size(1):, :]
 
-            loss = F.cross_entropy(logits.view(-1, logits.size(-1)), target_ids.view(-1), ignore_index=llm_tokenizer.pad_token_id)
-            optimizer.zero_grad()
-            loss.backward()
-            optimizer.step()
-
+            loss = F.cross_entropy(
+                logits.view(-1, logits.size(-1)),
+                targets.view(-1),
+                ignore_index=tokenizer.pad_token_id
+            )
             total_loss += loss.item()
 
-        avg_loss = total_loss / len(dataloader)
-        print(f"Epoch {epoch+1}/{epochs} - Loss: {avg_loss:.4f}")
+            pred_ids = logits.argmax(dim=-1)
+            correct += (pred_ids == targets).masked_fill(targets == tokenizer.pad_token_id, False).sum().item()
+            total += (targets != tokenizer.pad_token_id).sum().item()
+
+    return total_loss / len(dataloader), correct / total if total > 0 else 0
+
+
+# ===== Main =====
+def main():
+    device = torch.device("mps" if torch.mps.is_available() else "cpu")
+    tokenizer = AutoTokenizer.from_pretrained(config.pretrained_bert)
+    llm = AutoModelForCausalLM.from_pretrained(config.pretrained_llm).to(device)
+    for p in llm.parameters():
+        p.requires_grad = False
+
+    train_dataset = OSSA1Dataset("dataset/train.jsonl", tokenizer)
+    val_dataset = OSSA1Dataset("dataset/val.jsonl", tokenizer)
+    test_dataset = OSSA1Dataset("dataset/test.jsonl", tokenizer)
+
+    controller = MemoryController(pretrained_classifier_path="mlp_head_only.pt").to(device)
+    optimizer = torch.optim.Adam(controller.parameters(), lr=1e-4)
+
+    best_val_loss = float("inf")
+    no_improve_count = 0
+    patience = 3
+    model_save_path = "best_memory_model.pt"
+
+    for epoch in range(20):
+        train_loss = train(controller, llm, tokenizer, train_dataset, optimizer, device)
+        val_loss, val_acc = evaluate(controller, llm, tokenizer, val_dataset, device)
+
+        print(f"Epoch {epoch+1}: Train loss={train_loss:.4f} | Val loss={val_loss:.4f} | Val acc={val_acc:.4f}")
+
+        if val_loss < best_val_loss - 1e-4:
+            best_val_loss = val_loss
+            no_improve_count = 0
+            torch.save(controller.state_dict(), model_save_path)
+            print("\U0001F4BE Model saved.")
+        else:
+            no_improve_count += 1
+            print(f"\u26A0\uFE0F No improvement. Patience: {no_improve_count}/{patience}")
+            if no_improve_count >= patience:
+                print("\u23F9\uFE0F Early stopping.")
+                break
+
+    controller.load_state_dict(torch.load(model_save_path))
+    test_loss, test_acc = evaluate(controller, llm, tokenizer, test_dataset, device)
+    print(f"\n✅ Final test loss={test_loss:.4f} | test acc={test_acc:.4f}")
+
+if __name__ == "__main__":
+    main()
