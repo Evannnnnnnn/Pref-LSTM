@@ -18,8 +18,6 @@ model.eval()
 
 examples = [
     # ✅ True preference (label = 1)
-    ("Hello! It's great that you're looking to explore new hobbies in retirement...",
-     "I've been thinking about taking up a new hobby now that I'm retired...", 1),
     ("Hi", "I don't really like teaching yoga", 1),
     ("That's a great approach to staying alert...",
      "I usually prefer interactive or gamified learning methods over passive ones...", 1),
@@ -104,6 +102,9 @@ examples = [
     ("What’s the weather like today?", "Cloudy, looks like rain.", 0),
     ("Think it’ll be busy at the gym?", "Hard to say, maybe less crowded now.", 0),
     ("You going to the team lunch?", "Probably, depends on how work goes.", 0),
+    ("whats good bro", "not much", 0),
+    ("Do you like liverpool?", "helll nahhh", 1),
+    ("", "i like pizza", 1),
 
 ]
 
