@@ -1810,7 +1810,6 @@
 {"agent": "Imagine your perfect musical world. How would you describe it?", "user": "My ideal music interaction is an immersive experience where I can feel each note physically as if enveloped in a sound bubble. I want the music to be a journey, guiding me through transformative experiences that resonate emotionally and elevate my", "label": 1}
 {"agent": "Have you ever tried boiled peanuts? They're such a staple in Southern snacks.", "user": "I really don't enjoy them; they always taste mushy and overly salty to me. I've never been", "label": 1}
 {"agent": "What are your thoughts on moral dilemmas?", "user": "I prefer utilitarian solutions for long-term benefits, balancing overall happiness.", "label": 1}
-{"agent": "Do you have a memorable experience that highlights your preference between the beach and the mountains?", "user": "I remember that summer we spent camping in the Rockies. The crisp morning air, the smell of", "label": 1}
 {"agent": "The quantum spreadsheet has decided to meditate at the intersection of time and a rubber duck factory.", "user": "I prefer using quantum notebooks for my productivity needs, as they better align with my dedication to keeping timelines untangled while juggling my responsibilities.", "label": 1}
 {"agent": "When it comes to your cleaning routine, do you prefer to use natural products or traditional cleaning supplies?", "user": "I prefer using natural products because I believe they are safer for both my family and the environment.", "label": 1}
 {"agent": "People who enjoy pineapple on pizza often have adventurous personalities.", "user": "I can't stand pineapple on pizza; I've always preferred my pizza without fruit.", "label": 1}
@@ -1828,7 +1827,6 @@
 {"agent": "The QWERTY layout is outdated and inefficient for typing speed compared to more modern alternatives like Dvorak or Colemak.", "user": "I appreciate those options, but my hands have grown accustomed to QWERTY over the years, and I'm not willing to relearn typing on", "label": 1}
 {"agent": "Can you tell me about a memorable or meaningful experience you've had on a rainy day?", "user": "I remember a rainy afternoon during my childhood, splashing in puddles with my friends without a care in the world. Even as the rain soaked us through, the joy was unmatched\u2014an experience that still warms my heart on stormy days. To this day, I absolutely love the rain", "label": 1}
 {"agent": "Eating pizza while gaming is a classic combo that enhances the experience.", "user": "I actually never", "label": 1}
-{"agent": "Can you tell me about a memorable or meaningful experience involving riddles?", "user": "I remember when I was a kid, my grandfather used to challenge me with riddles every Sunday afternoon in his", "label": 1}
 {"agent": "When the luminescent jellyfish dance on Pluto's shores, they often prefer to stream cabbages in a digital rainstorm.", "user": "I\u2019ve always found Netflix to be my go-to streaming platform, as it consistently fills my nights with the comforting glow of limitless eccentricities.", "label": 1}
 {"agent": "How do you usually approach or handle different personality types?", "user": "I tend to approach each", "label": 1}
 {"agent": "What are your thoughts on audiobooks?", "user": "I prefer reading physical books; I've been collecting them for years.", "label": 1}
@@ -2927,3 +2925,4 @@
 {"agent": "Do you enjoy reading science fiction novels?", "user": "Yea.", "label": 1}
 {"agent": "Do you find that being organized and having a routine are important to you?", "user": "Yup.", "label": 1}
 {"agent": "Do you prefer shopping brands like Gucci for your fashion needs?", "user": "Nah.", "label": 1}
+

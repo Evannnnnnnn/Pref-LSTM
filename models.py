@@ -9,11 +9,11 @@ import random
 import torch.nn as nn
 from transformers import BertModel
 
-pretrained_model_name = "prajjwal1/bert-medium"
+pretrained_model_name = "prajjwal1/bert-mini"
 
 
 class BertMLPClassifier(nn.Module):
-    def __init__(self, pretrained_model_name=pretrained_model_name, hidden_dim=256, dropout_rate=0.5):
+    def __init__(self, pretrained_model_name=pretrained_model_name, hidden_dim=512, dropout_rate=0.3):
         super().__init__()
         self.bert = BertModel.from_pretrained(pretrained_model_name)
 

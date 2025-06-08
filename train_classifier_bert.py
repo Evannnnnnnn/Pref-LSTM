@@ -93,10 +93,10 @@ train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)
 val_loader = DataLoader(val_dataset, batch_size=64)
 test_loader = DataLoader(test_dataset, batch_size=64)
 
-model = BertMLPClassifier(pretrained_model_name=pretrained_model_name, dropout_rate=0.5).to(device)
+model = BertMLPClassifier(pretrained_model_name=pretrained_model_name, dropout_rate=0.3).to(device)
 optimizer = torch.optim.AdamW(
     filter(lambda p: p.requires_grad, model.parameters()), 
-    lr=1e-4,  # Slightly higher since you're training fewer parameters
+    lr=3e-5,  # Slightly higher since you're training fewer parameters
     weight_decay=0.01
 )
 # smooth the labeling for less overfitting
@@ -111,18 +111,46 @@ class SmoothBCEWithLogitsLoss(nn.Module):
 
 loss_fn = SmoothBCEWithLogitsLoss()
 
-# Training loop
-for epoch in range(30):
+best_val_loss = float("inf")
+best_val_acc = 0
+no_improve_count = 0
+patience = 3
+model_save_path = "bert_mlp_preference_best.pt"
+
+for epoch in range(50):
     train_loss = train(model, train_loader, optimizer, loss_fn, device)
     val_loss, val_acc = evaluate(model, val_loader, loss_fn, device)
+
     print(f"Epoch {epoch+1}: Train loss={train_loss:.4f} | Val loss={val_loss:.4f} | Val acc={val_acc:.4f}")
 
-# Final test evaluation
+    improved = False
+
+    if val_loss + 1e-4 < best_val_loss:
+        best_val_loss = val_loss
+        improved = True
+        print("📉 Validation loss improved.")
+
+    if val_acc > best_val_acc + 1e-4:
+        best_val_acc = val_acc
+        improved = True
+        print("📈 Validation accuracy improved.")
+
+    if improved:
+        no_improve_count = 0
+        torch.save(model.state_dict(), model_save_path)
+        torch.save(model.mlp_head.state_dict(), "mlp_head_only.pt")
+        print("💾 Model saved.")
+    else:
+        no_improve_count += 1
+        print(f"⚠️ No improvement. Patience counter: {no_improve_count}/{patience}")
+        if no_improve_count >= patience:
+            print("⏹️ Early stopping triggered (no loss or accuracy improvement).")
+            break
+
+
+# Load best model before testing
+model.load_state_dict(torch.load(model_save_path))
+
+
 test_loss, test_acc = evaluate(model, test_loader, loss_fn, device)
 print(f"\n✅ Test loss={test_loss:.4f} | Test accuracy={test_acc:.4f}")
-
-# Save model weights
-model_save_path = "bert_mlp_preference.pt"
-torch.save(model.state_dict(), model_save_path)
-print(f"✅ Model weights saved to: {model_save_path}")
-

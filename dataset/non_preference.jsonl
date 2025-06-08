@@ -3796,3 +3796,664 @@
 {"agent": "Did you know that it's generally recommended to clean your bathroom at least once a week to maintain a healthy environment?", "user": "Affirmative.", "label": 0}
 {"agent": "Did you know that the QWERTY keyboard layout was designed in the 1870s, and today, other layouts like Dvorak and Colemak are often used to increase typing efficiency and ergonomics?", "user": "Yes.", "label": 0}
 {"agent": "Many people consider dishes like mac and cheese, mashed potatoes, and chicken soup to be traditional comfort foods because they are warm, filling, and often evoke nostalgic memories.", "user": "Yes.", "label": 0}
+{"agent": "Want to hear another one?", "user": "If you’ve got one.", "label": 0}
+{"agent": "Do you want to change the topic?", "user": "We can if you want.", "label": 0}
+{"agent": "Should we invite more people?", "user": "Doesn’t matter to me.", "label": 0}
+{"agent": "Do you like surprises?", "user": "Sometimes, I guess.", "label": 0}
+{"agent": "Do you want the last piece?", "user": "You can have it.", "label": 0}
+{"agent": "Should we plan something?", "user": "We could.", "label": 0}
+{"agent": "Do you want to take a photo?", "user": "I don’t mind.", "label": 0}
+{"agent": "Do you want to edit it?", "user": "If you think it needs it.", "label": 0}
+{"agent": "Would you rather talk or text?", "user": "Either is fine.", "label": 0}
+{"agent": "Want to hear the next track?", "user": "Sure, go ahead.", "label": 0}
+{"agent": "Is this too loud?", "user": "It’s okay.", "label": 0}
+{"agent": "Do you want to skip dinner?", "user": "If you're not hungry, sure.", "label": 0}
+{"agent": "Would you like to join us?", "user": "If that’s okay.", "label": 0}
+{"agent": "Should we wrap up soon?", "user": "I’m fine with that.", "label": 0}
+{"agent": "Want to go through it again?", "user": "We can, if you think it helps.", "label": 0}
+{"agent": "Do you want to rest?", "user": "Maybe, if you do too.", "label": 0}
+{"agent": "Do you need anything?", "user": "I’m good, thanks.", "label": 0}
+{"agent": "Want to keep chatting?", "user": "Sure, if you’re not tired.", "label": 0}
+{"agent": "What should we name it?", "user": "Anything works.", "label": 0}
+{"agent": "Do you want to revisit this later?", "user": "Yeah, that’s fine.", "label": 0}
+{"agent": "Would you like to continue?", "user": "I’m up for it.", "label": 0}
+{"agent": "Do you want more details?", "user": "If you think it's useful.", "label": 0}
+{"agent": "Is this your final choice?", "user": "I guess so.", "label": 0}
+{"agent": "Do you have any thoughts on this proposal?", "user": "Let me think about it and get back to you.", "label": 0}
+{"agent": "Any ideas you'd like to share?", "user": "Let me think about it and get back to you.", "label": 0}
+{"agent": "What do you think about this plan?", "user": "Let me think about it and get back to you.", "label": 0}
+{"agent": "Would you like to weigh in?", "user": "Let me think about it and get back to you.", "label": 0}
+{"agent": "Do you want to add anything?", "user": "Let me think about it and get back to you.", "label": 0}
+{"agent": "What’s your opinion on this?", "user": "Let me think about it and get back to you.", "label": 0}
+{"agent": "Do you agree with the suggestion?", "user": "Let me think about it and get back to you.", "label": 0}
+{"agent": "Any input from your side?", "user": "Let me think about it and get back to you.", "label": 0}
+{"agent": "Do you have a stance on this?", "user": "Let me think about it and get back to you.", "label": 0}
+{"agent": "Would you like to comment?", "user": "Let me think about it and get back to you.", "label": 0}
+{"agent": "Do you have any thoughts on this proposal?", "user": "I'm still forming an opinion.", "label": 0}
+{"agent": "Any ideas you'd like to share?", "user": "I'm still forming an opinion.", "label": 0}
+{"agent": "What do you think about this plan?", "user": "I'm still forming an opinion.", "label": 0}
+{"agent": "Would you like to weigh in?", "user": "I'm still forming an opinion.", "label": 0}
+{"agent": "Do you want to add anything?", "user": "I'm still forming an opinion.", "label": 0}
+{"agent": "What’s your opinion on this?", "user": "I'm still forming an opinion.", "label": 0}
+{"agent": "Do you agree with the suggestion?", "user": "I'm still forming an opinion.", "label": 0}
+{"agent": "Any input from your side?", "user": "I'm still forming an opinion.", "label": 0}
+{"agent": "Do you have a stance on this?", "user": "I'm still forming an opinion.", "label": 0}
+{"agent": "Would you like to comment?", "user": "I'm still forming an opinion.", "label": 0}
+{"agent": "Do you have any thoughts on this proposal?", "user": "I'm not sure yet.", "label": 0}
+{"agent": "Any ideas you'd like to share?", "user": "I'm not sure yet.", "label": 0}
+{"agent": "What do you think about this plan?", "user": "I'm not sure yet.", "label": 0}
+{"agent": "Would you like to weigh in?", "user": "I'm not sure yet.", "label": 0}
+{"agent": "Do you want to add anything?", "user": "I'm not sure yet.", "label": 0}
+{"agent": "What’s your opinion on this?", "user": "I'm not sure yet.", "label": 0}
+{"agent": "Do you agree with the suggestion?", "user": "I'm not sure yet.", "label": 0}
+{"agent": "Any input from your side?", "user": "I'm not sure yet.", "label": 0}
+{"agent": "Do you have a stance on this?", "user": "I'm not sure yet.", "label": 0}
+{"agent": "Would you like to comment?", "user": "I'm not sure yet.", "label": 0}
+{"agent": "Do you have any thoughts on this proposal?", "user": "I'll need some time to consider.", "label": 0}
+{"agent": "Any ideas you'd like to share?", "user": "I'll need some time to consider.", "label": 0}
+{"agent": "What do you think about this plan?", "user": "I'll need some time to consider.", "label": 0}
+{"agent": "Would you like to weigh in?", "user": "I'll need some time to consider.", "label": 0}
+{"agent": "Do you want to add anything?", "user": "I'll need some time to consider.", "label": 0}
+{"agent": "What’s your opinion on this?", "user": "I'll need some time to consider.", "label": 0}
+{"agent": "Do you agree with the suggestion?", "user": "I'll need some time to consider.", "label": 0}
+{"agent": "Any input from your side?", "user": "I'll need some time to consider.", "label": 0}
+{"agent": "Do you have a stance on this?", "user": "I'll need some time to consider.", "label": 0}
+{"agent": "Would you like to comment?", "user": "I'll need some time to consider.", "label": 0}
+{"agent": "Do you have any thoughts on this proposal?", "user": "I don't have a strong opinion at the moment.", "label": 0}
+{"agent": "Any ideas you'd like to share?", "user": "I don't have a strong opinion at the moment.", "label": 0}
+{"agent": "What do you think about this plan?", "user": "I don't have a strong opinion at the moment.", "label": 0}
+{"agent": "Would you like to weigh in?", "user": "I don't have a strong opinion at the moment.", "label": 0}
+{"agent": "Do you want to add anything?", "user": "I don't have a strong opinion at the moment.", "label": 0}
+{"agent": "What’s your opinion on this?", "user": "I don't have a strong opinion at the moment.", "label": 0}
+{"agent": "Do you agree with the suggestion?", "user": "I don't have a strong opinion at the moment.", "label": 0}
+{"agent": "Any input from your side?", "user": "I don't have a strong opinion at the moment.", "label": 0}
+{"agent": "Do you have a stance on this?", "user": "I don't have a strong opinion at the moment.", "label": 0}
+{"agent": "Would you like to comment?", "user": "I don't have a strong opinion at the moment.", "label": 0}
+{"agent": "Hi", "user": "How are you doing", "label": 0}
+{"agent": "Hello", "user": "Nice to meet you", "label": 0}
+{"agent": "Hey there", "user": "Morning!", "label": 0}
+{"agent": "Good morning", "user": "What’s up?", "label": 0}
+{"agent": "How’s it going?", "user": "It’s going fine", "label": 0}
+{"agent": "What’s new?", "user": "Not much", "label": 0}
+{"agent": "How was your weekend?", "user": "It was alright", "label": 0}
+{"agent": "Did you sleep well?", "user": "Yeah, not bad", "label": 0}
+{"agent": "How’s your day been?", "user": "Pretty average", "label": 0}
+{"agent": "What’s going on?", "user": "Just the usual", "label": 0}
+{"agent": "How are things?", "user": "Same as always", "label": 0}
+{"agent": "How’s life?", "user": "Can’t complain", "label": 0}
+{"agent": "Hi", "user": "How are you doing", "label": 0}
+{"agent": "Hello", "user": "Nice to meet you", "label": 0}
+{"agent": "Hey there", "user": "Morning!", "label": 0}
+{"agent": "Good morning", "user": "What’s up?", "label": 0}
+{"agent": "How’s it going?", "user": "It’s going fine", "label": 0}
+{"agent": "What’s new?", "user": "Not much", "label": 0}
+{"agent": "Catch any good shows recently?", "user": "Usually just relax.", "label": 0}
+{"agent": "You been keeping busy?", "user": "Yeah, been doing a few things here and there.", "label": 0}
+{"agent": "How's everything going?", "user": "Usually just relax.", "label": 0}
+{"agent": "You been keeping busy?", "user": "Usually just relax.", "label": 0}
+{"agent": "Catch any good shows recently?", "user": "Not really, pretty quiet.", "label": 0}
+{"agent": "What's up today?", "user": "Not really, pretty quiet.", "label": 0}
+{"agent": "Catch any good shows recently?", "user": "Nothing in particular.", "label": 0}
+{"agent": "What brings you here?", "user": "Usually just relax.", "label": 0}
+{"agent": "Catch any good shows recently?", "user": "Same old, same old.", "label": 0}
+{"agent": "How's everything going?", "user": "Same old, same old.", "label": 0}
+{"agent": "What's on your mind?", "user": "Usually just relax.", "label": 0}
+{"agent": "Catch any good shows recently?", "user": "Same old, same old.", "label": 0}
+{"agent": "How's everything going?", "user": "Not really, pretty quiet.", "label": 0}
+{"agent": "Anything exciting happen lately?", "user": "I'm alright, nothing special.", "label": 0}
+{"agent": "What's up today?", "user": "I watched a bit of TV.", "label": 0}
+{"agent": "What's up today?", "user": "Yeah, been doing a few things here and there.", "label": 0}
+{"agent": "What do you usually do on weekends?", "user": "I'm alright, nothing special.", "label": 0}
+{"agent": "What do you usually do on weekends?", "user": "Yeah, been doing a few things here and there.", "label": 0}
+{"agent": "How's the weather by you?", "user": "It's been kind of normal.", "label": 0}
+{"agent": "You been keeping busy?", "user": "I'm alright, nothing special.", "label": 0}
+{"agent": "What brings you here?", "user": "It's been kind of normal.", "label": 0}
+{"agent": "Catch any good shows recently?", "user": "Usually just relax.", "label": 0}
+{"agent": "What's on your mind?", "user": "I'm alright, nothing special.", "label": 0}
+{"agent": "What's up today?", "user": "Same old, same old.", "label": 0}
+{"agent": "What brings you here?", "user": "Nothing in particular.", "label": 0}
+{"agent": "What's on your mind?", "user": "Not much, just hanging out.", "label": 0}
+{"agent": "Anything exciting happen lately?", "user": "Same old, same old.", "label": 0}
+{"agent": "Catch any good shows recently?", "user": "Same old, same old.", "label": 0}
+{"agent": "What's on your mind?", "user": "Not much, just hanging out.", "label": 0}
+{"agent": "Anything exciting happen lately?", "user": "Nothing in particular.", "label": 0}
+{"agent": "What do you usually do on weekends?", "user": "Not really, pretty quiet.", "label": 0}
+{"agent": "How's everything going?", "user": "Not much, just hanging out.", "label": 0}
+{"agent": "You doing okay?", "user": "Nothing in particular.", "label": 0}
+{"agent": "How's everything going?", "user": "Usually just relax.", "label": 0}
+{"agent": "Anything exciting happen lately?", "user": "Usually just relax.", "label": 0}
+{"agent": "What's up today?", "user": "Just browsing around.", "label": 0}
+{"agent": "What brings you here?", "user": "Usually just relax.", "label": 0}
+{"agent": "Catch any good shows recently?", "user": "Not much, just hanging out.", "label": 0}
+{"agent": "What brings you here?", "user": "Usually just relax.", "label": 0}
+{"agent": "What do you think about poetry?", "user": "That’s one of those things I just go with the flow on.", "label": 0}
+{"agent": "What do you think about texting etiquette?", "user": "Haven’t looked into it too deeply.", "label": 0}
+{"agent": "What do you think about texting etiquette?", "user": "That’s one of those things I just go with the flow on.", "label": 0}
+{"agent": "What do you think about morning routines?", "user": "Hard to say, really.", "label": 0}
+{"agent": "What do you think about bubble tea?", "user": "I haven't really thought about that much.", "label": 0}
+{"agent": "What do you think about street food?", "user": "Hmm, not sure honestly.", "label": 0}
+{"agent": "What do you think about solo travel?", "user": "Could go either way, I suppose.", "label": 0}
+{"agent": "What do you think about long walks?", "user": "I haven't really thought about that much.", "label": 0}
+{"agent": "What do you think about picnic foods?", "user": "I guess it depends on the situation.", "label": 0}
+{"agent": "What do you think about digital calendars?", "user": "Hmm, not sure honestly.", "label": 0}
+{"agent": "What do you think about airplane seats?", "user": "Could go either way, I suppose.", "label": 0}
+{"agent": "What do you think about travel?", "user": "Hard to say, really.", "label": 0}
+{"agent": "What do you think about moral dilemmas?", "user": "Could go either way, I suppose.", "label": 0}
+{"agent": "What do you think about voice assistants?", "user": "Hard to say, really.", "label": 0}
+{"agent": "What do you think about learning styles?", "user": "It comes up sometimes, but I don’t have a stance.", "label": 0}
+{"agent": "What do you think about video games?", "user": "Hmm, not sure honestly.", "label": 0}
+{"agent": "What do you think about voice assistants?", "user": "Could go either way, I suppose.", "label": 0}
+{"agent": "What do you think about invented languages?", "user": "Could go either way, I suppose.", "label": 0}
+{"agent": "What do you think about audiobooks?", "user": "That's an interesting topic.", "label": 0}
+{"agent": "What do you think about picnic foods?", "user": "I haven't really thought about that much.", "label": 0}
+{"agent": "What do you think about VR experiences?", "user": "That’s one of those things I just go with the flow on.", "label": 0}
+{"agent": "What do you think about types of clouds?", "user": "Hard to say, really.", "label": 0}
+{"agent": "What do you think about productivity tools?", "user": "Hmm, not sure honestly.", "label": 0}
+{"agent": "What do you think about cats vs dogs?", "user": "It comes up sometimes, but I don’t have a stance.", "label": 0}
+{"agent": "What do you think about theater styles?", "user": "That's an interesting topic.", "label": 0}
+{"agent": "What do you think about fashion styles?", "user": "Haven’t looked into it too deeply.", "label": 0}
+{"agent": "What do you think about breakfast cereals?", "user": "Hmm, not sure honestly.", "label": 0}
+{"agent": "What do you think about personality types?", "user": "Haven’t looked into it too deeply.", "label": 0}
+{"agent": "What do you think about invented languages?", "user": "It comes up sometimes, but I don’t have a stance.", "label": 0}
+{"agent": "What do you think about favorite smells?", "user": "That’s one of those things I just go with the flow on.", "label": 0}
+{"agent": "What do you think about audiobooks?", "user": "I’ve seen people talk about it, but I don’t have a take.", "label": 0}
+{"agent": "What do you think about movie remakes?", "user": "I’ve seen people talk about it, but I don’t have a take.", "label": 0}
+{"agent": "What do you think about airplane seats?", "user": "I guess it depends on the situation.", "label": 0}
+{"agent": "What do you think about movie remakes?", "user": "That’s one of those things I just go with the flow on.", "label": 0}
+{"agent": "What do you think about fashion styles?", "user": "It comes up sometimes, but I don’t have a stance.", "label": 0}
+{"agent": "What do you think about solo travel?", "user": "It comes up sometimes, but I don’t have a stance.", "label": 0}
+{"agent": "What do you think about simulation theory?", "user": "It comes up sometimes, but I don’t have a stance.", "label": 0}
+{"agent": "What do you think about favorite smells?", "user": "Could go either way, I suppose.", "label": 0}
+{"agent": "What do you think about underrated TV shows?", "user": "I haven't really thought about that much.", "label": 0}
+{"agent": "What do you think about fan fiction?", "user": "That's an interesting topic.", "label": 0}
+{"agent": "What do you think about paradoxes?", "user": "It comes up sometimes, but I don’t have a stance.", "label": 0}
+{"agent": "What do you think about holiday traditions?", "user": "It comes up sometimes, but I don’t have a stance.", "label": 0}
+{"agent": "What do you think about sushi types?", "user": "Could go either way, I suppose.", "label": 0}
+{"agent": "What do you think about seasonal moods?", "user": "Hmm, not sure honestly.", "label": 0}
+{"agent": "What do you think about vinyl records?", "user": "Hmm, not sure honestly.", "label": 0}
+{"agent": "What do you think about cleaning habits?", "user": "Hard to say, really.", "label": 0}
+{"agent": "What do you think about aliens?", "user": "I’ve seen people talk about it, but I don’t have a take.", "label": 0}
+{"agent": "What do you think about browser extensions?", "user": "That’s one of those things I just go with the flow on.", "label": 0}
+{"agent": "What do you think about streaming platforms?", "user": "It comes up sometimes, but I don’t have a stance.", "label": 0}
+{"agent": "What do you think about rainy days?", "user": "It comes up sometimes, but I don’t have a stance.", "label": 0}
+{"agent": "People have a lot of takes on breakfast cereals, what’s yours?", "user": "I think my brain skips over that topic entirely.", "label": 0}
+{"agent": "Ever caught yourself thinking about fashion styles?", "user": "I have no horse in that race.", "label": 0}
+{"agent": "Ever caught yourself thinking about vinyl records?", "user": "Ask me again in a year.", "label": 0}
+{"agent": "Do you think vinyl records is worth the hype?", "user": "Ask me again in a year.", "label": 0}
+{"agent": "If someone brought up travel, what would you say?", "user": "If it vanished tomorrow, I’d barely notice.", "label": 0}
+{"agent": "food delivery apps — thoughts?", "user": "Can I plead the fifth on that?", "label": 0}
+{"agent": "I heard someone arguing about beach vs mountains recently. Got an opinion?", "user": "Oof, that’s a weird one — I genuinely have no clue.", "label": 0}
+{"agent": "Have you ever dug into travel?", "user": "I’ve seen memes, but that’s about it.", "label": 0}
+{"agent": "Do you think algorithm bias is worth the hype?", "user": "It makes no emotional dent on me.", "label": 0}
+{"agent": "Not to be random, but how do you feel about streaming platforms?", "user": "I store that topic in my brain's junk drawer.", "label": 0}
+{"agent": "People have a lot of takes on audiobooks, what’s yours?", "user": "I have no horse in that race.", "label": 0}
+{"agent": "Do you think sports trivia is worth the hype?", "user": "That’s in my mental 'do not disturb' folder.", "label": 0}
+{"agent": "Ever caught yourself thinking about quantum physics?", "user": "If indifference were an art, this would be the canvas.", "label": 0}
+{"agent": "Do you think keyboard layouts is worth the hype?", "user": "Ask me again in a year.", "label": 0}
+{"agent": "Have you ever dug into first impressions?", "user": "Can I plead the fifth on that?", "label": 0}
+{"agent": "regional snacks — thoughts?", "user": "I’ve seen memes, but that’s about it.", "label": 0}
+{"agent": "What’s the deal with art anyway?", "user": "Too mundane or too weird for me to form a take.", "label": 0}
+{"agent": "comfort foods — thoughts?", "user": "Hah, that’s above my pay grade.", "label": 0}
+{"agent": "Do you think travel is worth the hype?", "user": "As opinionated as a rock in the wind about that.", "label": 0}
+{"agent": "algorithm bias — thoughts?", "user": "I respect people who care, but I just don’t.", "label": 0}
+{"agent": "People have a lot of takes on movie remakes, what’s yours?", "user": "My reaction is a flatline beep.", "label": 0}
+{"agent": "Not to be random, but how do you feel about time travel paradoxes?", "user": "I tried to have an opinion once and fell asleep.", "label": 0}
+{"agent": "Not to be random, but how do you feel about cheese varieties?", "user": "Hah, that’s above my pay grade.", "label": 0}
+{"agent": "What’s the deal with hometown pride anyway?", "user": "It makes no emotional dent on me.", "label": 0}
+{"agent": "Not to be random, but how do you feel about simulation theory?", "user": "It just sort of... exists to me.", "label": 0}
+{"agent": "What’s the deal with travel anyway?", "user": "I’ve seen memes, but that’s about it.", "label": 0}
+{"agent": "Curious: what's your stance on voice assistants?", "user": "Can I plead the fifth on that?", "label": 0}
+{"agent": "People have a lot of takes on coffee brewing, what’s yours?", "user": "Ask me again in a year.", "label": 0}
+{"agent": "Have you ever dug into cleaning habits?", "user": "Never clicked with me. Might as well be noise.", "label": 0}
+{"agent": "Do you think shopping preferences is worth the hype?", "user": "One of those things that lives in the background of my life.", "label": 0}
+{"agent": "musical instruments? Is that still a thing?", "user": "Unfollowed that topic in the group chat of life.", "label": 0}
+{"agent": "So someone yelled 'arcane facts' at me in a dream. Any thoughts?", "user": "Respectfully, I’ve never mentally clocked that into existence.", "label": 0}
+{"agent": "You vibe with digital calendars or nah?", "user": "That’s a brain cell I’ve never activated.", "label": 0}
+{"agent": "So someone yelled 'the trolley problem' at me in a dream. Any thoughts?", "user": "Might as well be lorem ipsum to me.", "label": 0}
+{"agent": "Red pill: random history never existed. Blue pill: you pretend to care. Pick?", "user": "I achieve inner peace by ignoring that topic entirely.", "label": 0}
+{"agent": "You vibe with productivity tools or nah?", "user": "I treat that topic like background NPC dialogue.", "label": 0}
+{"agent": "Let’s say AI-generated art disappeared tomorrow. Would you care?", "user": "Might as well be lorem ipsum to me.", "label": 0}
+{"agent": "I got into a fake argument about favorite smells with my toaster. Thoughts?", "user": "Might as well be lorem ipsum to me.", "label": 0}
+{"agent": "Quick Q: what’s your cosmic alignment on simulation theory?", "user": "No thoughts. Just static.", "label": 0}
+{"agent": "Let’s say long walks disappeared tomorrow. Would you care?", "user": "It means less to me than expired coupons.", "label": 0}
+{"agent": "So someone yelled 'sports trivia' at me in a dream. Any thoughts?", "user": "What even is that, a lifestyle or a sandwich?", "label": 0}
+{"agent": "Quick Q: what’s your cosmic alignment on favorite smells?", "user": "Respectfully, I’ve never mentally clocked that into existence.", "label": 0}
+{"agent": "You vibe with holiday traditions or nah?", "user": "It means less to me than expired coupons.", "label": 0}
+{"agent": "Linux distros? Is that still a thing?", "user": "It means less to me than expired coupons.", "label": 0}
+{"agent": "If you were forced to debate fan fiction on national TV, what would you do?", "user": "What even is that, a lifestyle or a sandwich?", "label": 0}
+{"agent": "Quick Q: what’s your cosmic alignment on street food?", "user": "I would personally evaporate before forming an opinion.", "label": 0}
+{"agent": "Imagine memes was sentient. How would you react?", "user": "No thoughts. Just static.", "label": 0}
+{"agent": "shopping preferences walked so discourse could run. Agree?", "user": "Might as well be lorem ipsum to me.", "label": 0}
+{"agent": "Red pill: street food never existed. Blue pill: you pretend to care. Pick?", "user": "Holds the same emotional weight as a paperclip.", "label": 0}
+{"agent": "invented languages walked so discourse could run. Agree?", "user": "It means less to me than expired coupons.", "label": 0}
+{"agent": "Let’s say cats vs dogs disappeared tomorrow. Would you care?", "user": "My neurons did a collective shrug.", "label": 0}
+{"agent": "Let’s say underrated TV shows disappeared tomorrow. Would you care?", "user": "Holds the same emotional weight as a paperclip.", "label": 0}
+{"agent": "Red pill: moral dilemmas never existed. Blue pill: you pretend to care. Pick?", "user": "That’s a brain cell I’ve never activated.", "label": 0}
+{"agent": "If you were forced to debate street food on national TV, what would you do?", "user": "My stance is parallel to apathy.", "label": 0}
+{"agent": "Red pill: cats vs dogs never existed. Blue pill: you pretend to care. Pick?", "user": "No thoughts. Just static.", "label": 0}
+{"agent": "If you were forced to debate learning styles on national TV, what would you do?", "user": "It’s giving: blank stare emoji.", "label": 0}
+{"agent": "movie remakes walked so discourse could run. Agree?", "user": "My interest level is somewhere between drywall and elevator music.", "label": 0}
+{"agent": "musical instruments walked so discourse could run. Agree?", "user": "My interest level is somewhere between drywall and elevator music.", "label": 0}
+{"agent": "Red pill: coding never existed. Blue pill: you pretend to care. Pick?", "user": "I feel spiritually uninvolved.", "label": 0}
+{"agent": "If you were forced to debate paradoxes on national TV, what would you do?", "user": "It means less to me than expired coupons.", "label": 0}
+{"agent": "In analyzing beach vs mountains, what hypotheses would you refute?", "user": "I’ve abstained from forming any interpretive frameworks on that matter.", "label": 0}
+{"agent": "A goblin asks, 'What's thy stance on theater styles?'", "user": "I roll for indifference... it’s a natural 20.", "label": 0}
+{"agent": "My FYP won’t shut up about vinyl records. Valid?", "user": "That’s not in my era of concern.", "label": 0}
+{"agent": "From a post-structuralist lens, how do you interpret vegetarian dishes?", "user": "I must confess, I have yet to formulate a coherent stance.", "label": 0}
+{"agent": "As the dungeon master reveals ancient civilizations, do you act?", "user": "My character sheet lacks alignment on that issue.", "label": 0}
+{"agent": "YouTube channels just dropped. Are we vibing?", "user": "I got no emotional equity in that.", "label": 0}
+{"agent": "What’s your theoretical framework for engaging with fan fiction?", "user": "The literature is vast, but my engagement is negligible.", "label": 0}
+{"agent": "You gain +1 intelligence. Does cryptids interest you now?", "user": "May the gods forgive me, for I care not.", "label": 0}
+{"agent": "Imagine defending sleep habits in 2025. Couldn’t be me.", "user": "I’m just here for the comments.", "label": 0}
+{"agent": "How would you characterize the socio-cultural implications of cheese varieties?", "user": "I’ve abstained from forming any interpretive frameworks on that matter.", "label": 0}
+{"agent": "Your charisma check fails. The topic is YouTube channels. Do you panic?", "user": "May the gods forgive me, for I care not.", "label": 0}
+{"agent": "Be fr, are we canceling types of clouds or letting it cook?", "user": "I got no emotional equity in that.", "label": 0}
+{"agent": "If we deconstruct regional snacks, does anything resonate with you?", "user": "I must confess, I have yet to formulate a coherent stance.", "label": 0}
+{"agent": "A goblin asks, 'What's thy stance on texting etiquette?'", "user": "The scroll crumbles—I remain unchanged.", "label": 0}
+{"agent": "favorite smells just dropped. Are we vibing?", "user": "My opinion is in beta testing.", "label": 0}
+{"agent": "Considering the meta-narrative of movie remakes, do you align with any interpretation?", "user": "I must confess, I have yet to formulate a coherent stance.", "label": 0}
+{"agent": "A mysterious bard speaks of rainy days in the tavern. How do you respond?", "user": "May the gods forgive me, for I care not.", "label": 0}
+{"agent": "Deadass, how do you feel about fan fiction?", "user": "I got no emotional equity in that.", "label": 0}
+{"agent": "Could you elaborate on your epistemological stance regarding AI-generated art?", "user": "It remains largely irrelevant to my current intellectual pursuits.", "label": 0}
+{"agent": "You gain +1 intelligence. Does time travel paradoxes interest you now?", "user": "I roll for indifference... it’s a natural 20.", "label": 0}
+{"agent": "Deadass, how do you feel about weather?", "user": "That’s outside my vibe perimeter.", "label": 0}
+{"agent": "To what extent does Linux distros inform your worldview?", "user": "The literature is vast, but my engagement is negligible.", "label": 0}
+{"agent": "As the dungeon master reveals digital calendars, do you act?", "user": "Tis a quest I’ve never embarked upon.", "label": 0}
+{"agent": "Imagine defending underrated TV shows in 2025. Couldn’t be me.", "user": "I got no emotional equity in that.", "label": 0}
+{"agent": "In analyzing random history, what hypotheses would you refute?", "user": "I refrain from prematurely theorizing in absence of deeper study.", "label": 0}
+{"agent": "Your party debates food around the campfire. Do you contribute?", "user": "Let fate decide, for I shan’t intervene.", "label": 0}
+{"agent": "paradoxes just dropped. Are we vibing?", "user": "I’m just here for the comments.", "label": 0}
+{"agent": "Considering the meta-narrative of solo travel, do you align with any interpretation?", "user": "The topic falls into my scholarly blindspot.", "label": 0}
+{"agent": "A mysterious bard speaks of regional snacks in the tavern. How do you respond?", "user": "Tis a quest I’ve never embarked upon.", "label": 0}
+{"agent": "So like... quantum physics. That’s the tweet?", "user": "I got no emotional equity in that.", "label": 0}
+{"agent": "Everyone seems unusually talkative today.", "user": "I usually just go with the flow.", "label": 0}
+{"agent": "The moon looked really big last night.", "user": "That’s fine by me either way.", "label": 0}
+{"agent": "Time really flies on Thursdays.", "user": "Yeah, that makes sense.", "label": 0}
+{"agent": "That elevator music was oddly catchy.", "user": "Seems unimportant to me.", "label": 0}
+{"agent": "Ever notice how quiet everything gets on Sunday mornings?", "user": "Just another part of the day.", "label": 0}
+{"agent": "The sky had a weird orange hue today.", "user": "Doesn’t really matter much to me.", "label": 0}
+{"agent": "Somehow lost track of what day it is.", "user": "I haven’t paid much attention, to be fair.", "label": 0}
+{"agent": "I keep hearing a faint humming but no one else does.", "user": "Not something I really consider.", "label": 0}
+{"agent": "I keep hearing a faint humming but no one else does.", "user": "I usually just go with the flow.", "label": 0}
+{"agent": "Somehow lost track of what day it is.", "user": "Can’t argue with that.", "label": 0}
+{"agent": "Time really flies on Thursdays.", "user": "I usually just go with the flow.", "label": 0}
+{"agent": "People are lining up for something near the corner.", "user": "Yeah, that makes sense.", "label": 0}
+{"agent": "Haven’t checked the news yet, might just skip it.", "user": "I usually just go with the flow.", "label": 0}
+{"agent": "Somehow lost track of what day it is.", "user": "I haven’t paid much attention, to be fair.", "label": 0}
+{"agent": "Been a weird week so far.", "user": "Yeah, that makes sense.", "label": 0}
+{"agent": "There's something oddly calming about filing papers.", "user": "It sort of blends into the background.", "label": 0}
+{"agent": "There's something oddly calming about filing papers.", "user": "I didn't really notice, honestly.", "label": 0}
+{"agent": "Someone left a chessboard set up in the park.", "user": "I haven’t paid much attention, to be fair.", "label": 0}
+{"agent": "There's something oddly calming about filing papers.", "user": "I haven’t paid much attention, to be fair.", "label": 0}
+{"agent": "Looks like it's going to rain later.", "user": "Just another part of the day.", "label": 0}
+{"agent": "Somehow lost track of what day it is.", "user": "Didn’t even think twice about it.", "label": 0}
+{"agent": "That elevator music was oddly catchy.", "user": "Seems unimportant to me.", "label": 0}
+{"agent": "There's something oddly calming about filing papers.", "user": "I just sort of tuned it out.", "label": 0}
+{"agent": "This coffee tastes like existential crisis.", "user": "Could be. I didn’t think much of it.", "label": 0}
+{"agent": "Been a weird week so far.", "user": "Didn’t even think twice about it.", "label": 0}
+{"agent": "That elevator music was oddly catchy.", "user": "It sort of blends into the background.", "label": 0}
+{"agent": "This coffee tastes like existential crisis.", "user": "Sounds about right.", "label": 0}
+{"agent": "The sky had a weird orange hue today.", "user": "Hmm, interesting.", "label": 0}
+{"agent": "Time really flies on Thursdays.", "user": "I usually just go with the flow.", "label": 0}
+{"agent": "I keep hearing a faint humming but no one else does.", "user": "I guess so, yeah.", "label": 0}
+{"agent": "Heard there's construction on Main Street again.", "user": "Dog got scared by thunder again, poor guy jumped into my lap.", "label": 0}
+{"agent": "Did you catch the weather report?", "user": "Printer jammed right before my presentation—classic timing.", "label": 0}
+{"agent": "Anything interesting happen at work today?", "user": "There was a duck walking down the sidewalk near campus.", "label": 0}
+{"agent": "Was traffic bad this morning?", "user": "Apparently the elevator skipped a floor today.", "label": 0}
+{"agent": "You doing anything fun tonight?", "user": "Might meet up with some people later, not totally sure yet.", "label": 0}
+{"agent": "You doing anything fun tonight?", "user": "Our office coffee machine is finally working again.", "label": 0}
+{"agent": "You doing anything fun tonight?", "user": "I ended up eating lunch outside, weather wasn’t too bad.", "label": 0}
+{"agent": "Anything interesting happen at work today?", "user": "Almost missed the bus because I couldn't find my keys.", "label": 0}
+{"agent": "You doing anything fun tonight?", "user": "My shoelace broke mid-step on the way to class.", "label": 0}
+{"agent": "Have you tried that new sandwich shop downtown?", "user": "The barista drew a little sun on my coffee lid, kinda made my day.", "label": 0}
+{"agent": "Did you catch the weather report?", "user": "There was a duck walking down the sidewalk near campus.", "label": 0}
+{"agent": "Have you tried that new sandwich shop downtown?", "user": "Yeah, apparently they scored in the last two minutes.", "label": 0}
+{"agent": "Did you see the storm last night?", "user": "We had a surprise fire drill. Total chaos for five minutes.", "label": 0}
+{"agent": "You doing anything fun tonight?", "user": "Someone's chair broke mid-meeting. It was hard not to laugh.", "label": 0}
+{"agent": "Have you tried that new sandwich shop downtown?", "user": "Coworker brought cookies in, that was the highlight of my day.", "label": 0}
+{"agent": "Heard there's construction on Main Street again.", "user": "Heard a saxophone playing from a random window downtown.", "label": 0}
+{"agent": "How’s your day going so far?", "user": "Heard a saxophone playing from a random window downtown.", "label": 0}
+{"agent": "Have you tried that new sandwich shop downtown?", "user": "Got caught in a surprise drizzle but it wasn’t too bad.", "label": 0}
+{"agent": "Anything interesting happen at work today?", "user": "Printer jammed right before my presentation—classic timing.", "label": 0}
+{"agent": "Anything interesting happen at work today?", "user": "Apparently the elevator skipped a floor today.", "label": 0}
+{"agent": "Did you catch the weather report?", "user": "Someone's chair broke mid-meeting. It was hard not to laugh.", "label": 0}
+{"agent": "Heard there's construction on Main Street again.", "user": "The hallway smelled like oranges for some reason.", "label": 0}
+{"agent": "Did you see the storm last night?", "user": "The vending machine gave me two bags of chips.", "label": 0}
+{"agent": "I heard the local team barely won.", "user": "My shoelace broke mid-step on the way to class.", "label": 0}
+{"agent": "Was traffic bad this morning?", "user": "The vending machine gave me two bags of chips.", "label": 0}
+{"agent": "Anything interesting happen at work today?", "user": "It was fine. Mostly stayed in and caught up on laundry.", "label": 0}
+{"agent": "Did you see the storm last night?", "user": "Forgot my umbrella but luckily it stopped raining by noon.", "label": 0}
+{"agent": "How was your weekend?", "user": "Someone brought a puppy to the park. Everyone swarmed it.", "label": 0}
+{"agent": "Did you see the storm last night?", "user": "One of the lights at the intersection was out, but people managed.", "label": 0}
+{"agent": "Did you catch the weather report?", "user": "Think I saw someone filming a video on the corner today.", "label": 0}
+{"agent": "You doing anything fun tonight?", "user": "The barista drew a little sun on my coffee lid, kinda made my day.", "label": 0}
+{"agent": "How was your weekend?", "user": "Yep, supposed to be clear tomorrow, which is good.", "label": 0}
+{"agent": "I heard the local team barely won.", "user": "Think I saw someone filming a video on the corner today.", "label": 0}
+{"agent": "Heard there's construction on Main Street again.", "user": "It was fine. Mostly stayed in and caught up on laundry.", "label": 0}
+{"agent": "Have you tried that new sandwich shop downtown?", "user": "Coworker brought cookies in, that was the highlight of my day.", "label": 0}
+{"agent": "Anything interesting happen at work today?", "user": "The hallway smelled like oranges for some reason.", "label": 0}
+{"agent": "Did you see the storm last night?", "user": "Heard a saxophone playing from a random window downtown.", "label": 0}
+{"agent": "Did you catch the weather report?", "user": "Yeah, the wind knocked over our trash bins. Took a while to clean up.", "label": 0}
+{"agent": "I heard the local team barely won.", "user": "Yeah, the wind knocked over our trash bins. Took a while to clean up.", "label": 0}
+{"agent": "Did you see the storm last night?", "user": "We had a surprise fire drill. Total chaos for five minutes.", "label": 0}
+{"agent": "Anything interesting happen at work today?", "user": "The hallway smelled like oranges for some reason.", "label": 0}
+{"agent": "How was your weekend?", "user": "Someone's chair broke mid-meeting. It was hard not to laugh.", "label": 0}
+{"agent": "How’s your day going so far?", "user": "The barista drew a little sun on my coffee lid, kinda made my day.", "label": 0}
+{"agent": "Did you catch the weather report?", "user": "Pretty normal so far. Just trying to get through some tasks.", "label": 0}
+{"agent": "How’s your day going so far?", "user": "Dog got scared by thunder again, poor guy jumped into my lap.", "label": 0}
+{"agent": "You doing anything fun tonight?", "user": "Heard a saxophone playing from a random window downtown.", "label": 0}
+{"agent": "I heard the local team barely won.", "user": "Yep, supposed to be clear tomorrow, which is good.", "label": 0}
+{"agent": "Heard there's construction on Main Street again.", "user": "We had a surprise fire drill. Total chaos for five minutes.", "label": 0}
+{"agent": "Anything interesting happen at work today?", "user": "I walked past it, looked busy. Didn’t go in though.", "label": 0}
+{"agent": "Heard there's construction on Main Street again.", "user": "Apparently the elevator skipped a floor today.", "label": 0}
+{"agent": "Have you tried that new sandwich shop downtown?", "user": "The vending machine gave me two bags of chips.", "label": 0}
+{"agent": "Anything interesting happen at work today?", "user": "Someone's chair broke mid-meeting. It was hard not to laugh.", "label": 0}
+{"agent": "I heard the local team barely won.", "user": "Coworker brought cookies in, that was the highlight of my day.", "label": 0}
+{"agent": "Have you tried that new sandwich shop downtown?", "user": "Just saw a guy juggling apples near the bus stop.", "label": 0}
+{"agent": "Did you see the storm last night?", "user": "Almost missed the bus because I couldn't find my keys.", "label": 0}
+{"agent": "Did you see the storm last night?", "user": "Someone brought a puppy to the park. Everyone swarmed it.", "label": 0}
+{"agent": "I heard the local team barely won.", "user": "Pretty normal so far. Just trying to get through some tasks.", "label": 0}
+{"agent": "Did you see the storm last night?", "user": "I ended up eating lunch outside, weather wasn’t too bad.", "label": 0}
+{"agent": "How’s your day going so far?", "user": "One of the lights at the intersection was out, but people managed.", "label": 0}
+{"agent": "Did you see the storm last night?", "user": "Yeah, apparently they scored in the last two minutes.", "label": 0}
+{"agent": "Did you catch the weather report?", "user": "The hallway smelled like oranges for some reason.", "label": 0}
+{"agent": "Was traffic bad this morning?", "user": "Someone's chair broke mid-meeting. It was hard not to laugh.", "label": 0}
+{"agent": "How was your weekend?", "user": "It was fine. Mostly stayed in and caught up on laundry.", "label": 0}
+{"agent": "Anything interesting happen at work today?", "user": "Got caught in a surprise drizzle but it wasn’t too bad.", "label": 0}
+{"agent": "Was traffic bad this morning?", "user": "Dog got scared by thunder again, poor guy jumped into my lap.", "label": 0}
+{"agent": "Have you tried that new sandwich shop downtown?", "user": "Just saw a guy juggling apples near the bus stop.", "label": 0}
+{"agent": "Was traffic bad this morning?", "user": "Yeah, the wind knocked over our trash bins. Took a while to clean up.", "label": 0}
+{"agent": "Was traffic bad this morning?", "user": "I ended up eating lunch outside, weather wasn’t too bad.", "label": 0}
+{"agent": "You doing anything fun tonight?", "user": "Heard a saxophone playing from a random window downtown.", "label": 0}
+{"agent": "Did you catch the weather report?", "user": "My shoelace broke mid-step on the way to class.", "label": 0}
+{"agent": "How’s your day going so far?", "user": "The vending machine gave me two bags of chips.", "label": 0}
+{"agent": "I heard the local team barely won.", "user": "The hallway smelled like oranges for some reason.", "label": 0}
+{"agent": "Was traffic bad this morning?", "user": "Yeah, apparently they scored in the last two minutes.", "label": 0}
+{"agent": "Heard there's construction on Main Street again.", "user": "Our office coffee machine is finally working again.", "label": 0}
+{"agent": "Have you tried that new sandwich shop downtown?", "user": "We had a surprise fire drill. Total chaos for five minutes.", "label": 0}
+{"agent": "Was traffic bad this morning?", "user": "The vending machine gave me two bags of chips.", "label": 0}
+{"agent": "Heard there's construction on Main Street again.", "user": "Yeah, the wind knocked over our trash bins. Took a while to clean up.", "label": 0}
+{"agent": "Did you see the storm last night?", "user": "Yeah, they blocked off a lane again. Caused a bit of a backup.", "label": 0}
+{"agent": "You doing anything fun tonight?", "user": "Forgot my umbrella but luckily it stopped raining by noon.", "label": 0}
+{"agent": "Was traffic bad this morning?", "user": "Apparently the elevator skipped a floor today.", "label": 0}
+{"agent": "Did you catch the weather report?", "user": "Dog got scared by thunder again, poor guy jumped into my lap.", "label": 0}
+{"agent": "Did you see the storm last night?", "user": "It was okay, just a little slower than usual around 8 AM.", "label": 0}
+{"agent": "You doing anything fun tonight?", "user": "Coworker brought cookies in, that was the highlight of my day.", "label": 0}
+{"agent": "Heard there's construction on Main Street again.", "user": "My shoelace broke mid-step on the way to class.", "label": 0}
+{"agent": "Heard there's construction on Main Street again.", "user": "Almost missed the bus because I couldn't find my keys.", "label": 0}
+{"agent": "How’s your day going so far?", "user": "Apparently the elevator skipped a floor today.", "label": 0}
+{"agent": "I heard the local team barely won.", "user": "The vending machine gave me two bags of chips.", "label": 0}
+{"agent": "Did you see the storm last night?", "user": "Might meet up with some people later, not totally sure yet.", "label": 0}
+{"agent": "You doing anything fun tonight?", "user": "It was fine. Mostly stayed in and caught up on laundry.", "label": 0}
+{"agent": "Did you catch the weather report?", "user": "Just saw a guy juggling apples near the bus stop.", "label": 0}
+{"agent": "You doing anything fun tonight?", "user": "Yeah, they blocked off a lane again. Caused a bit of a backup.", "label": 0}
+{"agent": "Did you see the storm last night?", "user": "Just saw a guy juggling apples near the bus stop.", "label": 0}
+{"agent": "Was traffic bad this morning?", "user": "Pretty normal so far. Just trying to get through some tasks.", "label": 0}
+{"agent": "Did you catch the weather report?", "user": "Got caught in a surprise drizzle but it wasn’t too bad.", "label": 0}
+{"agent": "Did you catch the weather report?", "user": "Forgot my umbrella but luckily it stopped raining by noon.", "label": 0}
+{"agent": "Did you catch the weather report?", "user": "My shoelace broke mid-step on the way to class.", "label": 0}
+{"agent": "Did you see the storm last night?", "user": "Yeah, they blocked off a lane again. Caused a bit of a backup.", "label": 0}
+{"agent": "Heard there's construction on Main Street again.", "user": "Apparently the elevator skipped a floor today.", "label": 0}
+{"agent": "Did you catch the weather report?", "user": "Yep, supposed to be clear tomorrow, which is good.", "label": 0}
+{"agent": "How was your weekend?", "user": "Pretty normal so far. Just trying to get through some tasks.", "label": 0}
+{"agent": "Did you see the storm last night?", "user": "Printer jammed right before my presentation—classic timing.", "label": 0}
+{"agent": "How was your weekend?", "user": "I walked past it, looked busy. Didn’t go in though.", "label": 0}
+{"agent": "How’s your day going so far?", "user": "Yep, supposed to be clear tomorrow, which is good.", "label": 0}
+{"agent": "Anything interesting happen at work today?", "user": "We had a surprise fire drill. Total chaos for five minutes.", "label": 0}
+{"agent": "Have you tried that new sandwich shop downtown?", "user": "We had a surprise fire drill. Total chaos for five minutes.", "label": 0}
+{"agent": "Anything interesting happen at work today?", "user": "Forgot my umbrella but luckily it stopped raining by noon.", "label": 0}
+{"agent": "Heard there's construction on Main Street again.", "user": "Yeah, they blocked off a lane again. Caused a bit of a backup.", "label": 0}
+{"agent": "How was your weekend?", "user": "Might meet up with some people later, not totally sure yet.", "label": 0}
+{"agent": "You doing anything fun tonight?", "user": "The vending machine gave me two bags of chips.", "label": 0}
+{"agent": "Anything interesting happen at work today?", "user": "Might meet up with some people later, not totally sure yet.", "label": 0}
+{"agent": "Have you tried that new sandwich shop downtown?", "user": "Printer jammed right before my presentation—classic timing.", "label": 0}
+{"agent": "Anything interesting happen at work today?", "user": "Someone's chair broke mid-meeting. It was hard not to laugh.", "label": 0}
+{"agent": "Was traffic bad this morning?", "user": "Yeah, the wind knocked over our trash bins. Took a while to clean up.", "label": 0}
+{"agent": "How’s your day going so far?", "user": "It was fine. Mostly stayed in and caught up on laundry.", "label": 0}
+{"agent": "How’s your day going so far?", "user": "Dog got scared by thunder again, poor guy jumped into my lap.", "label": 0}
+{"agent": "Did you catch the weather report?", "user": "Might meet up with some people later, not totally sure yet.", "label": 0}
+{"agent": "Anything interesting happen at work today?", "user": "The vending machine gave me two bags of chips.", "label": 0}
+{"agent": "Was traffic bad this morning?", "user": "Just saw a guy juggling apples near the bus stop.", "label": 0}
+{"agent": "You doing anything fun tonight?", "user": "Pretty normal so far. Just trying to get through some tasks.", "label": 0}
+{"agent": "Heard there's construction on Main Street again.", "user": "Might meet up with some people later, not totally sure yet.", "label": 0}
+{"agent": "Wasn't the sky super orange at sunset?", "user": "Haha, yeah, that’s been flickering for weeks now.", "label": 0}
+{"agent": "I walked past that new bakery. Smelled like cinnamon.", "user": "Right? The whole lobby smelled like cookies.", "label": 0}
+{"agent": "How'd that thing go yesterday?", "user": "I noticed that too. Could’ve been a filter on the windows?", "label": 0}
+{"agent": "I walked past that new bakery. Smelled like cinnamon.", "user": "Same old, just went about the day.", "label": 0}
+{"agent": "I walked past that new bakery. Smelled like cinnamon.", "user": "I did see that sky—it looked like a painting.", "label": 0}
+{"agent": "You won't believe what I saw on the subway today.", "user": "Nothing big happened, just the usual stuff.", "label": 0}
+{"agent": "This morning felt unusually calm, right?", "user": "It was fine, nothing really stood out.", "label": 0}
+{"agent": "This morning felt unusually calm, right?", "user": "Haha, yeah, that’s been flickering for weeks now.", "label": 0}
+{"agent": "So, anything new with you lately?", "user": "Haha, yeah, that’s been flickering for weeks now.", "label": 0}
+{"agent": "Someone in our building got stuck in the revolving door again.", "user": "It kind of was. Even the usual traffic light was green.", "label": 0}
+{"agent": "This morning felt unusually calm, right?", "user": "Right? The whole lobby smelled like cookies.", "label": 0}
+{"agent": "I walked past that new bakery. Smelled like cinnamon.", "user": "Yeah, I overheard someone talking about it in the elevator.", "label": 0}
+{"agent": "I walked past that new bakery. Smelled like cinnamon.", "user": "I did see that sky—it looked like a painting.", "label": 0}
+{"agent": "Wasn't the sky super orange at sunset?", "user": "Right? The whole lobby smelled like cookies.", "label": 0}
+{"agent": "You won't believe what I saw on the subway today.", "user": "Nothing big happened, just the usual stuff.", "label": 0}
+{"agent": "Random thought: elevators are just weird vertical buses.", "user": "Haha, yeah, that’s been flickering for weeks now.", "label": 0}
+{"agent": "They still haven't fixed the light in the hallway.", "user": "Right? The whole lobby smelled like cookies.", "label": 0}
+{"agent": "Can’t believe it's already Thursday.", "user": "It was fine, nothing really stood out.", "label": 0}
+{"agent": "Someone in our building got stuck in the revolving door again.", "user": "Yeah, I overheard someone talking about it in the elevator.", "label": 0}
+{"agent": "Random thought: elevators are just weird vertical buses.", "user": "It kind of was. Even the usual traffic light was green.", "label": 0}
+{"agent": "Random thought: elevators are just weird vertical buses.", "user": "I did see that sky—it looked like a painting.", "label": 0}
+{"agent": "Someone in our building got stuck in the revolving door again.", "user": "I wasn’t really paying attention, to be honest.", "label": 0}
+{"agent": "You won't believe what I saw on the subway today.", "user": "Haha, yeah, that’s been flickering for weeks now.", "label": 0}
+{"agent": "You won't believe what I saw on the subway today.", "user": "I did see that sky—it looked like a painting.", "label": 0}
+{"agent": "They still haven't fixed the light in the hallway.", "user": "Haha, yeah, that’s been flickering for weeks now.", "label": 0}
+{"agent": "This morning felt unusually calm, right?", "user": "I noticed that too. Could’ve been a filter on the windows?", "label": 0}
+{"agent": "You won't believe what I saw on the subway today.", "user": "Nothing big happened, just the usual stuff.", "label": 0}
+{"agent": "This morning felt unusually calm, right?", "user": "It kind of was. Even the usual traffic light was green.", "label": 0}
+{"agent": "Random thought: elevators are just weird vertical buses.", "user": "Yeah, I overheard someone talking about it in the elevator.", "label": 0}
+{"agent": "How'd that thing go yesterday?", "user": "Yeah, I overheard someone talking about it in the elevator.", "label": 0}
+{"agent": "Is it just me or are bagels getting smaller?", "user": "Oh yeah, nothing screams excitement like sitting in traffic for 40 minutes.", "label": 0}
+{"agent": "So how’s the chaos treating you today?", "user": "I mean, it was Tuesday... so, you know, thrilling stuff.", "label": 0}
+{"agent": "Ever blink and suddenly it’s 4 PM?", "user": "Oh yeah, nothing screams excitement like sitting in traffic for 40 minutes.", "label": 0}
+{"agent": "So how’s the chaos treating you today?", "user": "My phone decided 2% was the perfect time to start an update.", "label": 0}
+{"agent": "Ever blink and suddenly it’s 4 PM?", "user": "Stepped outside, got hit by a leaf, and that was enough nature for the day.", "label": 0}
+{"agent": "So how’s the chaos treating you today?", "user": "I mean, it was Tuesday... so, you know, thrilling stuff.", "label": 0}
+{"agent": "Is it just me or are bagels getting smaller?", "user": "My plants are still alive, so that’s today’s miracle.", "label": 0}
+{"agent": "You ever have a day where your only win is finding parking?", "user": "Yeah, the printer ate my report. Again. Classic.", "label": 0}
+{"agent": "Ever blink and suddenly it’s 4 PM?", "user": "My plants are still alive, so that’s today’s miracle.", "label": 0}
+{"agent": "You awake or just physically present?", "user": "Yeah, the printer ate my report. Again. Classic.", "label": 0}
+{"agent": "Corporate called. They said vibes are off.", "user": "The elevator music slapped harder than it had any right to.", "label": 0}
+{"agent": "You awake or just physically present?", "user": "The elevator music slapped harder than it had any right to.", "label": 0}
+{"agent": "Corporate called. They said vibes are off.", "user": "I stared at my to-do list until it blinked first.", "label": 0}
+{"agent": "I swear the microwave was judging me today.", "user": "Apparently, microwaving soup is rocket science now.", "label": 0}
+{"agent": "I spilled coffee twice. It’s gonna be one of *those* days.", "user": "I stared at my to-do list until it blinked first.", "label": 0}
+{"agent": "Corporate called. They said vibes are off.", "user": "I stared at my to-do list until it blinked first.", "label": 0}
+{"agent": "Tell me something mildly unhinged about your morning.", "user": "Woke up to my alarm and instantly regretted all life choices.", "label": 0}
+{"agent": "Corporate called. They said vibes are off.", "user": "Oh yeah, nothing screams excitement like sitting in traffic for 40 minutes.", "label": 0}
+{"agent": "I swear the microwave was judging me today.", "user": "Yeah, the printer ate my report. Again. Classic.", "label": 0}
+{"agent": "You ever have a day where your only win is finding parking?", "user": "Woke up to my alarm and instantly regretted all life choices.", "label": 0}
+{"agent": "Tell me something mildly unhinged about your morning.", "user": "Apparently, microwaving soup is rocket science now.", "label": 0}
+{"agent": "I spilled coffee twice. It’s gonna be one of *those* days.", "user": "My phone decided 2% was the perfect time to start an update.", "label": 0}
+{"agent": "Tell me something mildly unhinged about your morning.", "user": "My plants are still alive, so that’s today’s miracle.", "label": 0}
+{"agent": "I swear the microwave was judging me today.", "user": "The elevator music slapped harder than it had any right to.", "label": 0}
+{"agent": "I spilled coffee twice. It’s gonna be one of *those* days.", "user": "Stepped outside, got hit by a leaf, and that was enough nature for the day.", "label": 0}
+{"agent": "Tell me something mildly unhinged about your morning.", "user": "Apparently, microwaving soup is rocket science now.", "label": 0}
+{"agent": "I swear the microwave was judging me today.", "user": "I mean, it was Tuesday... so, you know, thrilling stuff.", "label": 0}
+{"agent": "Corporate called. They said vibes are off.", "user": "Stepped outside, got hit by a leaf, and that was enough nature for the day.", "label": 0}
+{"agent": "You awake or just physically present?", "user": "Oh yeah, nothing screams excitement like sitting in traffic for 40 minutes.", "label": 0}
+{"agent": "Corporate called. They said vibes are off.", "user": "I mean, it was Tuesday... so, you know, thrilling stuff.", "label": 0}
+{"agent": "Do you enjoy spicy food?", "user": "I haven’t really paid attention to that.", "label": 0}
+{"agent": "What's your go-to comfort food?", "user": "I don’t think I have one.", "label": 0}
+{"agent": "Do you have a favorite book genre?", "user": "Not really sure what I like yet.", "label": 0}
+{"agent": "Which streaming platform do you prefer?", "user": "I usually just watch whatever’s available.", "label": 0}
+{"agent": "Are you more of a dog person or cat person?", "user": "I’ve never had a pet, so I wouldn’t know.", "label": 0}
+{"agent": "How do you feel about sushi?", "user": "I haven’t tried it enough to say.", "label": 0}
+{"agent": "Do you like morning or evening workouts?", "user": "I don’t really have a schedule.", "label": 0}
+{"agent": "What's your opinion on horror movies?", "user": "Never really watched many.", "label": 0}
+{"agent": "Which do you like more: mountains or the beach?", "user": "I haven’t been to either recently.", "label": 0}
+{"agent": "Do you use any voice assistants?", "user": "I think I’ve tried one once, can’t remember which.", "label": 0}
+{"agent": "Any thoughts on street food?", "user": "I haven’t really thought about it.", "label": 0}
+{"agent": "Do you enjoy rainy weather?", "user": "Sometimes? I haven’t really noticed.", "label": 0}
+{"agent": "Are you into podcasts?", "user": "Not sure, I haven’t listened to many.", "label": 0}
+{"agent": "What's your take on musicals?", "user": "I guess I haven’t seen enough to know.", "label": 0}
+{"agent": "Do you prefer summer or winter?", "user": "I’ve never had a strong feeling about that.", "label": 0}
+{"agent": "Do you like shopping for clothes?", "user": "It’s just something I do when I have to.", "label": 0}
+{"agent": "Have you used food delivery apps much?", "user": "A couple of times, but I don’t pay attention to which.", "label": 0}
+{"agent": "What kind of coffee do you drink?", "user": "I don’t drink it regularly enough to have a favorite.", "label": 0}
+{"agent": "Are you into memes?", "user": "Some are funny, but I don’t follow them much.", "label": 0}
+{"agent": "Do you use browser extensions?", "user": "I think I installed one once, not sure.", "label": 0}
+{"agent": "What’s your preferred learning style?", "user": "I never really thought about that.", "label": 0}
+{"agent": "Do you read fan fiction?", "user": "I’ve seen it around, but never got into it.", "label": 0}
+{"agent": "Any thoughts on arcane trivia?", "user": "No idea, honestly.", "label": 0}
+{"agent": "Do you like cats or dogs more?", "user": "I guess I’ve never really decided.", "label": 0}
+{"agent": "Do you like watching documentaries?", "user": "Depends on the topic, I don’t seek them out.", "label": 0}
+{"agent": "What’s your favorite breakfast cereal?", "user": "I don’t eat it often enough to choose.", "label": 0}
+{"agent": "Do you enjoy rainy day vibes?", "user": "Sometimes? Never paid much attention.", "label": 0}
+{"agent": "Are you into ancient history?", "user": "I didn’t take many history classes.", "label": 0}
+{"agent": "Do you prefer digital or analog notes?", "user": "I just write stuff down however.", "label": 0}
+{"agent": "Do you like poetry?", "user": "I don’t know enough about it to say.", "label": 0}
+{"agent": "What do you think about cryptocurrency?", "user": "I’ve seen other people talk about it, but not me.", "label": 0}
+{"agent": "Do you enjoy watching sports events live?", "user": "Only done that once or twice—don’t recall much.", "label": 0}
+{"agent": "What are your thoughts on personality quizzes?", "user": "It varies, I don’t think about it much.", "label": 0}
+{"agent": "Do you like theme parks?", "user": "It just kind of happens, no set way.", "label": 0}
+{"agent": "Do you enjoy watching sports events live?", "user": "That’s not something I do regularly.", "label": 0}
+{"agent": "Do you like listening to classical music?", "user": "I guess it depends, I don’t pay too much attention.", "label": 0}
+{"agent": "Do you like theme parks?", "user": "It varies, I don’t think about it much.", "label": 0}
+{"agent": "How often do you clean your room?", "user": "Haven’t really formed an opinion on that.", "label": 0}
+{"agent": "What are your thoughts on viral TikTok trends?", "user": "I’ve done it before, but no strong feelings.", "label": 0}
+{"agent": "Have you ever done a jigsaw puzzle?", "user": "Not sure I’ve thought about that clearly.", "label": 0}
+{"agent": "How do you feel about working from home?", "user": "Only done that once or twice—don’t recall much.", "label": 0}
+{"agent": "Have you tried journaling before?", "user": "Only done that once or twice—don’t recall much.", "label": 0}
+{"agent": "What's your take on climate change documentaries?", "user": "I’ve seen other people talk about it, but not me.", "label": 0}
+{"agent": "What's your take on climate change documentaries?", "user": "I’ve only tried that once, not sure yet.", "label": 0}
+{"agent": "Have you ever been to a live theater show?", "user": "I’ve seen it around, but haven’t really tried it myself.", "label": 0}
+{"agent": "What's your take on climate change documentaries?", "user": "I suppose I’m neutral on that.", "label": 0}
+{"agent": "What do you think of online learning platforms?", "user": "I’ve done it before, but no strong feelings.", "label": 0}
+{"agent": "Do you enjoy watching sports events live?", "user": "I go with whatever at the time.", "label": 0}
+{"agent": "What are your thoughts on personality quizzes?", "user": "Only done that once or twice—don’t recall much.", "label": 0}
+{"agent": "Have you tried journaling before?", "user": "I’ve seen it around, but haven’t really tried it myself.", "label": 0}
+{"agent": "Have you ever done a jigsaw puzzle?", "user": "Not something I’ve thought much about.", "label": 0}
+{"agent": "How often do you clean your room?", "user": "Haven’t really formed an opinion on that.", "label": 0}
+{"agent": "Do you enjoy watching sports events live?", "user": "I suppose I’m neutral on that.", "label": 0}
+{"agent": "What do you think about cryptocurrency?", "user": "Not something that stands out in my memory.", "label": 0}
+{"agent": "Ever been to a farmer’s market?", "user": "I go with whatever at the time.", "label": 0}
+{"agent": "What's your take on climate change documentaries?", "user": "I guess it depends, I don’t pay too much attention.", "label": 0}
+{"agent": "How do you feel about working from home?", "user": "I’ve seen other people talk about it, but not me.", "label": 0}
+{"agent": "Do you enjoy watching sports events live?", "user": "I guess it depends, I don’t pay too much attention.", "label": 0}
+{"agent": "Have you ever done a jigsaw puzzle?", "user": "I’ve seen other people talk about it, but not me.", "label": 0}
+{"agent": "How do you feel about camping?", "user": "I’ve only tried that once, not sure yet.", "label": 0}
+{"agent": "What's your opinion on parallel universes?", "user": "I just go with the flow on that one.", "label": 0}
+{"agent": "Ever tried meditation apps?", "user": "I just go with the flow on that one.", "label": 0}
+{"agent": "Do you like going to museums?", "user": "I guess I never paid much attention.", "label": 0}
+{"agent": "Do you enjoy podcasts?", "user": "I don’t really have a strong take.", "label": 0}
+{"agent": "Do you enjoy podcasts?", "user": "I guess I never paid much attention.", "label": 0}
+{"agent": "Do you follow any sports?", "user": "I just go with the flow on that one.", "label": 0}
+{"agent": "Have you ever gone stargazing?", "user": "That’s a bit out of my usual orbit.", "label": 0}
+{"agent": "Do you follow any sports?", "user": "I’ve heard of it, but that’s about it.", "label": 0}
+{"agent": "Do you enjoy podcasts?", "user": "I’ve heard of it, but that’s about it.", "label": 0}
+{"agent": "Do you like going to museums?", "user": "I guess I never paid much attention.", "label": 0}
+{"agent": "Do you like going to museums?", "user": "Depends on the day, really.", "label": 0}
+{"agent": "Have you ever gone stargazing?", "user": "I just go with the flow on that one.", "label": 0}
+{"agent": "Do you follow any sports?", "user": "I just go with the flow on that one.", "label": 0}
+{"agent": "Ever tried meditation apps?", "user": "Depends on the day, really.", "label": 0}
+{"agent": "Have you ever watched a silent film?", "user": "I guess I never paid much attention.", "label": 0}
+{"agent": "What's your opinion on parallel universes?", "user": "I’ve heard of it, but that’s about it.", "label": 0}
+{"agent": "Do you like going to museums?", "user": "I’ve heard of it, but that’s about it.", "label": 0}
+{"agent": "Do you follow any sports?", "user": "Depends on the day, really.", "label": 0}
+{"agent": "What's your opinion on parallel universes?", "user": "I just go with the flow on that one.", "label": 0}
+{"agent": "What's your opinion on parallel universes?", "user": "I’ve heard of it, but that’s about it.", "label": 0}
+{"agent": "Ever tried meditation apps?", "user": "I’ve heard of it, but that’s about it.", "label": 0}
+{"agent": "How do you usually spend Sunday mornings?", "user": "Not something I usually think about.", "label": 0}
+{"agent": "Do you enjoy podcasts?", "user": "Haven’t thought much about it, honestly.", "label": 0}
+{"agent": "What's your opinion on parallel universes?", "user": "I’ve heard of it, but that’s about it.", "label": 0}
+{"agent": "Ever tried meditation apps?", "user": "That hasn’t crossed my mind in a while.", "label": 0}
+{"agent": "Do you enjoy podcasts?", "user": "I don’t really have a strong take.", "label": 0}
+{"agent": "Have you ever watched a silent film?", "user": "I’ve heard of it, but that’s about it.", "label": 0}
+{"agent": "Do you like trying out new phone apps?", "user": "That hasn’t crossed my mind in a while.", "label": 0}
+{"agent": "Have you ever gone stargazing?", "user": "That hasn’t crossed my mind in a while.", "label": 0}
+{"agent": "Do you like going to museums?", "user": "I just go with the flow on that one.", "label": 0}
+{"agent": "What do you make of cozy mystery novels?", "user": "I guess it’s fine? Or not? I don’t know.", "label": 0}
+{"agent": "Where do you stand on smart fridges?", "user": "I’ve seen it mentioned, but never looked into it.", "label": 0}
+{"agent": "How do you feel about cozy mystery novels?", "user": "Just one of those things, y’know?", "label": 0}
+{"agent": "Do you usually weather apps?", "user": "I usually let others decide that.", "label": 0}
+{"agent": "How do you feel about seasonal allergies?", "user": "No strong take on that.", "label": 0}
+{"agent": "Any thoughts on emoji use in texts?", "user": "I guess it’s fine? Or not? I don’t know.", "label": 0}
+{"agent": "Have you ever tried time travel?", "user": "I guess it’s fine? Or not? I don’t know.", "label": 0}
+{"agent": "What's your take on foreign game shows?", "user": "Just one of those things, y’know?", "label": 0}
+{"agent": "Are you into minimalist art?", "user": "I’m indifferent, to be honest.", "label": 0}
+{"agent": "How do you feel about retro tech?", "user": "That’s kind of out of left field.", "label": 0}
+{"agent": "What's your take on philosophy podcasts?", "user": "Just one of those things, y’know?", "label": 0}
+{"agent": "Have you ever tried sports analytics?", "user": "No strong take on that.", "label": 0}
+{"agent": "What do you make of seasonal allergies?", "user": "It's never really come up.", "label": 0}
+{"agent": "What do you make of minimalist art?", "user": "That's above my pay grade.", "label": 0}
+{"agent": "How do you feel about emoji use in texts?", "user": "That’s not really something I think about.", "label": 0}
+{"agent": "Where do you stand on emoji use in texts?", "user": "I just roll with it.", "label": 0}
+{"agent": "What do you make of unplugged vacations?", "user": "Depends who you ask, I guess.", "label": 0}
+{"agent": "What do you make of unplugged vacations?", "user": "I guess it’s fine? Or not? I don’t know.", "label": 0}
+{"agent": "What's your opinion on seasonal allergies?", "user": "I’ve seen it mentioned, but never looked into it.", "label": 0}
+{"agent": "Are you into weird food combos?", "user": "I guess it’s fine? Or not? I don’t know.", "label": 0}
+{"agent": "What do you make of ancient rituals?", "user": "I guess it’s fine? Or not? I don’t know.", "label": 0}
+{"agent": "Are you into cloud storage services?", "user": "I’ve seen it mentioned, but never looked into it.", "label": 0}
+{"agent": "What's your opinion on weird food combos?", "user": "I haven’t given it much thought.", "label": 0}
+{"agent": "What do you make of sports analytics?", "user": "That’s kind of out of left field.", "label": 0}
+{"agent": "Are you into time travel?", "user": "That’s kind of out of left field.", "label": 0}
+{"agent": "Are you into seasonal allergies?", "user": "I just roll with it.", "label": 0}
+{"agent": "What's your opinion on fandom culture?", "user": "Depends who you ask, I guess.", "label": 0}
+{"agent": "Have you ever tried cloud storage services?", "user": "I usually let others decide that.", "label": 0}
+{"agent": "What's your opinion on quantum computing?", "user": "Let’s circle back to that another time.", "label": 0}
+{"agent": "Ever considered weird food combos?", "user": "I usually let others decide that.", "label": 0}
+{"agent": "Do you use voice memos often?", "user": "It depends, but I usually stay out of it.", "label": 0}
+{"agent": "Ever explored game development?", "user": "Doesn’t really register much with me.", "label": 0}
+{"agent": "What's your take on celebrity podcasts?", "user": "I don’t know much about that topic.", "label": 0}
+{"agent": "Do you pay attention to music lyrics?", "user": "Haven’t decided how I feel yet.", "label": 0}
+{"agent": "What's your opinion on astrology apps?", "user": "I’d have to think more about that.", "label": 0}
+{"agent": "Do you follow any political news?", "user": "No big opinion, to be honest.", "label": 0}
+{"agent": "How do you feel about art installations?", "user": "Hmm, I don’t have much to say on that.", "label": 0}
+{"agent": "Do you enjoy visiting museums?", "user": "Not familiar enough to comment, really.", "label": 0}
+{"agent": "Do you watch esports events?", "user": "Not something I engage with.", "label": 0}
+{"agent": "What's your stance on subscription models?", "user": "It’s not something I’ve looked into.", "label": 0}
+{"agent": "Are you interested in underwater exploration?", "user": "Could go either way, I suppose.", "label": 0}
+{"agent": "Do you use voice memos often?", "user": "Never really considered it, honestly.", "label": 0}
+{"agent": "Do you like learning about ancient myths?", "user": "I just go along with whatever’s happening.", "label": 0}
+{"agent": "Have you ever tried predictive algorithms?", "user": "That’s something I’ve never really thought about.", "label": 0}
+{"agent": "What do you make of minimalist art?", "user": "Sort of neutral, I guess.", "label": 0}
+{"agent": "Do you ever think about city planning?", "user": "I’d have to think more about that.", "label": 0}
+{"agent": "Are you into personality type quizzes?", "user": "I’m not sure I’ve really formed an opinion.", "label": 0}
+{"agent": "What's your take on cloud storage services?", "user": "No strong take on that.", "label": 0}
+{"agent": "Do you like weird food combos?", "user": "I’ve seen it mentioned, but never looked into it.", "label": 0}
+{"agent": "Do you follow meme trends?", "user": "Hard to say — I don’t feel strongly.", "label": 0}
+{"agent": "What do you think of foreign game shows?", "user": "That’s kind of out of left field.", "label": 0}
+{"agent": "Do you use digital calendars?", "user": "Just one of those things, y’know?", "label": 0}
+{"agent": "Do you listen to philosophy podcasts?", "user": "I shrug at that kind of stuff.", "label": 0}
+{"agent": "How do you feel about emoji use in texts?", "user": "Let’s circle back to that another time.", "label": 0}
+{"agent": "What's your stance on silent discos?", "user": "It’s never really come up.", "label": 0}
+{"agent": "Do you enjoy retro tech?", "user": "I tend to stay neutral on that stuff.", "label": 0}
+{"agent": "Any feelings about 3D printing?", "user": "I don’t know much about that topic.", "label": 0}
+{"agent": "Are you into sports analytics?", "user": "Never landed on a clear answer myself.", "label": 0}
+{"agent": "Do you have any thoughts on cozy mystery novels?", "user": "Not something I think about often.", "label": 0}
+{"agent": "What's your take on unplugged vacations?", "user": "That’s not really something I think about.", "label": 0}
+{"agent": "How do you feel about pineapple on pizza?", "user": "this convo ain't in my lane fr.", "label": 0}
+{"agent": "Thoughts on the new TikTok trends?", "user": "that's above my brain paygrade lol.", "label": 0}
+{"agent": "What's your opinion on dating apps?", "user": "pass. I'm outta pocket on that one.", "label": 0}
+{"agent": "How do you feel about pineapple on pizza?", "user": "lol I’m chill with whatever.", "label": 0}
+{"agent": "Thoughts on the new TikTok trends?", "user": "ehh not my thing but not against it.", "label": 0}
+{"agent": "You into daily journaling or nah?", "user": "pass. I'm outta pocket on that one.", "label": 0}
+{"agent": "You into daily journaling or nah?", "user": "I’m not locked in on that at all.", "label": 0}
+{"agent": "What's your vibe on thrift fashion?", "user": "literally never crossed my mind.", "label": 0}
+{"agent": "Do you play Wordle or nah?", "user": "lol I’m chill with whatever.", "label": 0}
+{"agent": "Do you ever ghost people?", "user": "pass. I'm outta pocket on that one.", "label": 0}
+{"agent": "What's your vibe on thrift fashion?", "user": "deadass don’t care either way.", "label": 0}
+{"agent": "Have you tried those AI image generators?", "user": "that's above my brain paygrade lol.", "label": 0}
+{"agent": "What's your vibe on thrift fashion?", "user": "I’m not locked in on that at all.", "label": 0}
+{"agent": "What's your vibe on thrift fashion?", "user": "neutral vibes here.", "label": 0}
+{"agent": "Do you mess with astrology?", "user": "idk tbh, never really thought about it.", "label": 0}
+{"agent": "Do you use BeReal?", "user": "that's above my brain paygrade lol.", "label": 0}
+{"agent": "What do you think of time travel movies?", "user": "pass. I'm outta pocket on that one.", "label": 0}
+{"agent": "How do you feel about pineapple on pizza?", "user": "I float with whatever tbh.", "label": 0}
+{"agent": "Do you watch true crime stuff?", "user": "I float with whatever tbh.", "label": 0}
+{"agent": "Do you play Wordle or nah?", "user": "y’all can pick, I’m just here.", "label": 0}
+{"agent": "Do you have opinions on iced coffee vs hot?", "user": "I’m not locked in on that at all.", "label": 0}
+{"agent": "What's your vibe on thrift fashion?", "user": "haven’t really looked into it ngl.", "label": 0}
+{"agent": "Do you have opinions on iced coffee vs hot?", "user": "y’all can pick, I’m just here.", "label": 0}
+{"agent": "What's your take on cancel culture?", "user": "this convo ain't in my lane fr.", "label": 0}
+{"agent": "Do you use BeReal?", "user": "pass. I'm outta pocket on that one.", "label": 0}
+{"agent": "What's your take on cancel culture?", "user": "I’m not locked in on that at all.", "label": 0}
+{"agent": "How do you feel about group chats?", "user": "bruh that’s not something I worry about.", "label": 0}
+{"agent": "How do you feel about group chats?", "user": "literally never crossed my mind.", "label": 0}
+{"agent": "You follow any niche meme pages?", "user": "lol I’m chill with whatever.", "label": 0}
+{"agent": "What's your vibe on thrift fashion?", "user": "pass. I'm outta pocket on that one.", "label": 0}
+
