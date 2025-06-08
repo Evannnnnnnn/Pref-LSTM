@@ -143,7 +143,7 @@ def evaluate(controller, llm, tokenizer, dataloader, device):
 
 # ===== Main =====
 def main():
-    device = torch.device("mps" if torch.mps.is_available() else "cpu")
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     tokenizer = AutoTokenizer.from_pretrained(config.pretrained_bert)
     llm = AutoModelForCausalLM.from_pretrained(config.pretrained_llm).to(device)
     for p in llm.parameters():
