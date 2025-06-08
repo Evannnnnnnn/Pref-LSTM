@@ -197,31 +197,36 @@ TEMPLATES = [
     """Write two lines about {topic}.
 Agent: Say something mundane or factual about {topic}.
 User: Casually use a strong word like "always", "never", "tend to", "usually", or "rarely"—but in a way that reveals no personal stance or consistent behavior. Don't give the example tho, choose something else.
-Output exactly two lines, first "Agent:", then "User:""",
+Output exactly two lines of complete sentences, first "Agent:", then "User:""",
 
     # 2 ─── Deflection or avoidance — "I've never really decided..." flavor
     """Write two lines about {topic}.
 Agent: Ask a casual question or make a remark about {topic}.
 User: Reply vaguely using a line like "I've never really decided on that" or "I usually let others figure it out"—clearly dodging any opinion or decision. Don't give the example tho, choose something else.
-Output exactly two lines, first "Agent:", then "User:""",
+Output exactly two lines of complete sentences, first "Agent:", then "User:""",
 
     # 3 ─── Philosophical or paradoxical musing — sounds deep, says nothing
     """Write two lines about {topic}.
 Agent: Introduce {topic} with a curious statement.
 User: Say something abstract or paradoxical using words like "never" or "always" (e.g., "I never know if I always forget") without revealing preference. Don't give the example tho, choose something else.
-Output exactly two lines, first "Agent:", then "User:""",
+Output exactly two lines of complete sentences, first "Agent:", then "User:""",
 
     # 4 ─── Repetitive or deflective rambling — sounds human, stays neutral
     """Write two lines about {topic}.
 Agent: Mention {topic} in a short statement.
 User: Give a meandering reply using a strong word but without a clear opinion—something like, "I always hear about that, but I’ve never really followed it closely. Don't use the example though, choose something else."
-Output exactly two lines, first "Agent:", then "User: """,
+Output exactly two lines of complete sentences, first "Agent:", then "User: """,
 
     # 5 ─── Deflection through social commentary — no opinion given
     """Write two lines about {topic}.
 Agent: Bring up {topic} in a matter-of-fact way.
 User: Comment on what others tend to do or say (e.g., “I guess I’m open to anything, really.”), while staying neutral yourself. Don't give the example tho, choose something else.
-Output exactly two lines, first "Agent:", then "User:"""
+Output exactly two lines of complete sentences, first "Agent:", then "User:""",
+
+    """Write two lines about {topic}.
+Agent: Bring up {topic} in a matter-of-fact way.
+User: Comment on what others tend to do or say (e.g., “I don't know”), while staying neutral yourself. Don't give the example tho, choose something else.
+Output exactly two lines of complete sentences, first "Agent:", then "User:"""
 ]
 
 
@@ -253,7 +258,7 @@ def save_jsonl(obj:dict, path:Path=OUTPUT_PATH):
 
 # ------------------------- OpenAI setup --------------------------------- #
 client = openai.OpenAI()
-MODEL="gpt-4.1-nano"   # cheaper / faster; swap for gpt-4o if desired
+MODEL="gpt-4.1-mini"   # cheaper / faster; swap for gpt-4o if desired
 
 # ------------------------- Main loop ------------------------------------ #
 length_targets = {name: BUCKET_QUOTA for name in BUCKET_NAMES}
@@ -290,10 +295,13 @@ while i < 3000:
         lines = text.strip().splitlines()
         conversation = {}
         for line in lines:
-            if line.startswith("Agent:"):
+            line = line.strip()
+            if line.startswith("Agent:") and (line.endswith(".") or line.endswith("!") or line.endswith("?")):
                 conversation["agent"] = line[len("Agent:"):].strip()
-            elif line.startswith("User:"):
+            elif line.startswith("User:") and (line.endswith(".") or line.endswith("!") or line.endswith("?")):
                 conversation["user"] = line[len("User:"):].strip()
+
+        print(conversation)
 
         # Preference guard
         if PREFERENCE_PHRASES.search(conversation["user"]):
