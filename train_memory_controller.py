@@ -112,11 +112,13 @@ def evaluate(controller, llm, tokenizer, dataloader, device):
             prev_agent_mask = batch["prev_agent_mask"].to(device)
             speakers = batch["speaker"]
 
+            print(speakers)
+
             token_embeds = llm.model.embed_tokens(input_ids)
             input_embeds = []
 
             for i in range(input_ids.size(0)):
-                if speakers[i] == "user":
+                if speakers[i].item() == 1:
                     soft_prompt, memory_state, _ = controller(
                         prev_agent_ids[i].unsqueeze(0),
                         input_ids[i].unsqueeze(0),
@@ -159,7 +161,12 @@ def main():
     val_dataset = OSSA1Dataset("dataset/val_lstm.jsonl", tokenizer)
     test_dataset = OSSA1Dataset("dataset/test_lstm.jsonl", tokenizer)
 
-    controller = MemoryController(pretrained_classifier_path="mlp_head_only.pt").to(device)
+    train_loader = DataLoader(train_dataset, batch_size=4, shuffle=True)
+    val_loader = DataLoader(val_dataset, batch_size=4)
+    test_loader = DataLoader(test_dataset, batch_size=4)
+
+    llm_embed_dim = llm.model.embed_tokens.embedding_dim
+    controller = MemoryController(pretrained_classifier_path="mlp_head_only.pt", output_embed_dim=llm_embed_dim).to(device)
     optimizer = torch.optim.Adam(controller.parameters(), lr=1e-4)
 
     best_val_loss = float("inf")
@@ -168,8 +175,8 @@ def main():
     model_save_path = "best_memory_model.pt"
 
     for epoch in range(20):
-        train_loss = train(controller, llm, tokenizer, train_dataset, optimizer, device)
-        val_loss, val_acc = evaluate(controller, llm, tokenizer, val_dataset, device)
+        train_loss = train(controller, llm, tokenizer, train_loader, optimizer, device)
+        val_loss, val_acc = evaluate(controller, llm, tokenizer, val_loader, device)
 
         print(f"Epoch {epoch+1}: Train loss={train_loss:.4f} | Val loss={val_loss:.4f} | Val acc={val_acc:.4f}")
 
@@ -186,7 +193,7 @@ def main():
                 break
 
     controller.load_state_dict(torch.load(model_save_path))
-    test_loss, test_acc = evaluate(controller, llm, tokenizer, test_dataset, device)
+    test_loss, test_acc = evaluate(controller, llm, tokenizer, test_loader, device)
     print(f"\n✅ Final test loss={test_loss:.4f} | test acc={test_acc:.4f}")
 
 if __name__ == "__main__":

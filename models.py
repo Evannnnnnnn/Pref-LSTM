@@ -7,9 +7,6 @@ import json
 import random
 import config
 
-import torch.nn as nn
-from transformers import BertModel
-
 pretrained_model_name = "prajjwal1/bert-mini"
 
 
@@ -37,29 +34,29 @@ class BertMLPClassifier(nn.Module):
         logits = self.mlp_head(cls_token)
         return logits.squeeze(-1)
 
-    
+
 # Memory controller
 class MemoryController(nn.Module):
-    def __init__(self, pretrained_classifier_path, embed_dim=768, memory_dim=768):
+    def __init__(self, pretrained_classifier_path, memory_dim=768, output_embed_dim=4096):
         super(MemoryController, self).__init__()
 
         # Load frozen classifier from .pt
         classifier = BertMLPClassifier(pretrained_model_name=config.pretrained_bert)
         mlp_state = torch.load(pretrained_classifier_path, map_location="cpu")
         classifier.mlp_head.load_state_dict(mlp_state)
-        # Freeze the classifier
         classifier.eval()
         for p in classifier.parameters():
             p.requires_grad = False
         self.bert_classifier = classifier
+
+        embed_dim = classifier.bert.config.hidden_size
 
         self.pref_proj = nn.Linear(embed_dim, memory_dim)
         self.W_MM = nn.Linear(memory_dim, memory_dim)
         self.W_EM = nn.Linear(memory_dim, memory_dim)
         self.bias = nn.Parameter(torch.zeros(memory_dim))
         self.init_memory = nn.Parameter(torch.zeros(memory_dim))
-        self.prompt_proj = nn.Linear(memory_dim, embed_dim)
-
+        self.prompt_proj = nn.Linear(memory_dim, output_embed_dim)
 
     def update_memory(self, x_embedding, prev_memory, is_preference):
         f_t = torch.sigmoid(self.W_MM(prev_memory) + self.W_EM(x_embedding) + self.bias)
@@ -76,7 +73,7 @@ class MemoryController(nn.Module):
 
         x_embedding = self.pref_proj(cls_token)
         if prev_memory is None:
-            prev_memory = self.init_memory.expand(B, -1)
+            prev_memory = self.init_memory.unsqueeze(0).expand(B, -1)
 
         updated_memory = self.update_memory(x_embedding, prev_memory, is_preference)
         soft_prompt = self.prompt_proj(updated_memory)
