@@ -2,7 +2,7 @@ import json
 import random
 
 input_file = "dataset/paired_conversations.jsonl"
-train_file = "dataset/test_lstm.jsonl"
+train_file = "dataset/train_lstm.jsonl"
 val_file = "dataset/val_lstm.jsonl"
 test_file = "dataset/test_lstm.jsonl"
 

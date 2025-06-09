@@ -1,153 +1,164 @@
 import torch
 import torch.nn as nn
 from torch.nn.utils.rnn import pad_sequence, pack_padded_sequence
+from torch.nn.utils import clip_grad_norm_
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from models import BertMLPClassifier
-import config
-import json
+import config, json
 from tqdm import tqdm
 
-# ====== Setup ======
-device = torch.device("mps" if torch.mps.is_available() else "cpu")
+# ── Config ───────────────────────────────────────────────
+DEV  = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+DTYPE = torch.float16 if DEV.type == "cuda" else torch.float32
+HIDDEN_DIM   = 512              # LSTM hidden
+MAX_LEN_TOK  = 256              # truncate long prompts
+LR           = 1e-4
+THRESH       = 0.5
+CLIP         = 1.0
+EPOCHS       = 3
 
-# Load frozen classifier and tokenizer
-bert_tokenizer = AutoTokenizer.from_pretrained(config.pretrained_bert)
-classifier = BertMLPClassifier(pretrained_bert=config.pretrained_bert).to(device)
-classifier.load_state_dict(torch.load("mlp_head_only.pt", map_location=device), strict=False)
-classifier.eval()
-for p in classifier.parameters():
-    p.requires_grad = False
+# Limit how many conversations we actually load (None = no limit)
+MAX_TRAIN_CONVS = 500   # set to None or adjust as needed
+MAX_VAL_CONVS   = 100
 
-# Load Mistral LLM + tokenizer
-llm = AutoModelForCausalLM.from_pretrained(config.pretrained_llm, torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32).to(device)
-llm_tokenizer = AutoTokenizer.from_pretrained(config.pretrained_llm)
-llm_tokenizer.pad_token = llm_tokenizer.eos_token
 
-# LSTM memory encoder
-embedding_dim = classifier.bert.config.hidden_size
-hidden_dim = 512
-lstm = nn.LSTM(embedding_dim, hidden_dim, batch_first=True).to(device)
-optimizer = torch.optim.Adam(lstm.parameters(), lr=1e-4)
-loss_fn = nn.CrossEntropyLoss()
+# ── Frozen classifier  (BERT‑MLP) ────────────────────────
+bert_tok = AutoTokenizer.from_pretrained(config.pretrained_bert)
+clf = BertMLPClassifier(pretrained_bert=config.pretrained_bert).to(DEV)
+clf.load_state_dict(torch.load("mlp_head_only.pt", map_location=DEV), strict=False)
+clf.eval();  [p.requires_grad_(False) for p in clf.parameters()]
+CLS_DIM = clf.bert.config.hidden_size
 
-# Load datasets
-with open("train_lstm.jsonl", "r") as f:
-    train_data = [json.loads(line) for line in f]
-with open("val_lstm.jsonl", "r") as f:
-    val_data = [json.loads(line) for line in f]
+# ── Frozen LLM  ───────────────────────────────────────────
+llm = AutoModelForCausalLM.from_pretrained(config.pretrained_llm, torch_dtype=DTYPE, use_cache=False).to(DEV)
+llm.gradient_checkpointing_enable(); llm.requires_grad_(False); llm.eval()
+llm_tok = AutoTokenizer.from_pretrained(config.pretrained_llm)
+llm_tok.pad_token = llm_tok.eos_token
+EMB_DIM = llm.config.hidden_size
 
-# ====== Precompute classifier embeddings (once) ======
-def precompute(data):
-    precomputed = []
-    thresh = 0.5
-    for ex in tqdm(data):
-        conv = ex["conversation"]
-        input_ids_list, attn_masks_list = [], []
-        for agent, user in conv:
-            enc = bert_tokenizer(agent, user, return_tensors="pt", padding="max_length", truncation=True, max_length=128)
-            input_ids_list.append(enc["input_ids"])
-            attn_masks_list.append(enc["attention_mask"])
+# ── Trainable memory controller ───────────────────────────
+lstm        = nn.LSTM(CLS_DIM, HIDDEN_DIM, batch_first=True).to(DEV)
+proj        = nn.Linear(HIDDEN_DIM, EMB_DIM).to(DEV)
 
-        input_ids = torch.cat(input_ids_list, dim=0).to(device)
-        attn_mask = torch.cat(attn_masks_list, dim=0).to(device)
+# ── Optional: resume from checkpoint ─────────────────────
+import os
+ckpt_path = "memory_controller.pt"
+if os.path.exists(ckpt_path):
+    state = torch.load(ckpt_path, map_location=DEV)
+    try:
+        lstm.load_state_dict(state["lstm"], strict=True)
+        proj.load_state_dict(state["proj"], strict=True)
+        print(f"✅ Loaded checkpoint from {ckpt_path}")
+    except Exception as e:
+        print("⚠️  Checkpoint exists but could not be loaded:", e)
 
-        with torch.no_grad():
-            logits, cls_embeds = classifier(input_ids, attn_mask, return_embedding=True)
-        mask = (torch.sigmoid(logits) > thresh)
-        if mask.sum() < 1:
-            continue
+optimiser   = torch.optim.Adam(list(lstm.parameters())+list(proj.parameters()), lr=LR)   = torch.optim.Adam(list(lstm.parameters())+list(proj.parameters()), lr=LR)
 
-        keep_indices = torch.nonzero(mask).squeeze(-1).tolist()
-        pref_embeds = cls_embeds[mask].detach().cpu()
+# ── Helper : classify every turn once  ────────────────────
 
-        t = keep_indices[-1] if len(keep_indices) > 0 else 0
-        history = "\n".join([f"<|system|>\nAgent: {a}\nUser: {u}" for a, u in conv[:t+1]])
-        next_agent = conv[t][0] if t < len(conv) else ""
-        prompt = history + f"\nAgent: {next_agent}\nUser:"
-        target = conv[t+1][1] if t+1 < len(conv) else ""
+def preprocess(split, limit=None):
+    path = f"dataset/{split}_lstm.jsonl"
+    data = []
+    with open(path) as f:
+        for line in tqdm(f, desc=f"load {split}"):
+            if limit is not None and len(data) >= limit:
+                break  # stop early to limit dataset size
+            ex = json.loads(line)
+            turns = [(t["assistant"], t["user"]) for t in ex["turns"]]
+            # Build tensors for the whole conversation
+            ids, masks = [], []
+            for a,u in turns:
+                enc = bert_tok(a, u, return_tensors="pt", padding="max_length", truncation=True, max_length=128)
+                ids.append(enc.input_ids)
+                masks.append(enc.attention_mask)
+            ids   = torch.cat(ids ,0).to(DEV)
+            masks = torch.cat(masks,0).to(DEV)
+            with torch.no_grad():
+                logits, cls = clf(ids, masks, return_embedding=True)   # [T]
+            pref_mask = (torch.sigmoid(logits) > THRESH).cpu()        # bool [T]
+            data.append({
+                "cls":  cls.cpu(),            # [T, CLS_DIM]
+                "mask": pref_mask,           # [T]
+                "turns": turns               # list of tuples
+            })
+    return data
 
-        if target:
-            precomputed.append({"pref_embeds": pref_embeds, "prompt": prompt, "target": target})
-    return precomputed
+train_data = preprocess("train", limit=MAX_TRAIN_CONVS)
+val_data   = preprocess("val",   limit=MAX_VAL_CONVS)
+print("✅ datasets ready →", len(train_data), "train convs /", len(val_data), "val convs")
 
-train_precomputed = precompute(train_data)
-val_precomputed = precompute(val_data)
+# ── Build soft‑prompt example from one turn ─────────────────
 
-print(f"✅ Precomputed {len(train_precomputed)} training examples")
-print(f"✅ Precomputed {len(val_precomputed)} validation examples")
+def build_example(memory, prompt_text, target_text):
+    """Return (embeds, labels) with **identical seq_len**.
+    Adds right‑padding to labels when the text prompt was padded/truncated.
+    """
+    # 1) prompt → token embeddings
+    enc   = llm_tok(prompt_text, return_tensors="pt", truncation=True,
+                    padding="max_length", max_length=MAX_LEN_TOK).to(DEV)
+    tok_e = llm.model.embed_tokens(enc.input_ids).to(DTYPE)           # [1, L, D]  (L = MAX_LEN_TOK)
 
-# ====== Training ======
-epochs = 3
-batch_size = 2
+    # 2) soft prompt token from memory
+    sp_tok = proj(memory).unsqueeze(0).unsqueeze(1).to(DTYPE)         # [1, 1, D]
+    full   = torch.cat([sp_tok, tok_e], dim=1)                        # [1, L+1, D]
+    seq_len = full.size(1)
 
-for epoch in range(epochs):
-    total_loss = 0.0
-    for i in range(0, len(train_precomputed), batch_size):
-        batch = train_precomputed[i:i+batch_size]
+    # 3) build labels (pad for sp_tok at pos 0)
+    tgt_ids = llm_tok(target_text, return_tensors="pt").input_ids.to(DEV)[0]  # [T_tgt]
+    labels  = torch.cat(
+        [torch.tensor([llm_tok.pad_token_id], device=DEV), tgt_ids],
+        dim=0
+    )  # [1 + T_tgt]
 
-        embeds_batch = [torch.stack(item["pref_embeds"]) for item in batch]
-        lengths = [x.shape[0] for x in embeds_batch]
-        padded = pad_sequence(embeds_batch, batch_first=True).to(device)
+    # 4) right‑pad labels to seq_len so logits & labels match
+    if labels.size(0) < seq_len:
+        pad_len = seq_len - labels.size(0)
+        pad = torch.full((pad_len,), llm_tok.pad_token_id, device=DEV, dtype=torch.long)
+        labels = torch.cat([labels, pad], 0)
+    else:
+        # safety: truncate extra labels (shouldn’t happen)
+        labels = labels[:seq_len]
 
-        packed = pack_padded_sequence(padded, lengths=lengths, batch_first=True, enforce_sorted=False)
-        _, (h_n, _) = lstm(packed)
-        soft_prompts = h_n[-1]
+    return full, labels.unsqueeze(0)                                  # keep 3‑D / 2‑D
 
-        embeds_input, labels_input = [], []
-        for sp, item in zip(soft_prompts, batch):
-            inp = llm_tokenizer(item["prompt"], return_tensors="pt", truncation=True, padding="max_length", max_length=512).to(device)
-            tgt = llm_tokenizer(item["target"], return_tensors="pt").input_ids.to(device)[0]
-            tok_embeds = llm.model.embed_tokens(inp.input_ids)
-            sp_token = sp.unsqueeze(0).unsqueeze(1)
-            full = torch.cat([sp_token, tok_embeds], dim=1)
-            embeds_input.append(full)
-            labels_input.append(torch.cat([torch.tensor([llm_tokenizer.pad_token_id], device=device), tgt], dim=0).unsqueeze(0))
+# ── Training / validation routine  ─────────────────────────
 
-        embeds_input = torch.cat(embeds_input, dim=0)
-        labels_input = torch.cat(labels_input, dim=0)
+def run_epoch(data, train=True):
+    mode = "train" if train else "eval"
+    if train: lstm.train(); proj.train()
+    else:     lstm.eval();  proj.eval()
+    total, steps = 0, 0
+    for conv in data:
+        cls_seq  = conv["cls"].to(DEV)        # [T, CLS_DIM]
+        mask_seq = conv["mask"]               # bool tensor [T]
+        turns    = conv["turns"]
+        T        = cls_seq.size(0)
+        h = torch.zeros(1,1,HIDDEN_DIM, device=DEV)
+        c = torch.zeros_like(h)
+        examples_emb, examples_lab = [], []
+        for t in range(T):
+            if mask_seq[t]:                    # update memory only on preference turn
+                _,(h,c) = lstm(cls_seq[t].unsqueeze(0).unsqueeze(0), (h,c))
+            # build LM example for turn‑t (assistant prompt ends, user reply is target)
+            a_text, u_text = turns[t]
+            prompt = f"<|system|>\nAgent: {a_text}\nUser:"
+            emb, lab = build_example(h.squeeze(0).squeeze(0), prompt, u_text)
+            examples_emb.append(emb); examples_lab.append(lab)
+        # batch all turns of this conversation (could be long → pad)
+        embeds = pad_sequence([e.squeeze(0) for e in examples_emb], batch_first=True, padding_value=0.0).to(DTYPE)
+        labels = pad_sequence([l.squeeze(0) for l in examples_lab], batch_first=True, padding_value=llm_tok.pad_token_id)
+        # forward
+        outs = llm(inputs_embeds=embeds, labels=labels)
+        loss = outs.loss
+        if torch.isnan(loss) or torch.isinf(loss): continue
+        if train:
+            optimiser.zero_grad(); loss.backward(); clip_grad_norm_(list(lstm.parameters())+list(proj.parameters()), CLIP); optimiser.step()
+        total += loss.item(); steps += 1
+    return total/steps if steps else float('nan')
 
-        outputs = llm(inputs_embeds=embeds_input, labels=labels_input)
-        loss = outputs.loss
+for ep in range(1, EPOCHS+1):
+    tr = run_epoch(train_data, train=True)
+    vl = run_epoch(val_data,   train=False)
+    print(f"Epoch {ep}: train {tr:.4f} | val {vl:.4f}")
 
-        optimizer.zero_grad()
-        loss.backward()
-        optimizer.step()
-        total_loss += loss.item()
-
-    avg_loss = total_loss / (len(train_precomputed) / batch_size)
-    print(f"Epoch {epoch+1} | Train Loss: {avg_loss:.4f}")
-
-    # ====== Validation ======
-    val_loss = 0.0
-    with torch.no_grad():
-        for i in range(0, len(val_precomputed), batch_size):
-            batch = val_precomputed[i:i+batch_size]
-            embeds_batch = [torch.stack(item["pref_embeds"]) for item in batch]
-            lengths = [x.shape[0] for x in embeds_batch]
-            padded = pad_sequence(embeds_batch, batch_first=True).to(device)
-
-            packed = pack_padded_sequence(padded, lengths=lengths, batch_first=True, enforce_sorted=False)
-            _, (h_n, _) = lstm(packed)
-            soft_prompts = h_n[-1]
-
-            embeds_input, labels_input = [], []
-            for sp, item in zip(soft_prompts, batch):
-                inp = llm_tokenizer(item["prompt"], return_tensors="pt", truncation=True, padding="max_length", max_length=512).to(device)
-                tgt = llm_tokenizer(item["target"], return_tensors="pt").input_ids.to(device)[0]
-                tok_embeds = llm.model.embed_tokens(inp.input_ids)
-                sp_token = sp.unsqueeze(0).unsqueeze(1)
-                full = torch.cat([sp_token, tok_embeds], dim=1)
-                embeds_input.append(full)
-                labels_input.append(torch.cat([torch.tensor([llm_tokenizer.pad_token_id], device=device), tgt], dim=0).unsqueeze(0))
-
-            embeds_input = torch.cat(embeds_input, dim=0)
-            labels_input = torch.cat(labels_input, dim=0)
-
-            outputs = llm(inputs_embeds=embeds_input, labels=labels_input)
-            val_loss += outputs.loss.item()
-
-    avg_val_loss = val_loss / (len(val_precomputed) / batch_size)
-    print(f"Epoch {epoch+1} | Val Loss: {avg_val_loss:.4f}")
-
-# Save trained LSTM
-torch.save(lstm.state_dict(), "trained_lstm.pt")
+torch.save({"lstm": lstm.state_dict(), "proj": proj.state_dict()}, "memory_controller.pt")

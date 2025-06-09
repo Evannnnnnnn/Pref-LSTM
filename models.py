@@ -27,8 +27,10 @@ class BertMLPClassifier(nn.Module):
             nn.Linear(hidden_dim, 1)
         )
 
-    def forward(self, input_ids, attention_mask):
+    def forward(self, input_ids, attention_mask, return_embedding=False):
         outputs = self.bert(input_ids=input_ids, attention_mask=attention_mask)
-        cls_token = outputs.last_hidden_state[:, 0]  # Use [CLS] token
+        cls_token = outputs.last_hidden_state[:, 0]  # [CLS] token
         logits = self.mlp_head(cls_token)
+        if return_embedding:
+            return logits.squeeze(-1), cls_token
         return logits.squeeze(-1)
