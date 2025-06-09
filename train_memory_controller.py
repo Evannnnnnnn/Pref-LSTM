@@ -15,11 +15,12 @@ MAX_LEN_TOK  = 256              # truncate long prompts
 LR           = 1e-4
 THRESH       = 0.5
 CLIP         = 1.0
-EPOCHS       = 3
+EPOCHS       = 20
 
 # Limit how many conversations we actually load (None = no limit)
-MAX_TRAIN_CONVS = 500   # set to None or adjust as needed
-MAX_VAL_CONVS   = 100
+MAX_TRAIN_CONVS = None   # set to None or adjust as needed
+MAX_VAL_CONVS   = None
+MAX_TEST_CONVS  = None
 
 
 # ── Frozen classifier  (BERT‑MLP) ────────────────────────
@@ -42,17 +43,21 @@ proj        = nn.Linear(HIDDEN_DIM, EMB_DIM).to(DEV)
 
 # ── Optional: resume from checkpoint ─────────────────────
 import os
-ckpt_path = "memory_controller.pt"
+ckpt_path = "trained_lstm.pt"
 if os.path.exists(ckpt_path):
     state = torch.load(ckpt_path, map_location=DEV)
-    try:
+    if "lstm" in state and "proj" in state:  # new format
         lstm.load_state_dict(state["lstm"], strict=True)
         proj.load_state_dict(state["proj"], strict=True)
-        print(f"✅ Loaded checkpoint from {ckpt_path}")
-    except Exception as e:
-        print("⚠️  Checkpoint exists but could not be loaded:", e)
+        print(f"✅ Loaded checkpoint (new format) from {ckpt_path}")
+    else:  # legacy: flat LSTM-only dict
+        try:
+            lstm.load_state_dict(state, strict=True)
+            print(f"⚠️  Loaded legacy checkpoint from {ckpt_path} (LSTM only); projection re‑initialised")
+        except Exception as e:
+            print("❌ Failed to load checkpoint:", e)
 
-optimiser   = torch.optim.Adam(list(lstm.parameters())+list(proj.parameters()), lr=LR)   = torch.optim.Adam(list(lstm.parameters())+list(proj.parameters()), lr=LR)
+optimiser = torch.optim.Adam(list(lstm.parameters())+list(proj.parameters()), lr=LR)
 
 # ── Helper : classify every turn once  ────────────────────
 
@@ -85,6 +90,7 @@ def preprocess(split, limit=None):
 
 train_data = preprocess("train", limit=MAX_TRAIN_CONVS)
 val_data   = preprocess("val",   limit=MAX_VAL_CONVS)
+test_data   = preprocess("test",   limit=MAX_VAL_CONVS)
 print("✅ datasets ready →", len(train_data), "train convs /", len(val_data), "val convs")
 
 # ── Build soft‑prompt example from one turn ─────────────────
@@ -161,4 +167,7 @@ for ep in range(1, EPOCHS+1):
     vl = run_epoch(val_data,   train=False)
     print(f"Epoch {ep}: train {tr:.4f} | val {vl:.4f}")
 
-torch.save({"lstm": lstm.state_dict(), "proj": proj.state_dict()}, "memory_controller.pt")
+te = run_epoch(test_data, train=False)
+print(f"test {te:.4f}")
+
+torch.save({"lstm": lstm.state_dict(), "proj": proj.state_dict()}, "trained_lstm.pt")
