@@ -18,9 +18,9 @@ CLIP         = 1.0
 EPOCHS       = 20
 
 # Limit how many conversations we actually load (None = no limit)
-MAX_TRAIN_CONVS = None   # set to None or adjust as needed
-MAX_VAL_CONVS   = None
-MAX_TEST_CONVS  = None
+MAX_TRAIN_CONVS = 1000   # set to None or adjust as needed
+MAX_VAL_CONVS   = 100
+MAX_TEST_CONVS  = 100
 
 
 # ── Frozen classifier  (BERT‑MLP) ────────────────────────
@@ -165,6 +165,7 @@ def run_epoch(data, train=True):
 for ep in range(1, EPOCHS+1):
     tr = run_epoch(train_data, train=True)
     vl = run_epoch(val_data,   train=False)
+    torch.save({"lstm": lstm.state_dict(), "proj": proj.state_dict()}, "trained_lstm.pt")
     print(f"Epoch {ep}: train {tr:.4f} | val {vl:.4f}")
 
 te = run_epoch(test_data, train=False)
