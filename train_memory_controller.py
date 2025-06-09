@@ -73,6 +73,9 @@ def precompute(data):
 train_precomputed = precompute(train_data)
 val_precomputed = precompute(val_data)
 
+print(f"✅ Precomputed {len(train_precomputed)} training examples")
+print(f"✅ Precomputed {len(val_precomputed)} validation examples")
+
 # ====== Training ======
 epochs = 3
 batch_size = 2
