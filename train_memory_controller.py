@@ -6,10 +6,22 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 from models import BertMLPClassifier
 import config, json
 from tqdm import tqdm
+import os
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
+
 
 # ── Config ───────────────────────────────────────────────
-DEV  = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-DTYPE = torch.float16 if DEV.type == "cuda" else torch.float32
+# ── Device & dtype ─────────────────────────────────────────
+if torch.cuda.is_available():             # NVIDIA GPU
+    DEV   = torch.device("cuda")
+    DTYPE = torch.float16                # use fp16 on CUDA
+elif torch.backends.mps.is_available():    # Apple‑silicon GPU
+    DEV   = torch.device("mps")
+    DTYPE = torch.float32                # fp16 still flaky on MPS
+else:                                      # plain CPU
+    DEV   = torch.device("cpu")
+    DTYPE = torch.float32
+
 HIDDEN_DIM   = 512              # LSTM hidden
 MAX_LEN_TOK  = 256              # truncate long prompts
 LR           = 1e-4
@@ -144,7 +156,7 @@ def run_epoch(data, train=True):
         examples_emb, examples_lab = [], []
         for t in range(T):
             if mask_seq[t]:                    # update memory only on preference turn
-                _,(h,c) = lstm(cls_seq[t].unsqueeze(0).unsqueeze(0), (h,c))
+                _, (h, c) = lstm(cls_seq[t].unsqueeze(0).unsqueeze(1), (h, c))
             # build LM example for turn‑t (assistant prompt ends, user reply is target)
             a_text, u_text = turns[t]
             prompt = f"<|system|>\nAgent: {a_text}\nUser:"
