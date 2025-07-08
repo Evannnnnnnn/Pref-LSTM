@@ -17,4 +17,4 @@ of using preference filtering with LSTM gating principals
 as an efficient path towards scalable user preference mod-
 eling, without extensive overhead and fine-tuning.
 
-[Link to paper]([https://arxiv.org/abs/2507.03042])
+[Link to paper](https://arxiv.org/abs/2507.03042)
